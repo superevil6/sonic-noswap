@@ -10,17 +10,94 @@ It has 35 Sonic characters (Metal Sonic, Shadow, Blaze, Silver, Rouge, Espio, Bi
 more), an Extras Pack of 12 guests from other games (Mega Man, Ristar, NiGHTS, Pulseman, Joe Musashi...), a Mania mod,
 and **Mania Lock-On**, a SONIC MANIA button in Origins' main menu that starts your own copy of the Mania decompilation.
 
+Curious how the extra character cards work? The research is documented on HedgeDocs:
+[Sonic Origins Character Select](https://hedgedocs.com/index.php/Sonic_Origins_Character_Select).
+
+![The NoSwap roster](docs/images/roster.png)
+
 ## Download and play
 
-**Players don't need this repository.** The ready-to-install mods are on the
-[Releases page](https://github.com/superevil6/sonic-noswap/releases): the core, one mod per character, the
-all-in-one, the Extras Pack, the Mania mod, Mania Lock-On and the Creator Kit. Install them with
-[HedgeModManager](https://github.com/hedge-dev/HedgeModManager) 8 or newer; [docs/INSTALL.md](docs/INSTALL.md) has the
-steps.
+**Players don't need this repository.** Everything is ready to install on the
+[Releases page](https://github.com/superevil6/sonic-noswap/releases/latest). Pick the game below and follow its steps.
+It looks like a lot written out, but it's a few minutes the first time.
 
-- Tested with Sonic Origins Plus (Steam).
-- **Not compatible with Sonic Origins Ultrafix (yet).** Both mods replace many of the same game scripts. Disable
-  Ultrafix while playing NoSwap.
+### Sonic Origins (Steam)
+
+![Origins' character select with the extra characters](docs/images/origins-character-select.png)
+
+**You need:** Sonic Origins on Steam (PC), and [HedgeModManager](https://github.com/hedge-dev/HedgeModManager)
+(version 8 or newer), the usual mod manager for Origins.
+
+1. **Set up HedgeModManager** if you haven't: download it, open it, and pick Sonic Origins when it asks for your game.
+2. From the [Releases page](https://github.com/superevil6/sonic-noswap/releases/latest), download:
+   - **`NoSwap-AllInOne-<version>.zip`**: the mod with all 35 Sonic characters (required).
+   - **`NoSwap-Extras-<version>.zip`**: the 12 guest characters (optional).
+3. In HedgeModManager, click **Install Mod** (or drag a zip onto its window) and pick each zip you downloaded.
+4. **Tick** "NoSwap: Extra Characters" (and "NoSwap: Extras Pack"), then click **Save & Play**.
+5. **Playing:**
+   - **Sonic 1, Sonic 2 and Sonic CD:** the extras are in the character select, after the usual cards. Scroll right to
+     see them all.
+   - **Sonic 3 & Knuckles:** on the save screen, press **up/down** on a save slot to choose its character.
+
+![Choosing a character on Sonic 3 & Knuckles' save screen](docs/images/origins-s3k-save-select.png)
+
+**Good to know**
+- **Not compatible with Sonic Origins Ultrafix (yet):** untick Ultrafix while playing NoSwap. Other mods that change
+  the menus or the player can clash the same way.
+- **If the extra cards are empty or everyone plays as Sonic,** another mod is overriding NoSwap's files: untick it, or
+  move NoSwap above it in HedgeModManager's list. NoSwap shows a message box when it detects this, and writes details
+  to `NoSwapS3K.log` in its mod folder.
+- Origins' own save file is never touched; the extras save to their own file.
+- Optional: **`ManiaLockOn-<version>.zip`** adds a SONIC MANIA button to Origins' main menu that starts your Sonic Mania
+  decompilation (see below). Install and tick it the same way.
+
+### Sonic Mania (the decompilation)
+
+![An extra's act clear in Sonic Mania](docs/images/mania-act-clear.png)
+
+NoSwap for Mania runs on the **Sonic Mania decompilation**, a free fan-made version of Mania's engine that loads mods.
+**It does not work with the normal Steam executable,** but the decompilation uses your Steam copy's game data, so you
+only need to own Mania.
+
+**You need:** Sonic Mania on Steam (PC).
+
+1. **Get the decompilation** (official releases, both by RSDKModding):
+   - the engine, from [RSDKv5-Decompilation releases](https://github.com/RSDKModding/RSDKv5-Decompilation/releases):
+     `v5-windows-x64.zip`, take **`RSDKv5U.exe`**;
+   - the game code, from [Sonic-Mania-Decompilation releases](https://github.com/RSDKModding/Sonic-Mania-Decompilation/releases):
+     `mania-windows-x64.zip`, take **`v5U/Game.dll`**.
+2. Put **`RSDKv5U.exe`** and **`Game.dll`** in your Sonic Mania folder, next to **`Data.rsdk`** (in Steam: right-click
+   Sonic Mania > Manage > Browse local files). Double-click `RSDKv5U.exe` once to check it runs, then close it.
+3. **Install the mods**, either way:
+   - **With the [RSDK Mod Manager](https://gamebanana.com/tools/10457)** (easiest): put it in the same folder, open
+     it, install **`NoSwapMania-<version>.zip`** (and optionally **`NoSwapMania-Extras-<version>.zip`**), tick them,
+     and click **Save & Play**.
+   - **By hand:** make a folder called **`mods`** next to `RSDKv5U.exe`, unzip the zips into it (you should end up
+     with `mods/NoSwapMania/mod.ini`), then create a text file **`mods/modconfig.ini`** containing:
+     ```
+     [Mods]
+     NoSwapMania=y
+     NoSwapMania-Extras=y
+     ```
+4. **Playing:** start `RSDKv5U.exe`, choose **Mania Mode**, and on the save select press **up/down** on "No Save" or a
+   new save slot to cycle through the characters.
+
+![Super Metal Sonic in Green Hill](docs/images/mania-super-metal.png)
+
+**Good to know**
+- The official decompilation releases have the Plus content switched off (no Mighty, Ray or Encore). NoSwap works
+  either way.
+- Tested with the official v1.1.1 releases.
+
+### The Extras Pack
+
+![The 12 guest characters](docs/images/extras.png)
+
+Twelve guests from other classic games: Mega Man, Ray Poward, Sparkster, Ristar, Dynamite Headdy, John Morris, Ecco the
+Dolphin, NiGHTS, Joe Musashi, Gilius Thunderhead, Pulseman and Axel Stone. Install the Extras Pack **next to** the main
+mod (same version) for either game. Each one is also on the Releases page on its own, if you only want one.
+
+## About this repository
 
 This repository is the source: the build tools, the Origins DLL, the Mania mod, the character configs and the docs. It
 contains **no game files and no sprite sheets or sounds**. Everything the build needs from the games is taken from your
