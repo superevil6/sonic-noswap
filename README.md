@@ -1,5 +1,5 @@
 # NoSwap: Extra Characters for Sonic Origins and Sonic Mania
-[![NoSwap showcase](https://youtu.be/mTsP9Xk0ZI8/maxresdefault.jpg)](https://youtu.be/mTsP9Xk0ZI8)
+[![NoSwap showcase](https://img.youtube.com/vi/mTsP9Xk0ZI8/hqdefault.jpg)](https://youtu.be/mTsP9Xk0ZI8)
 
 NoSwap adds new playable characters to the classic games in **Sonic Origins** (Sonic 1, Sonic 2, Sonic CD and
 Sonic 3 & Knuckles) and to **Sonic Mania** (through the Sonic Mania decompilation), **without replacing anyone**.
