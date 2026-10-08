@@ -1,0 +1,13 @@
+Heavy & Bomb (Sonic 1 style) custom sprite sheet by Akimaca:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/228293/ (from "HeavyBomb Link.txt").
+Sheet: testmods/HeavyBomb.png (1124x606), shared with Bomb (testmods/bomb), read in place.
+
+Terms, printed on the sheet: "Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use, just give credit where
+it's due!!!"
+Credit (README): Original sprites by SEGA, Sonic Team & Akimaca, with the link above. Public. Heavy (c) SEGA.
+
+What we do: frames are cut out of their cells as drawn (he already faces right; nothing is mirrored); the UI art
+(life counter, signpost, continue icons) as drawn. Only the "Normal" palette; not the palette variants or the
+"Scrapped/Test" box. The Dash pose layers the sheet's DASH flash ahead of his running frames. The big END SPRITE
+(206x141) loses 17 + 18 columns (the ends of his soles) to fit the shared 171 px ending pose box. His jump / Spin Dash /
+special stage ball is Sonic Mania's plain spin ball (SEGA / Sonic Team) in his greys (tools/generic_ball.py, not the artist's art). No scaling; every colour exact.

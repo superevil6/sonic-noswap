@@ -1,0 +1,211 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Bean the Dynamite: everything NoSwap needs to build him, in plain data (docs/character-json.md). Keys starting with _ are comments.",
+
+  "id": "bean",
+  "name": "BEAN",
+  "full_name": "Bean the Dynamite",
+
+  "credits": {
+    "short": "Sprites: deltaConduit",
+    "full": "Bean the Dynamite (Sonic 1 style) custom sprites by deltaConduit. Original sprites by SEGA, Sonic Team & deltaConduit - https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/263920/",
+    "artists": ["deltaConduit"],
+    "url": "https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/263920/",
+    "terms": "ORIGINAL SPRITES BY SEGA, SONIC TEAM & DELTACONDUIT. FREE TO USE, BUT GIVE CREDIT. DO NOT EDIT. DON'T USE THESE SPRITES FOR EXE STUFF.",
+    "_terms_mean": "Frames are crops only, as drawn: no scaling, recolouring, merged colours or pasted pieces; nothing .exe-themed. One crop beyond a cell: END_MEDIUM loses its 6 leftmost columns (tail feather tips) to fit the 71 px ending pose box."
+  },
+
+  "sheet": {
+    "file": "../Bean.png",
+    "_file": "relative to this folder (testmods/Bean.png, 693x529)",
+    "background": ["#d8b4fc", "#b490fc", "#906cd8"],
+    "_background": "the lavender page and its two cell colours",
+    "feet_y": 20,
+    "angled_halves": true,
+    "_angled_halves": "walk / run lists are upright frames, then the 45-degree ones (S3&K splits them)"
+  },
+
+  "base": "sonic",
+  "_base": "whose moveset, physics and animation list he plays on: sonic, tails or knuckles",
+
+  "flags": {
+    "super": false,
+    "drop_dash": false,
+    "roll": false,
+    "no_roll": false,
+    "private": false,
+    "crossover": false
+  },
+  "card": null,
+  "_card": "null: the Origins select card is his Stopped frame at 8x",
+
+  "games": {"sonic1": true, "sonic2": true, "soniccd": true, "s3k": true, "mania": true},
+
+  "palette": {
+    "own": {
+      "74": "#006c00", "75": "#249000", "76": "#48b424", "77": "#6cd848",
+      "78": "#480000", "79": "#900000", "80": "#fc0000",
+      "81": "#b4b400", "82": "#fcfc00",
+      "83": "#fcfcfc", "84": "#b4b4b4", "85": "#909090", "86": "#484848",
+      "87": "#90fcfc"
+    },
+    "_own": "slot -> colour: his own colours, each exact (greens, reds, beak/name yellow, white and greys, the signpost sky)",
+    "shared": {"#000000": 1},
+    "_shared": "sheet colour -> one of Sonic's slots it already matches",
+    "other_colours": "nearest",
+    "_other_colours": "any other colour on the sheet (labels, the Sonic cameo) goes to the slot of its nearest listed colour",
+    "strict": true,
+    "_strict": "stop the build if a used frame or UI element has a colour not listed (the sheet says DO NOT EDIT)"
+  },
+
+  "frames": {
+    "_frames": "name -> [x, y, w, h]: the sprite's own cell on the sheet. Named after the sheet's labels, left to right from 1",
+    "STAND": [2, 66, 28, 40],
+    "IDLE1": [40, 70, 35, 36], "IDLE2": [76, 70, 35, 36],
+    "BOMB": [112, 76, 8, 10],
+    "UP": [130, 65, 27, 41], "DUCK": [167, 83, 37, 23],
+    "WALK1": [214, 68, 32, 38], "WALK2": [247, 66, 33, 38], "WALK3": [281, 67, 32, 39], "WALK4": [314, 68, 33, 38],
+    "WALK5": [348, 66, 35, 38], "WALK6": [384, 67, 33, 39],
+    "WALKA1": [427, 61, 26, 40], "WALKA2": [454, 59, 29, 44], "WALKA3": [484, 60, 30, 42], "WALKA4": [515, 61, 31, 44],
+    "WALKA5": [547, 59, 31, 47], "WALKA6": [579, 61, 33, 39],
+    "RUN1": [2, 136, 37, 35], "RUN2": [40, 136, 37, 35], "RUN3": [78, 136, 37, 35], "RUN4": [116, 136, 37, 35],
+    "RUNA1": [163, 128, 29, 43], "RUNA2": [193, 127, 26, 43], "RUNA3": [220, 128, 28, 44], "RUNA4": [249, 128, 26, 43],
+    "SKID1": [285, 131, 36, 40], "SKID2": [322, 132, 35, 39],
+    "DASH1": [367, 144, 32, 27], "DASH2": [400, 144, 31, 27], "DASH3": [432, 144, 31, 27], "DASH4": [464, 144, 31, 27],
+    "DASH5": [496, 144, 31, 27],
+    "BALL": [537, 141, 30, 30], "TURN1": [568, 141, 30, 30], "TURN2": [599, 141, 30, 30], "TURN3": [630, 141, 30, 30],
+    "TURN4": [661, 141, 30, 30],
+    "HIGH1": [2, 195, 37, 41], "HIGH2": [40, 195, 28, 41], "HIGH3": [69, 196, 32, 40],
+    "LOW1": [111, 197, 32, 39], "LOW2": [144, 197, 33, 39], "LOW3": [178, 197, 32, 39],
+    "LEAP": [220, 197, 33, 39],
+    "PUSH1": [263, 200, 34, 36], "PUSH2": [298, 199, 34, 37], "PUSH3": [333, 200, 34, 36], "PUSH4": [368, 199, 34, 37],
+    "BAL1": [412, 192, 32, 44], "BAL2": [445, 193, 33, 43],
+    "SPRING": [488, 190, 26, 46], "GASP": [524, 195, 33, 41],
+    "HURT1": [567, 202, 43, 34], "HURT2": [611, 202, 42, 34],
+    "FAN1": [2, 275, 45, 25], "FAN2": [48, 275, 44, 25], "FAN3": [93, 275, 42, 25],
+    "PIPE1": [145, 271, 48, 28], "PIPE2": [194, 271, 47, 29],
+    "DIE": [251, 255, 35, 45], "DROWN": [296, 257, 35, 43],
+    "CONT1": [341, 272, 38, 28], "CONT2": [380, 272, 37, 28], "CONT3": [418, 272, 37, 28],
+    "ICON1": [523, 277, 16, 23], "ICON2": [540, 277, 16, 23],
+    "END1": [2, 325, 23, 40], "END2": [26, 325, 27, 40], "END3": [54, 322, 28, 43], "END4": [83, 325, 31, 40],
+    "END5": [115, 325, 31, 40], "END6": [147, 332, 29, 33],
+    "END_MEDIUM": [183, 322, 71, 65],
+    "_END_MEDIUM": "ENDING 7 is [177, 322, 77, 65]; its 6 leftmost columns are cut to fit the 71 px pose box",
+    "END_BIG": [255, 322, 154, 133],
+    "HUD_1UP": [465, 284, 48, 16],
+    "_HUD_1UP": "1-UP: his head (16x16, black rows above and below), the BEAN tag, the x",
+    "GOAL_SIGN": [566, 252, 48, 32]
+  },
+
+  "animations": {
+    "_animations": "the base's animation name -> frames (names above, in order) and options. anchor center: centred on the hitbox (balls, falls); align: nudge frames to overlap the first; loop: loop point; rot: rotation mode; speed / hitbox override the template's",
+    "Stopped": {"frames": ["STAND"]},
+    "Waiting": {"frames": ["IDLE1", "IDLE2"], "loop": 0},
+    "Looking Up": {"frames": ["UP"]},
+    "Looking Down": {"frames": ["DUCK"]},
+    "Walking": {"frames": ["WALK1", "WALK2", "WALK3", "WALK4", "WALK5", "WALK6",
+                           "WALKA1", "WALKA2", "WALKA3", "WALKA4", "WALKA5", "WALKA6"]},
+    "Running": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4", "RUNA1", "RUNA2", "RUNA3", "RUNA4"]},
+    "Skidding": {"frames": ["SKID1", "SKID2"], "align": true},
+    "Super Peel Out": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"], "rot": 2},
+    "Spin Dash": {"frames": ["DASH1", "DASH2", "DASH3", "DASH4", "DASH5"]},
+    "Jumping": {"frames": ["TURN1", "BALL", "TURN2", "BALL", "TURN3", "BALL", "TURN4", "BALL"], "anchor": "center"},
+    "Bouncing": {"frames": ["SPRING"], "anchor": "center"},
+    "Hurt": {"frames": ["HURT1"], "anchor": "center"},
+    "Dying": {"frames": ["DIE"], "anchor": "center"},
+    "Drowning": {"frames": ["DROWN"], "anchor": "center"},
+    "Fan Rotate": {"frames": ["FAN1", "FAN2", "FAN3"], "anchor": "center"},
+    "Breathing": {"frames": ["GASP"], "anchor": "center"},
+    "Pushing": {"frames": ["PUSH1", "PUSH2", "PUSH3", "PUSH4"], "align": true},
+    "Flailing 1": {"frames": ["BAL1", "BAL2"], "align": true},
+    "Flailing 2": {"frames": ["BAL1", "BAL2"], "align": true},
+    "Hanging": {"frames": ["PIPE1", "PIPE2"], "anchor": "center"},
+    "Clinging On": {"frames": ["PIPE1", "PIPE2"], "anchor": "center"},
+    "Corkscrew H": {"frames": ["TURN1", "TURN2", "TURN3", "TURN4"]},
+    "Water Slide": {"frames": ["HURT1", "HURT2"], "anchor": "center"},
+    "Continue": {"frames": ["CONT1", "CONT2", "CONT3"]},
+    "Continue Up": {"frames": ["UP"]},
+    "Super Transform": {"frames": ["IDLE1", "IDLE2"]}
+  },
+
+  "animations_sonic2": {
+    "_animations_sonic2": "only on Sonic 2's list (also feeds Sonic CD and S3&K, which are built from the Sonic 2 config)",
+    "Bored!": {"frames": ["IDLE1", "IDLE2"], "loop": 0},
+    "Flailing 3": {"frames": ["BAL1", "BAL2"], "align": true},
+    "Grabbed": {"frames": ["HURT1", "HURT2"], "anchor": "center"},
+    "Twirl H": {"frames": ["TURN1", "TURN2", "TURN3", "TURN4"], "rot": 2},
+    "Launcher": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 1": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 2": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 3": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 4": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 5": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]},
+    "3D Ramp 6": {"frames": ["RUN1", "RUN2", "RUN3", "RUN4"]}
+  },
+
+  "ability_animations": {
+    "_ability_animations": "NoSwap's own slots after the base's list: 41 the jump ability (attack), 42 hover, 43 / 44 the Y move on the ground / in the air (see docs/character-json.md)",
+    "41": {"name": "Leap", "frames": ["LEAP"], "anchor": "center", "speed": 120, "hitbox": 1},
+    "43": {"name": "Bomb Throw", "frames": ["HIGH1", "HIGH2", "HIGH3", "LOW1", "LOW2", "LOW3"], "speed": 0},
+    "44": {"name": "Bomb Throw Air", "frames": ["HIGH1", "HIGH2", "HIGH3", "LOW1", "LOW2", "LOW3"], "anchor": "center", "speed": 0}
+  },
+
+  "special_stage": {
+    "_special_stage": "Sonic 1's special stage animation (his ball)",
+    "Special Stage": {"frames": ["TURN1", "BALL", "TURN2", "BALL", "TURN3", "BALL", "TURN4", "BALL"], "anchor": "center"}
+  },
+
+  "s3k_victory": {
+    "_s3k_victory": "S3&K act clear: the build-up, then the last frame held (the sheet's ENDING: a fist out, shouting)",
+    "frames": ["END1", "END3"]
+  },
+
+  "ui": {
+    "_ui": "the sheet's own HUD art. An element is a frame name or a rect; trim false keeps its empty edges; remap +128 moves colours 1-15 to the UI sheet's 129-143",
+    "life_icon": {"rect": [465, 284, 16, 16], "trim": false},
+    "life_name": {"rect": [482, 285, 31, 7]},
+    "monitor_1up": {"rect": [465, 285, 16, 14], "trim": false},
+    "sign_face": {"frame": "GOAL_SIGN", "trim": false},
+    "mini_1": {"frame": "ICON1", "remap": "+128"},
+    "mini_2": {"frame": "ICON2", "remap": "+128"}
+  },
+
+  "ending": {
+    "_ending": "Sonic 1's ending: idle, three poses (small, medium, large), six good-ending frames",
+    "end_idle": {"frame": "STAND", "remap": "+128"},
+    "end_pose_1": {"frame": "END6", "remap": "+128"},
+    "end_pose_2": {"frame": "END_MEDIUM", "remap": "+128"},
+    "end_pose_3": {"frame": "END_BIG", "remap": "+128"},
+    "good_1": {"frame": "END1", "remap": "+128"},
+    "good_2": {"frame": "END2", "remap": "+128"},
+    "good_3": {"frame": "END3", "remap": "+128"},
+    "good_4": {"frame": "END4", "remap": "+128"},
+    "good_5": {"frame": "END5", "remap": "+128"},
+    "good_6": {"frame": "END6", "remap": "+128"}
+  },
+
+  "abilities": {
+    "_abilities": "moves from the shared list (tools/abilities.py's docstring) and their numbers. Speeds are 16.16 fixed point: \"0x30000\" is 3 px per frame (hex strings are allowed anywhere a number is)",
+    "abilities": ["double_jump", "melee"],
+    "double_jump": 0.85,
+    "_double_jump": "Leap: a second jump at 0.85x his jump, once per jump, in the LEAP pose (slot 41)",
+    "melee_sfx": "Insta Shield",
+    "melee_sfx_s3k": "Global/InstaShield.wav",
+    "melee_reach": [10, 10, 10, 10, 10, 10],
+    "melee_ticks": 3,
+    "melee_stop": true,
+    "_melee": "only the throw pose (slots 43 / 44) and S3&K's fallback if its shot system is off; he stops to throw on the ground",
+    "shot": {
+      "_shot": "Bomb Throw: low by default (bouncing along the floor), up held: the high lob. 2 out at once, gone at a wall, after 2 s or at the first hit",
+      "motion": "bounce", "speed": "0x30000", "start_vy": "-0x20000", "gravity": "0x3800", "bounce": "-0x30000",
+      "max_fall": "0x60000", "lifetime": 120, "max_alive": 2, "cooldown": 12, "pose": 10, "x": 12, "y": -4,
+      "radius": 5,
+      "up": {"speed": "0x20000", "start_vy": "-0x60000", "pose_frame": 2},
+      "art": {"sheet": "../Bean.png", "drawing": [112, 76, 8, 10], "crop": true, "background": ["#b490fc"],
+              "turns": ["none", "flip_x"], "ticks": 6, "hitbox": [-6, -6, 6, 6]},
+      "s3k": {"sound": "Global/HammerThrow.wav"},
+      "v4": {"sound": "Insta Shield"},
+      "cd": {"sound": "SFX_G_HAMMERDASH"}
+    }
+  }
+}

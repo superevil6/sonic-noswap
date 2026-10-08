@@ -1,0 +1,506 @@
+{
+  "format": "noswap-character/1",
+  "_about": "NiGHTS (NiGHTS into Dreams): a separate download (flags.crossover). Made with the toolset (noswap detect for the frames, the editor's palette proposal); the free flight is abilities.py free_flight (tools/free_flight.py). Keys starting with _ are comments.",
+  "id": "nights",
+  "key": "noswap.nights",
+  "name": "NIGHTS",
+  "full_name": "NiGHTS (NiGHTS into Dreams)",
+  "credits": {
+    "short": "Sprites: Hyperknux6",
+    "full": "NiGHTS (Sonic 3-Style) custom sprites by Hyperknux6, The Spriters Resource (custom_edited/nightscustoms asset 16645); NiGHTS (c) Sega / Sonic Team",
+    "artists": [
+      "Hyperknux6"
+    ],
+    "url": "https://www.spriters-resource.com/custom_edited/nightscustoms/asset/16645/",
+    "terms": "no credit needed",
+    "_terms": "the sheet's own words; credited anyway"
+  },
+  "sheet": {
+    "file": "NiGHTS_S3style.png",
+    "background": [
+      "#ffffff"
+    ],
+    "_background": "the white page (his near-whites #f7f7f7 / #f4f4f4 are art, kept)",
+    "feet_y": 20
+  },
+  "base": "sonic",
+  "flags": {
+    "super": false,
+    "drop_dash": false,
+    "roll": false,
+    "no_roll": false,
+    "private": false,
+    "crossover": true
+  },
+  "card": null,
+  "games": {
+    "sonic1": true,
+    "sonic2": true,
+    "soniccd": true,
+    "s3k": true,
+    "mania": true
+  },
+  "palette": {
+    "own": {
+      "74": "#7e00a8",
+      "75": "#6d0086",
+      "76": "#9f5400",
+      "77": "#f7b154",
+      "78": "#f7e586",
+      "79": "#9700cb",
+      "80": "#cbd4d4",
+      "81": "#202020",
+      "82": "#e6e600",
+      "83": "#ffff00",
+      "84": "#2d182d",
+      "85": "#9f2686",
+      "86": "#c0c0e0",
+      "87": "#e52e27",
+      "88": "#f7f7f7",
+      "89": "#606080",
+      "90": "#a0a0c0",
+      "91": "#f4f4f4",
+      "92": "#ee35cb",
+      "93": "#ff00ff",
+      "94": "#f78697"
+    },
+    "_own": "from the editor's Fill from sheet (backend.palette_fill): every colour exact, none merged",
+    "shared": {
+      "#e0e0e0": 6,
+      "#800000": 13,
+      "#e00000": 12,
+      "#a06040": 11,
+      "#404040": 9
+    },
+    "other_colours": "nearest",
+    "strict": true
+  },
+  "frames": {
+    "STAND1": [
+      11,
+      9,
+      32,
+      40
+    ],
+    "FLOAT1": [
+      45,
+      2,
+      29,
+      46
+    ],
+    "STAND2": [
+      86,
+      6,
+      32,
+      40
+    ],
+    "FLOAT2": [
+      128,
+      6,
+      29,
+      46
+    ],
+    "FLY1": [
+      11,
+      57,
+      38,
+      33
+    ],
+    "FLY2": [
+      58,
+      62,
+      43,
+      23
+    ],
+    "DRILL1": [
+      112,
+      55,
+      35,
+      39
+    ],
+    "DRILL2": [
+      155,
+      57,
+      35,
+      39
+    ],
+    "DRILL3": [
+      195,
+      60,
+      35,
+      39
+    ],
+    "DRILL4": [
+      244,
+      56,
+      35,
+      39
+    ],
+    "SWIM1": [
+      4,
+      112,
+      43,
+      23
+    ],
+    "SWIM2": [
+      65,
+      112,
+      43,
+      23
+    ],
+    "SWIM3": [
+      112,
+      113,
+      51,
+      22
+    ],
+    "SWIM4": [
+      177,
+      112,
+      51,
+      22
+    ],
+    "SWIM5": [
+      235,
+      115,
+      51,
+      22
+    ],
+    "SWIM6": [
+      4,
+      149,
+      51,
+      22
+    ],
+    "SWIM7": [
+      63,
+      148,
+      51,
+      22
+    ],
+    "SWIM8": [
+      130,
+      151,
+      51,
+      22
+    ],
+    "SWIM9": [
+      194,
+      149,
+      51,
+      25
+    ],
+    "SWIM10": [
+      255,
+      145,
+      49,
+      30
+    ],
+    "LOOP_R": [
+      96,
+      319,
+      38,
+      33
+    ],
+    "LOOP_UR": [
+      145,
+      260,
+      29,
+      44
+    ],
+    "LOOP_U": [
+      128,
+      206,
+      33,
+      38
+    ],
+    "LOOP_UL": [
+      86,
+      178,
+      44,
+      29
+    ],
+    "LOOP_L": [
+      40,
+      181,
+      38,
+      33
+    ],
+    "LOOP_DL": [
+      9,
+      219,
+      29,
+      44
+    ],
+    "LOOP_D": [
+      10,
+      276,
+      33,
+      38
+    ],
+    "LOOP_DR": [
+      38,
+      325,
+      44,
+      29
+    ]
+  },
+  "animations": {
+    "_animations": "no walk or run art: he floats. The walk is his floating frames and the run his flying ones, both turned with his speed at runtime (float_lean); no hurt or death art: floating frames",
+    "Stopped": {
+      "frames": [
+        "STAND1"
+      ]
+    },
+    "Waiting": {
+      "frames": [
+        "STAND1",
+        "STAND2"
+      ],
+      "speed": 16
+    },
+    "Walking": {
+      "frames": [
+        "FLOAT1",
+        "FLOAT2"
+      ],
+      "rot": 1,
+      "hold": 4
+    },
+    "Running": {
+      "frames": [
+        "FLY1",
+        "FLY2"
+      ],
+      "rot": 1,
+      "hold": 4
+    },
+    "Super Peel Out": {
+      "frames": [
+        "FLY1",
+        "FLY2"
+      ],
+      "rot": 1,
+      "hold": 4
+    },
+    "Skidding": {
+      "frames": [
+        "STAND2"
+      ]
+    },
+    "Looking Up": {
+      "frames": [
+        "FLOAT2"
+      ]
+    },
+    "Looking Down": {
+      "frames": [
+        "STAND1"
+      ]
+    },
+    "Bouncing": {
+      "frames": [
+        "FLOAT1",
+        "FLOAT2"
+      ],
+      "hold": 4
+    },
+    "Hurt": {
+      "frames": [
+        "FLOAT2"
+      ]
+    },
+    "Dying": {
+      "frames": [
+        "FLOAT1"
+      ]
+    },
+    "Drowning": {
+      "frames": [
+        "FLOAT1"
+      ]
+    }
+  },
+  "animations_sonic2": {},
+  "ability_animations": {
+    "_ability_animations": "41 the Drill Dash (an attack): its 4 blur frames; 42 the flight (not an attack): 0-7 the paraloop's 8 headings (0 right, counterclockwise), 8-17 the swim cycle (underwater, flying level). The code picks the frame (speed 0)",
+    "41": {
+      "name": "Drill Dash",
+      "frames": [
+        "DRILL1",
+        "DRILL2",
+        "DRILL3",
+        "DRILL4"
+      ],
+      "anchor": "center",
+      "speed": 0
+    },
+    "42": {
+      "name": "Flight",
+      "frames": [
+        "LOOP_R",
+        "LOOP_UR",
+        "LOOP_U",
+        "LOOP_UL",
+        "LOOP_L",
+        "LOOP_DL",
+        "LOOP_D",
+        "LOOP_DR",
+        "SWIM1",
+        "SWIM2",
+        "SWIM3",
+        "SWIM4",
+        "SWIM5",
+        "SWIM6",
+        "SWIM7",
+        "SWIM8",
+        "SWIM9",
+        "SWIM10"
+      ],
+      "anchor": "center",
+      "speed": 0
+    }
+  },
+  "s3k_victory": {
+    "frames": [
+      "STAND1",
+      "FLOAT1",
+      "LOOP_U"
+    ],
+    "pose": 2
+  },
+  "ui": {
+    "life_icon": {
+      "rect": [
+        22,
+        13,
+        16,
+        16
+      ],
+      "trim": false
+    },
+    "monitor_1up": {
+      "rect": [
+        22,
+        14,
+        16,
+        14
+      ],
+      "trim": false
+    },
+    "mini_1": {
+      "rect": [
+        22,
+        13,
+        16,
+        16
+      ],
+      "remap": "+128"
+    },
+    "mini_2": {
+      "rect": [
+        22,
+        13,
+        16,
+        16
+      ],
+      "remap": "+128"
+    }
+  },
+  "ending": {
+    "end_idle": {
+      "frame": "STAND1",
+      "remap": "+128"
+    },
+    "end_pose_1": {
+      "frame": "FLOAT1",
+      "remap": "+128"
+    },
+    "end_pose_2": {
+      "frame": "FLY1",
+      "remap": "+128"
+    },
+    "end_pose_3": {
+      "frame": "LOOP_U",
+      "remap": "+128"
+    },
+    "good_1": {
+      "frame": "STAND1",
+      "remap": "+128"
+    },
+    "good_2": {
+      "frame": "FLOAT1",
+      "remap": "+128"
+    },
+    "good_3": {
+      "frame": "STAND2",
+      "remap": "+128"
+    },
+    "good_4": {
+      "frame": "FLOAT2",
+      "remap": "+128"
+    },
+    "good_5": {
+      "frame": "FLY1",
+      "remap": "+128"
+    },
+    "good_6": {
+      "frame": "FLY2",
+      "remap": "+128"
+    }
+  },
+  "ball": {
+    "size": "medium",
+    "colours": {
+      "outline": "#2d182d",
+      "dark": "#6d0086",
+      "mid": "#7e00a8",
+      "light": "#9700cb",
+      "shine": "#f7f7f7"
+    },
+    "use_for": [
+      "Jumping",
+      "Spin Dash",
+      "Rolling",
+      "Special Stage"
+    ],
+    "_colours": "his own purples (auto picked the pink #ee35cb as the light shade)"
+  },
+  "abilities": {
+    "_abilities": "free_flight: tools/free_flight.py (S1/S2/CD), native/src/NightsFlight.h (S3&K), native/mania/src/ManiaNights.h (Mania)",
+    "abilities": [
+      "free_flight"
+    ],
+    "fly_speed": "0x50000",
+    "_fly_speed": "5 px a frame at most in flight (Sonic's top speed is 6)",
+    "fly_accel": "0x3000",
+    "fly_drag": "0x1800",
+    "fly_turn": 8,
+    "_fly_turn": "degrees a frame: a full loop in 45 frames",
+    "fly_meter": 360,
+    "_fly_meter": "6 s of flight; drains 1 a frame (not underwater), refills 6 a frame on the ground, +60 a ring",
+    "fly_drain": 1,
+    "fly_refill": 6,
+    "fly_ring": 60,
+    "fly_sink": "0x10000",
+    "_fly_sink": "empty: he floats down at 1 px a frame at most",
+    "fly_swim_frames": 10,
+    "fly_swim_ticks": 4,
+    "drill_frames": 20,
+    "drill_speed": "0xA0000",
+    "drill_cooldown": 20,
+    "drill_cost": 30,
+    "drill_sfx": "Release",
+    "drill_sfx_s3k": "Global/Release.wav",
+    "drill_sfx_cd": "SFX_G_RELEASE",
+    "loop_points": 12,
+    "loop_every": 5,
+    "loop_close": 24,
+    "loop_min": 40,
+    "loop_hit": 3,
+    "_loop": "the Paraloop: a sample of his path every 5 frames (the last 12); back within 24 px of one 4+ samples old, round a loop at least 40 px wide and tall: everything inside is hit (3 frames)",
+    "float_lean": 5,
+    "float_lean_max": 24,
+    "_float_lean": "the walk / run turned toward his travel by his speed (Mephiles' runtime tilt), 24/512 of a turn at most"
+  }
+}

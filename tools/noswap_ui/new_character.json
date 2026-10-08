@@ -1,0 +1,41 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Made with the NoSwap character editor, from Bean's layout; docs/character-json.md explains every key. Keys starting with _ are comments.",
+  "id": "",
+  "key": "",
+  "name": "",
+  "full_name": "",
+  "credits": {
+    "short": "",
+    "full": "",
+    "artists": [],
+    "url": "",
+    "terms": "",
+    "_terms": "copy the sheet's terms word for word"
+  },
+  "sheet": {
+    "file": "",
+    "background": [],
+    "_background": "the sheet's empty colours (guessed from its corners: check them)",
+    "feet_y": 20
+  },
+  "base": "sonic",
+  "flags": {"super": false, "drop_dash": false, "roll": false, "no_roll": false, "private": false, "crossover": false},
+  "card": null,
+  "games": {"sonic1": true, "sonic2": true, "soniccd": true, "s3k": true, "mania": true},
+  "palette": {
+    "own": {},
+    "_own": "slot -> colour: the character's own colours, in slots 74-95",
+    "shared": {"#000000": 1},
+    "other_colours": "nearest",
+    "strict": false
+  },
+  "frames": {},
+  "animations": {},
+  "animations_sonic2": {},
+  "ability_animations": {},
+  "special_stage": {},
+  "ui": {},
+  "ending": {},
+  "abilities": {"abilities": []}
+}

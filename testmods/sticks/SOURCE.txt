@@ -1,0 +1,23 @@
+Sticks the Badger sprite sheet, uploaded by SilverWarudo33:
+https://www.deviantart.com/silverwarudo33/art/Sticks-Sprite-Sheet-by-NeoFireSonic-848604044 (from "Sticks2 Link.txt").
+Sheet: testmods/Sticks2.png (929x1406, #0088ff background), read in place (no copy here).
+
+Credit, verbatim from the page:
+"Sprite by Neo-Fire-Sonic and UberHawg. Ripped from Sonic Legends."
+(The page adds: "Give Credit or else".)
+
+PERMISSION PENDING: the user is checking with the artists (2026-09-27). Until they agree she is PRIVATE
+(tools/extras.py "private": True): built for local testing only, never released, not in the README's character
+list or credits. Credit in release, once allowed:
+  Sticks the Badger: "Sprite by Neo-Fire-Sonic and UberHawg. Ripped from Sonic Legends." Sticks the Badger (c) SEGA.
+
+Not used: the big official Sticks portrait at the top right (SEGA's Sonic Boom art) and the small head icon touching
+it. Her select-card picture is her own standing sprite (the "Stopped" frame), like every other extra's.
+
+What we do: frames are cut (the "!" over one waiting frame is cut with her) and enlarged 1.2x, nearest-neighbour
+(the sheet draws her about 32 px tall against Sonic's 40; the user approved this for her only, 2026-09-27). The HUD
+icons are 16-px crops of her enlarged front-on head; the signpost shows that pose's head and shoulders on the game's
+own board (Items2). The "STICKS" HUD name tag isn't on the sheet: our own lettering in the HUD font the other extras
+use. Her jump, Spin Dash and special-stage ball are Tails' own ball (SEGA's, from each game's Tails) in her colours
+(tools/sonic_ball.py). Palette: the built frames use 22 colours, each kept exactly in the extras' own slots 74-95.
+Nothing is merged, redrawn or recoloured.

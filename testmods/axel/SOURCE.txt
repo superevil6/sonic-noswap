@@ -1,0 +1,20 @@
+Axel Stone (Streets of Rage 2 / Bare Knuckle II, Sega Mega Drive / Genesis)
+
+Sheet: SoR2_Axel.png, "Axel", ripped by Yawackhary, The Spriters Resource, asset 10976
+(https://www.spriters-resource.com/sega_genesis/sor2/asset/10976/). The asset page states no terms of its own (checked
+2026-10-02).
+Its own words (the sheet's footer): "Axel - Streets of Rage 2/Bare Knuckle II (Mega Drive/Genesis) Ripped by
+Yawackhary, no credit needed but don't steal. Sprites: Sega / Ancient"
+
+Credited anyway (README, the Origins card: "Sprites: Yawackhary (tSR)").
+
+Used as drawn (faithful art rule): crops of his frames, mirrored (the sheet draws him facing left), no scaling: he's
+about 77 px tall against Sonic's 40 (Joe Musashi is 61), so his Origins card is his standing frame at 4x instead of 8x.
+His drop shadow (#000000, a separate object in the game) is left out as background; no colour is changed or merged
+(14 colours, all exact, in Origins and Mania). His HUD head, 1-UP head and the continue-screen minis are crops of his
+standing frames (the shared boxes are 16x16 and 36x48); the signpost is his head on the official board (1.5x
+nearest-neighbour, the signpost exception). The UI and ending crops face left as drawn (they can't be mirrored). His
+Sonic 1 ending poses are his crouching / kneeling / squatting frames (the shared ending boxes are about 60-68 px tall).
+His spin ball is Sonic Mania's plain ball (SEGA) in his jeans blues, shirt white and skin.
+
+A separate download (character.json flags.crossover). Streets of Rage and Axel Stone (c) SEGA (sprites: Sega / Ancient).

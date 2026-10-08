@@ -1,0 +1,35 @@
+Ecco the Dolphin sprite sheets, both from The Spriters Resource, both ripped by arkonviox. The pages give no usage terms.
+
+1. USED: "Ecco & Dolphins", Ecco: The Tides of Time (Sega Genesis), asset 141831:
+   https://www.spriters-resource.com/sega_genesis/eccothetidesoftime/asset/141831/
+   Sheet: testmods/ecco/Ecco_TidesOfTime.png (1853x2260, RGBA, cyan #00ffff background; the user supplied it), read in
+   place. Genesis art at 1x: he's 73 x 26 px swimming sideways, about 55 x 53 diagonally, 30 x 69 upright.
+   12 colours of his own (all exact in his slots 74-85, none merged), plus the credit line's navy #000040.
+
+2. UNUSED: Ecco the Dolphin (PC), asset 12683:
+   https://www.spriters-resource.com/pc_computer/eccodolphin/asset/12683/
+   Sheet: testmods/ecco/Ecco.png (3381x3630). The PC version's high-resolution art at its own size (not pixel-doubled):
+   145 x 54 px sideways. Too large: his 8-direction swim alone needs 12 of the 8 player sheets Sonic 1/2/CD allow, and
+   he'd be a third of the screen wide. Shrinking it would break the faithful-art rule, so the Genesis sheet is used.
+
+Credit in release: Ecco the Dolphin (Ecco: The Tides of Time): ripped by arkonviox, The Spriters Resource; Ecco the
+Dolphin / Ecco: The Tides of Time (c) Sega / Novotrade. A separate download (extras.py "crossover").
+
+Layout of Ecco_TidesOfTime.png (the PC sheet has the same layout), rows from the top ("r<row>" in make_configs.py):
+  r0-r7    swim cycles, 6 frames each: r0 right, r1 down-right, r2 down, r3 down-left, r4 left, r5 up-left, r6 up,
+           r7 up-right. The sheet's own mirror copies: r4 = r0 and r3 = r1 and r5 = r7 mirrored left-right, r6 = r2
+           mirrored top-bottom (pixel for pixel).
+  r8-r11   shrink rows (9 / 14 frames): turning toward or away from the viewer and back
+  r12-r13  full turns, 32 angles each (no swim cycle)
+  r14-r15  a turn round through a curl, 29 frames each
+  r16      the charge's blur streak alone, 8 directions (same order as r0-r7)
+  r17-r24  the charge, 8 frames per direction (straight, bend, coil, uncoil, straight, blur streak), same order
+  r25      a somersault, 8 frames (a full turn, curled)
+  r26      a curl shrinking into the distance, 8 frames
+  bottom right: the ripper's credit line (8 px letters)
+
+What we do (make_configs.py): frames cut whole, as drawn, and positioned (aligned on each other where their shapes
+overlap most, or on their centroid); Dying is the sideways frame turned half round (belly up). Nothing is redrawn,
+recoloured or resized. The HUD icon is a 16x16 crop of his head from the sideways frame; the signpost is his front half
+on the game's own board, 1x; the Origins card is the up-right swim's second frame at 8x (pixel-exact). The "ECCO" HUD tag
+isn't on the sheet: Rayan C.'s HUD font, as the other extras'.

@@ -1,0 +1,21 @@
+Mephiles the Dark sprite sheet by Gardow:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/18326/ (from "Mephiles Link.txt").
+Sheet: testmods/Mephiles.png (675x652, sky-blue #09c2ff background), read in place (no copy here).
+
+Credits, verbatim from the sheet (top right): "Credits: Gardow, Xeric, Fox Omega, Charity, Domenico."
+The sheet's title: "MEPHILES THE DARK". No other usage terms are printed on the sheet: credit everyone listed.
+
+Credit (README, when integrated):
+  Mephiles the Dark sprites by Gardow (sheet credits: Gardow, Xeric, Fox Omega, Charity, Domenico). Mephiles (c) SEGA:
+  https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/18326/
+
+Status: PREPARED 2026-09-28 (make_configs.py), not yet in extras.py / abilities.py, never built.
+
+What we do: frames are cut as drawn (no scaling: he stands 40-42 px, floats 44-46; Sonic is about 40). The HUD icons are
+16-px crops of the sheet's loose front-view head; the signpost shows that head on the game's own board (Items2), 1.1x
+nearest-neighbour (the signpost exception). The "MEPHILES" HUD tag isn't on the sheet: our own lettering in the HUD
+font the other extras use. His jump, Spin Dash and special-stage ball is Sonic Mania's plain spin ball (SEGA / Sonic Team) in his
+blues (tools/generic_ball.py, not the artists' art: the sheet has no ball). The Y shot's art is the sheet's own dark orb
+(SFX section). Not used: the Shadow-form frames (21 colours of their own), the big spheres, streaks and aura puffs.
+Palette: 22 colours on the used frames, black in Sonic's slot 1 and the other 21 exact in slots 74-94; nothing merged,
+redrawn, smoothed or recoloured.

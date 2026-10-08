@@ -1,0 +1,34 @@
+John Morris (Castlevania: Bloodlines, Sega Genesis) sprite sheets, both from The Spriters Resource, downloaded by the user:
+
+1. "Castlevania: Bloodlines - John Morris", asset 5797: https://www.spriters-resource.com/sega_genesis/cvbl/asset/5797/
+   Sheet: testmods/john-morris/JohnMorris.png (1344x784), read in place.
+   Text on the sheet (its credits box), exactly as written:
+   "Original assets by Konami. Orig. rip by Badbatman3, re-ripped by UltraHype97. Give credit if used!"
+   Usage terms: credit if used.
+
+2. "Castlevania: Bloodlines - Items and Subweapons", asset 5796: https://www.spriters-resource.com/sega_genesis/cvbl/asset/5796/
+   Sheet: testmods/john-morris/Items.png (384x240), read in place.
+   Text on the sheet, exactly as written:
+   "Items and Subweapons - Castlevania: Bloodlines/Castlevania: The New Generation. Extracted by Yawackhary, no credit
+   needed but don't steal. Sprites: Konami"
+   Usage terms: no credit needed, don't steal (credited anyway).
+
+Credit in release: John Morris (Castlevania: Bloodlines): original rip by Badbatman3, re-ripped by UltraHype97; items and
+sub-weapons extracted by Yawackhary; The Spriters Resource; sprites (c) Konami.
+A separate download (extras.py "crossover"): shipped only as his own mod, never in the all-in-one bundle.
+
+What we do (make_configs.py): Genesis art at 1x (he stands 42-46 px). Frames are cut whole, as drawn (build/source.png is a
+working copy with each used frame's pixels copied exactly into a cell of its own). The whip is baked, not drawn at runtime:
+the sheet's "Assembled whip anims." rows show the LV1 leather whip in place round grey silhouettes of his attack frames; for
+each of them his real attack frame is put where its silhouette is (the offset where their shapes overlap best) and the
+whip's own pixels, as that row places them, go on top (existing pixels pasted together; nothing redrawn). Ground (ATK2-4),
+crouch (CATK2-4), aim up (AIMUP1-2, the whip diagonally up) and aim down (AIMDN1-2, the whip hanging straight down, as the
+sheet has it). The sub-weapons are Items.png's own drawings, cut as drawn: the thrown axe (its upright and level drawings,
+each also turned half round: a full turn in four frames), the cross (Bloodlines' boomerang-cross, its four red spinning
+drawings), the tossed holy water vial and the blue flames (the wide and the tall flame). Items.png's colours are the same
+Genesis colours as the John sheet's, converted a shade differently (e.g. #210021 / #200020): they draw with his nearest own
+colour (within 5 of 255 per channel). Not used: the stairs, the grapple / swing (not wanted), the Death palettes (a palette
+dissolve), whips LV2-4 (no upgrades), the tweaked sprites, the other items. The HUD icon is his idle frame's head cropped to
+16x16; the signpost is that head on the game's own board, at 1x. The "JOHN" HUD tag isn't on the sheet: our lettering in
+the HUD font the other extras use. His colours are the sheet's 15, all exact in his own slots (none merged). Nothing is
+redrawn, recoloured or resized.

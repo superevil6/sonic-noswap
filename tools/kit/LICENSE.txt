@@ -1,0 +1,24 @@
+NoSwap Creator Kit
+Copyright (c) 2026 Superevil (NoSwap)
+
+The kit's own code (the editor, the NoSwap tools in app/, the program) is free to use, copy and share, unchanged or
+changed, for NON-COMMERCIAL purposes only, as long as this notice is kept. Characters you make with it are yours (and
+your sprite artists'): share them freely, never sell them.
+
+THE KIT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM ITS USE. Keep backups of your saves and your work.
+
+The kit contains no game files. It reads your own copies of Sonic Origins and Sonic Mania only to build your
+characters. Sonic the Hedgehog, Sonic Origins, Sonic Mania and their characters are (c) SEGA. This is an unofficial fan
+tool: it isn't affiliated with or endorsed by SEGA.
+
+Third-party parts, each under its own licence (the texts are in licenses/):
+- Python (Python Software Foundation License): the interpreter the program carries.
+- Pillow (MIT-CMU licence) and NumPy (BSD 3-Clause): image handling.
+- PyInstaller's bootloader (GPL 2.0 with the bootloader exception, which allows distributing programs built with it).
+- Windows only: pywebview (BSD 3-Clause), pythonnet and clr_loader (MIT), bottle (MIT), proxy_tools (MIT): the editor's
+  window, through Microsoft Edge WebView2 (part of Windows).
+- Rayan C.'s "Sonic 1 Title Card / HUD / General Font (Expanded)" (app/testmods/_fonts): a fan sprite sheet, shared by
+  its author with "credit appreciated"; credited in CREDITS.md.
+- tools/rsdk5_extract.py ports the RSDKv5 decompilation's data pack reader (RSDKv5 decompilation by Rubberduckycooly and
+  chuliRMG, under the RSDKv5 Decompilation License: non-commercial, with credit).

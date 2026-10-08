@@ -1,0 +1,10 @@
+MagicEarth1.wav = "gaii_sfx/22_magic_earth_1.wav", extracted alone (unchanged) from the zip of:
+  Golden Axe II (Sega Genesis), "Sound Effects", The Sounds Resource, asset 416256
+  https://www.sounds-resource.com/sega_genesis/goldenaxe2/asset/416256/
+  Uploaded By: Unstabledproton (submitted July 14, 2019). No ripper named.
+  Terms: none stated on the page, and the zip has no readme (credited anyway).
+Used for: Gilius' Earthquake cast (pots_cast_sfx_s3k: Sonic 3 & Knuckles and Sonic Mania).
+Note: a substitute. The task asked for Golden Axe (arcade or Genesis); the Genesis Golden Axe pack (asset 396673) has
+only numbered files (01-37.wav), so no clip could be picked by name, and the arcade game has no sound assets there.
+Golden Axe II names its clips; "magic_earth" is Gilius' earth magic in Golden Axe II (his Earthquake art is from it too).
+It's the magic's sound effect, not a voice cry. Golden Axe II (c) SEGA.

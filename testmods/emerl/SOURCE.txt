@@ -1,0 +1,40 @@
+Emerl sprite sheet by Xeric and Deebs, the Mod.Gen Project Team:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/143123/ (from "Emerl Link.txt").
+Sheet: testmods/Emerl.png (505x453, RGBA; sprite panel #95b1c8 on a #546d8e page, lime #a8e61d measuring lines), read
+in place (no copy here).
+
+Verbatim from the sheet:
+  "Emerl by Xeric and Deebs."
+  "If you'd like to expand upon these, go ahead! These are being archived incase anyone has any use for them."
+  "SHEET PERMISSIONS:
+   - Use these sheets for whatever you like! Fan games, sprite comics, flash animations, whatever.
+   - Give credit please to the "Mod.Gen Project Team"- it's the best way to say thank you and to let people know where
+     to find more sprites!
+   - All characters are (c) to their respective owners"
+
+Credit (README, when integrated):
+  Emerl sprites by Xeric and Deebs, the Mod.Gen Project Team. Emerl (c) SEGA:
+  https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/143123/
+
+Status: PREPARED 2026-09-28 (make_configs.py), not yet in extras.py / abilities.py, never built.
+
+What we do: only the default gold Emerl (not the 16 palette variants of the first two rows, nor the two older-style
+frames). Frames are cut as drawn (no scaling: he stands 43 px; Sonic is about 40, 39 on this sheet). The sheet has no
+walk, run or ball: stand-ins are chosen from his frames (make_configs.py), and his jump, Spin Dash and special-stage
+ball is Sonic Mania's plain spin ball (SEGA / Sonic Team) in his golds (tools/generic_ball.py, not the artists' art). The HUD icons are 16-px crops
+of one of the sheet's loose heads; the signpost shows that head on the game's own board (Items2), 1.1x
+nearest-neighbour (the signpost exception). The "EMERL" HUD tag isn't on the sheet: our own lettering in the HUD font
+the other extras use. Palette: 31 colours on the used frames; 3 exactly Sonic's (#e0e0e0, #e00000, #800000), 22 exact
+in slots 74-95, and 6 merged into their nearest slot (the colour exception: three near-blacks 1-3 RGB steps apart, two
+1-px shades, and #ee8627 into #f09030). Nothing redrawn, smoothed or recoloured.
+
+Copy heads (2026-09-29, the user's request): each Copycat move has one of the sheet's four loose variant heads (the right
+end of the heads row: [222,109,23,22], [296,109,20,22], [246,110,25,21], [273,113,20,18]), pasted as drawn onto his
+frames in place of the default head (copy_heads.py: exact pixels, placed by pixel match; nothing redrawn or recoloured).
+The Double Jump's pose is R5_10 turned 45 degrees by a pixel-art rotation (Scale2x x3 then nearest sampling: only his
+own colours, hard pixels), the user's request, as Fang's cork exception.
+
+Running energy ball (2026-09-30, the user: no AI-drawn art): our drawn disc replaced by Metal Sonic's own run ball, the
+"Hover" balls of Akimaca's Metal Sonic sheet (testmods/metal-sonic/249964.png: [329,117,12,12], [342,113,20,20],
+[363,109,28,28]; credited to Akimaca), exact pixels in the game's Sonic blues and white (slots 3-6, as Metal's config).
+Run 12/20/28/20, walk 12/20/20/12.

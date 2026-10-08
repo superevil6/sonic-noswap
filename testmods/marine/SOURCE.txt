@@ -1,0 +1,19 @@
+Marine the Raccoon (Sonic 3 style) custom sprite sheet by Nintendo_6444:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/111914/ (from "Marine Link.txt").
+Sheet: testmods/Marine.png (482x404, blue-grey #95b1c8 page, nothing labelled), read in place.
+
+Text on the sheet, exactly as written:
+"Credit goes to Deebs, FireX, Vol, Frario, and Rathe Ethransu for Various things. And me (Nintendo_6444) for making
+these. Just give credit."
+
+Usage terms: credit only.
+Credit in release: Marine the Raccoon sprites made by Nintendo_6444, with credit to Deebs, FireX, Vol, Frario and Rathe
+Ethransu. Marine the Raccoon (c) SEGA / Sonic Team.
+
+What we do: frames are cut whole (build/source.png is a working copy with each used frame's pixels copied exactly into
+a cell of its own); make_configs.py lists which rows are what. Her jump ball is her one ball drawing turned a quarter at
+a time. Her Anchor Throw's pose is the sheet's pointing frame; the anchor is the user's own drawing ("Marine's anchor: drawn by Superevil", testmods/marine/anchor_marine.png, recoloured by us into her greys at the user's say), its chain a line drawn at runtime. (The retired Electric Blast's sparks still reserve their palette slots.) The HUD icon is her face
+cropped to 16x16; the signpost shows that face on the game's own board, enlarged 1.3x (the user's signpost exception).
+The "MARINE" HUD tag isn't on the sheet: our lettering in the HUD font the other extras use. Nothing is redrawn or
+recoloured; her frames have more colours than the 22 own slots, so the rarer shades share their nearest slot
+(make_configs.py prints the counts).

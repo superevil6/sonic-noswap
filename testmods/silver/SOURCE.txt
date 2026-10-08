@@ -1,0 +1,10 @@
+Silver (custom sheet)
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/111917/
+Uploaded by Gardow.
+Text on the sheet: "Sheet by Gardow. Additional credit goes to Xeric, Spyridon, Cyclone, Cylent Nite, DBurraki,
+Charity and Fox Omega"
+Usage terms: none written on the sheet beyond that credit (no permission line and no no-editing clause; Gardow's
+Shadow sheet, 18229, forbids edits, so we treat this one the same way). No sprite is redrawn or resized: frames
+are cut, the life icon and signpost head are crops, the head is set on the game's own signpost board, and the
+"SILVER" name tag is drawn from scratch.
+Credit in release: Gardow (sheet), with Xeric, Spyridon, Cyclone, Cylent Nite, DBurraki, Charity and Fox Omega.

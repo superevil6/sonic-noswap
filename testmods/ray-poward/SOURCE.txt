@@ -1,0 +1,23 @@
+Ray Poward (Contra: Hard Corps, Sega Genesis) sprite sheet, ripped by Eckles D. Fum (contributor Marksiks), The
+Spriters Resource: https://www.spriters-resource.com/sega_genesis/contrahc/asset/28048/
+Sheet: testmods/ray-contra/RayContra.png (985x631, RGB; green #00ff00 section panels on a blue #0000ff page, black
+section lines and labels, a teal #008080 text box), read in place (no copy here).
+
+Verbatim from the sheet (the teal box): "Anyways, Ray from Comtra: Hard Corps. Ripped by Eckles D. Fum. No need for
+credits but don't claim as your own."
+
+Usage terms: none beyond never claiming the sprites as ours. Credited anyway (the user's rule).
+Credit (README): Ray Poward (Contra: Hard Corps) ripped by Eckles D. Fum, with Marksiks, The Spriters Resource;
+Contra (c) Konami.
+
+A CROSSOVER character (extras.py "crossover": a separate download only, never in the all-in-one bundle). Not Ray the
+Flying Squirrel (testmods/ray, key noswap.ray): this one is testmods/ray-poward, key noswap.ray-poward, "RAY POWARD".
+
+What we do (make_configs.py): Genesis art at 1x (he stands 40 px). Frames are cut whole, as drawn (build/source.png is a
+working copy with each used frame's pixels copied exactly into a cell of its own). His jump and roll are the sheet's own
+somersault (four quarter turns of one drawing, as the sheet has them); no ball. The projectile is the sheet's weapon A
+bullet (6x6), cut exactly; its muzzle flashes, the laser, B, C and D aren't used. The signpost is the Misc portrait
+(inside its frame) on the game's own board, at 1x; the life icon / 1-UP are crops of the Misc standing frame's head.
+The "POWARD" HUD tag isn't on the sheet: our lettering in the HUD font the other extras use. Colours: his 16 exact in
+slots 74-89 (black is Sonic's slot 1), the bullet's and the portrait's shades exact in 90-95; one 1-px shade (#e0e0e0,
+the bullet's glint) merged into #f8f8f8. Nothing redrawn, recoloured or resized.

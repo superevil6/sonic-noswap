@@ -1,0 +1,20 @@
+Trip the Sungazer (Sonic Superstars) - "S1 Trip" custom sheet
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/227760/  (from "Trip Link.txt")
+Sheet: Trip.png (a copy of testmods/Trip.png)
+
+Credit block on the sheet, exactly (four lines):
+  "S1 Trip, by miniluv73 & Tarkan809"
+  "Credit to karlemerald, ritz_blitz09,"
+  "deltaconduit, _sumgaiondicord"
+  "+ those who helped with Trip 3&K"
+(The last handle reads "_sumgaiondicord" pixel for pixel; its fifth letter is the sheet font's odd "g" glyph.)
+Sheet legend: dark blue = "2013 exclusive", blue = "S1F exclusive", purple = "New sprites".
+
+Usage terms: none stated on the sheet beyond the credits; credit everyone above.
+What we do: frames are only cut (whole boxes; every box background colour, and the lime ground/wall marker
+bars, made transparent). Nothing is redrawn, resized, rotated or recoloured. Every colour keeps its exact value
+in a palette slot of its own (74-94); only black (#000000, and #080000) shares Sonic's slot 1. The HUD icon,
+"TRIP" name tag, continue minis and signpost board are the sheet's own; the signpost board sits under the
+game's own 2-row pole cap from Items2.gif.
+Credit in release: S1 Trip by miniluv73 & Tarkan809; thanks to karlemerald, ritz_blitz09, deltaconduit,
+_sumgaiondicord and those who helped with Trip 3&K. Trip the Sungazer and original sprites (c) SEGA / Sonic Team.

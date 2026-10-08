@@ -1,0 +1,4 @@
+Sonic 1 Title Card / HUD / General Font (Expanded), by Rayan C. (Rayan64_C), The Spriters Resource asset 493842:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/493842/
+Its note: "Credit on the custom sprites not required, but appreciated". Credited in the README.
+Save it as testmods/_fonts/Sonic1_Fonts_RayanC.png (tools/hud_font.py reads it): it isn't in the repository.

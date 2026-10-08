@@ -1,0 +1,13 @@
+(NO LONGER USED: Shadow now uses the Sonic Megamix sheet, see SOURCE.txt and make_configs.py.)
+Shadow (Sonic 3-Style), custom sheet by Gardow and others
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/18229/
+Uploaded by Gardow. (testmods/"Shadow Link.txt" points at a different asset; this is the sheet we use.)
+Credits on the sheet: "Project started by and original sprite made by Gardow. Bases made/ripped by Rathe,
+Deekman, Fox Omega and Nate. Sheeted by Gardow, Cylent Nite, The Sprite Lord, Karahni Popus, Cyclone TE
+and Charity. Give credit where credit is due. Do not edit any sprites that are on this sheet."
+Usage terms: credit required; NO EDITING of the sprites. make_configs.py therefore only cuts frames, sets
+sprites side by side (sparkle over Shadow, the Chaos Spear crescent beside him) and shrinks two continue
+icons, and does not redraw anything. Recolouring into Sonic's palette and the hand-drawn "SHADOW" tag are
+ours, not edits of the sheet's art.
+Credit in release: Gardow (original sprite, sheet), Rathe, Deekman, Fox Omega and Nate (bases),
+Cylent Nite, The Sprite Lord, Karahni Popus, Cyclone TE and Charity (sheeting).

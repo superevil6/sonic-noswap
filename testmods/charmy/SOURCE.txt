@@ -1,0 +1,8 @@
+Charmy - "Charmy in Sonic 1" (custom sheet)
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/278731/  (from testmods/"Charmy Link.txt")
+Text on the sheet: "Sprites by Casteor573. Free to use but give credit!!"
+Also on the sheet (a note, not a term): "Fun Fact: These sprites were made like 1-2 years ago. So they might not
+be the best per se"
+Usage terms: free to use with credit. No no-editing clause; we made no edits anyway (frames are cut, the life
+icon and signpost board are the sheet's own, and the "CHARMY" name tag is drawn from scratch).
+Credit in release: Casteor573.

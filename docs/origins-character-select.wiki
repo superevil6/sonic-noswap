@@ -1,0 +1,407 @@
+{{Notice
+| type = info
+| content = This research was done with heavy AI assistance (Claude), directed and tested in game by Superevil for the NoSwap mod. It is shared freely for anyone to use.<br/>
+All addresses are for the '''Steam''' release, '''Steam build ID 12197262''' (the executable's version resource reads '''2.0.2.2667'''). The build ID is the one the research was done against. The file version was read from the same installed executable; the DLL itself never checks it.<br/>
+Addresses are build-specific. Never trust an address blindly: before patching, compare the first bytes of every function it hooks with the bytes found in this build (listed in [[#Re-finding the functions|Re-finding the functions]]) and leave the game alone on any mismatch. After a game update, search the executable for those byte patterns to find the new addresses.
+}}
+
+'''Sonic Origins'''' character select for the classic games is a popup window drawn by the Hedgehog Engine side of the game, not by the Retro Engine (RSDK) games themselves. This page documents how it works internally (the data tables, the functions that fill it, the save records behind it and the menu archives that draw it) and [[#Adding cards|how to add new character cards]] to it.
+
+Everything here applies to '''Sonic 1, Sonic 2 and Sonic CD'''. Sonic 3 & Knuckles picks its character on its own save screen and is left out.
+
+== Overview ==
+
+After a mode is picked in the main menu, each classic game's title screen opens the popup <code>UICharacterSelectWindow</code>. It shows up to '''7 cards''' (casts <code>obj_btn_1</code> to <code>obj_btn_7</code>), one per playable '''kind'''.
+
+A '''kind''' is a byte that is the classic game's own character ID. The picked kind reaches the Sonic 1, Sonic 2 and Sonic CD scripts unchanged as <code>stage.playerListPos</code>:
+
+{| class="wikitable" style="margin: auto;" width="60%"
+!Kind
+!Character
+|-
+|0||Sonic
+|-
+|1||Tails
+|-
+|2||Knuckles
+|-
+|3||Sonic + Tails
+|-
+|4||Knuckles + Tails
+|-
+|5||Amy
+|-
+|6||Amy + Tails
+|}
+
+In the games' own data these match the GameConfig constants (Sonic 1: <code>PLAYER_SONIC</code> = 0, <code>TAILS</code> = 1, <code>KNUCKLES</code> = 2, <code>SONIC_TAILS</code> = 3, <code>AMY</code> = 5, <code>AMY_TAILS</code> = 6; ID 4 is unused in Sonic 1). The Retro Engine never bounds-checks <code>stage.playerListPos</code>, so every per-character behaviour is decided by the scripts.
+
+Games are numbered in RSDK order everywhere below: '''0''' Sonic 1, '''1''' Sonic 2, '''2''' Sonic 3 & Knuckles, '''3''' Sonic CD. Modes are numbered 0 to 3.
+
+The image base is fixed at <code>0x140000000</code>, and the executable has no relocations, so the addresses below are the same every run.
+
+== Data tables ==
+
+=== The kind table ===
+
+At <code>0x140D586A0</code>: 7 entries of 24 bytes (one per kind 0 to 6), each three pointers to C strings:
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Offset
+!Type
+!Meaning
+|-
+|0x00||<code>const char*</code>||SurfRide animation (pattern) that shows the card's picture: <code>PRM_chara_&lt;kind+1&gt;</code>
+|-
+|0x08||<code>const char*</code>||Text key of the card's first name line (<code>MAINMENU_character_name_*</code>)
+|-
+|0x10||<code>const char*</code>||Text key of the card's second name line
+|}
+
+The second line is only shown for the "+ Tails" kinds. That test is <code>KindHasTails(kind)</code> at <code>0x140331060</code>. The vanilla name keys in <code>text_menu_&lt;language&gt;.pac</code> are <code>MAINMENU_character_name_sonic</code>, <code>_tails</code>, <code>_knuckles</code> and <code>_amy</code>.
+
+The table ends exactly where Sonic 1's row table begins (<code>0x140D586A0 + 7 × 24 = 0x140D58748</code>), so it cannot be grown in place.
+
+=== The row tables ===
+
+Each game has a table of '''7 rows of 7 bytes'''. Each row lists the kinds to show, in card order. <code>0xFF</code> marks an unused card. The unlock state and Origins Plus pick which row is used.
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Address
+!Game
+!Notes
+|-
+|<code>0x140D58748</code>||Sonic 1||Rows 4 to 6 (Plus): <code>0 1 2 5</code>
+|-
+|<code>0x140D58780</code>||Sonic 2||Plus row: <code>0 1 2 5 3 4 6</code>
+|-
+|<code>0x140D587B8</code>||Sonic CD||
+|-
+|<code>0x140D587F0</code>, <code>0x140D58828</code>, <code>0x140D58860</code>||Not identified||Three more tables with the same 0x38 spacing
+|}
+
+Sonic 1's 49 bytes in this build, row by row:
+
+<pre>
+row 0: 00 01 02 FF FF FF FF
+row 1: 00 01 02 FF FF FF FF
+row 2: 00 FF FF FF FF FF FF
+row 3: 00 01 02 FF FF FF FF
+row 4: 00 01 02 05 FF FF FF
+row 5: 00 01 02 05 FF FF FF
+row 6: 00 01 02 05 FF FF FF
+</pre>
+
+Which unlock state selects rows 0 to 3 was not worked out.
+
+The row picker is the function at <code>0x1403E0D80</code>, <code>const uint8* RowPicker(uint8 game, uint8 mode, uint8 a, uint8 b)</code>. It returns a pointer to the chosen 7-byte row, which it indexes with an <code>imul 7</code>. The meaning of <code>a</code> and <code>b</code> was not identified. Rows are 7 wide in code, which matches the 7 card casts.
+
+=== Special values ===
+
+* <code>0xFF</code> in a row is an empty card. That is why the highest usable kind is 254.
+* '''Kind 3 fallback:''' <code>KindAllowedInGame(kind, game)</code> at <code>0x140331080</code> starts with <code>cmp cl, 6 / ja</code>, so it rejects every kind above 6. A rejected kind is replaced with '''3''' (Sonic & Tails) before the game starts. Any new kind needs this check to let it through.
+* '''"kind ≤ 6" checks:''' the popup's build function calls a shared helper at <code>0x140331220</code> to test that a kind is in range. Other 7-value enums (the MapArea enum, for one) use the same helper, so only the popup's own call sites may be redirected, never the helper itself.
+
+== The functions ==
+
+=== Building the popup ===
+
+The popup's build function is <code>0x1403E0030</code> (vtable slot 6 of <code>UICharacterSelectWindow</code>). It fills an array of '''16-byte card entries''' at window <code>+0x2B0</code> (count at <code>+0x2B8</code>), one per card:
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Offset
+!Meaning
+|-
+|0x00||Kind
+|-
+|0x01||Zone of the save
+|-
+|0x02 to 0x0C||Mission data (not decoded)
+|-
+|0x0D||Flags: bit 1 = has a save, bit 0 = cleared
+|}
+
+The card loop is at about <code>0x1403E09D0</code>, inside the build function. For each entry it finds the cast <code>obj_btn_%d</code> in the layout and plays the kind's pattern from the kind table. It then plays <code>PRM_save_icon_on</code> or <code>PRM_save_icon_off</code> and sets the name text casts <code>sysf_btn_name_1</code> and <code>sysf_btn_name_2</code>.
+
+These are the build function's references that matter when adding kinds (offsets from <code>0x1403E0030</code>):
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Offset
+!Instruction
+!Target
+|-
+| +0x78, +0x183, +0x1EE, +0x9AC, +0xB3E||<code>call</code>||"kind ≤ 6" helper <code>0x140331220</code>
+|-
+| +0xA01, +0xA9B, +0xB0B||<code>lea r64, [rip+disp32]</code>||Kind table <code>0x140D586A0</code>
+|-
+| +0xAB1||<code>call</code>||<code>KindHasTails</code> <code>0x140331060</code>
+|}
+
+A seventh "kind ≤ 6" call is in another of the popup's functions, at <code>0x1403E0F10 + 0x47</code>.
+
+Seen in testing (by temporarily editing Sonic 1's row bytes): the window shows 5, 6 or 7 cards and re-centres and resizes itself automatically. A duplicated kind works as a card (it highlights, shows its save and launches). The window's layer has animations <code>PRM_btn_2</code> to <code>PRM_btn_7</code>, which are probably what lays out each card count (unconfirmed).
+
+=== Window and cursor structures ===
+
+Known fields of <code>UICharacterSelectWindow</code>:
+* <code>+0x251</code> and <code>+0x250</code>: the two bytes the popup passes to the save views as their <code>a</code> and <code>b</code> arguments (probably mode and game);
+* <code>+0x264</code>: handle of its cursor controller;
+* <code>+0x2A8</code>: layer <code>lay</code>;
+* <code>+0x2B0</code> and <code>+0x2B8</code>: the card entries and their count.
+
+Its cursor controller is a <code>ui::MenuItemContainer</code>:
+* <code>+0x250</code> and <code>+0x258</code>: the "cursor moved" delegates and their count. Element 0 is the popup's: vtable <code>0x140D58B78</code>, popup pointer at <code>+0x8</code>, handler <code>0x1403E10A0</code> at <code>+0x10</code>. This is a reliable way to tell the character select's container apart from every other menu list.
+* <code>+0x290</code>: the "decide" delegates, fired by <code>FireDelegates(ctrl, ctrl+0x290, index)</code> at <code>0x1403BF8D0</code>;
+* <code>+0x2EC</code>: current index;
+* <code>+0x2F0</code> and <code>+0x2F8</code>: items (<code>MenuItem*</code>, with the card's cast at item <code>+0x18</code>);
+* <code>+0x318</code>: flags, where bit 2 means input is enabled.
+
+The popup keeps nothing per card beyond the entries: OK and the save line read entry ''n'' by the cursor index.
+
+=== Paging (NextEnabledIndex / PrevEnabledIndex) ===
+
+The cursor moves through <code>NextEnabledIndex</code> (<code>0x1403BFBB0</code>) and <code>PrevEnabledIndex</code> (<code>0x1403BFC40</code>), both <code>int (MenuItemContainer* ctrl, int index)</code>. <code>MenuItemContainer::Update</code> is at <code>0x1403C0810</code>.
+
+The popup has only 7 card slots, so a longer list needs a sliding window of 7. Moving right from the last card, or left from the first, scrolls the list by one (wrapping at the ends) and refills the 7 cards in place with the game's own calls:
+
+# Copy each card's 16-byte entry into window <code>+0x2B0</code>.
+# <code>PlayAnim(card, pattern, 0)</code> (<code>0x140481C20</code>) with the kind's picture pattern, then with <code>PRM_save_icon_on</code> or <code>_off</code>.
+# Get the layout component: <code>GetComponent(window, 0x142882E30)</code> (<code>0x1405C6FD0</code>).
+# Find each name text: <code>FindChild(component, "obj_btn_N", "sysf_btn_name_1")</code> (<code>0x14047F760</code>), and the same for <code>_2</code>.
+# Set each name: <code>SetTextKey(textCast, key)</code> (<code>0x140483330</code>), with <code>""</code> to hide a line.
+# Redraw the save line under the cards: <code>UpdateSaveInfo(window, index)</code> (<code>0x1403E1140</code>).
+
+The cursor index is returned unchanged, so the cursor stays where it is while the cards change. A hook on the build function (<code>0x1403E0030</code>) resets the page and records each kind's entry when the popup opens.
+
+=== Other helpers ===
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Address
+!Name (unofficial)
+!Notes
+|-
+|<code>0x1405C6420</code>||ResolveHandle||Handle to object
+|-
+|<code>0x14047F7A0</code>||FindCast(component, name)||
+|-
+|<code>0x142882E78</code>||(text cast class)||Compared against a cast's class chain before <code>SetTextKey</code>, as <code>UpdateSaveInfo</code> does at <code>0x1403E11C5</code>
+|-
+|<code>0x140454170</code>||PlaySfx(out, window, sound)||Playing sound 0 after a page refill works as the cursor sound (assumed)
+|-
+|<code>0x140483A00</code>||SetCropIndex(layer, cast, index)||Sets an image cast's crop
+|}
+
+=== Launch: how a kind reaches the game ===
+
+When a card is picked, its kind is stored as the "last kind" for (mode, game) and the game starts with it. Testing shows the kind arrives in Sonic 1, Sonic 2 and Sonic CD as <code>stage.playerListPos</code> unchanged (kinds 7 and up launch correctly once <code>KindAllowedInGame</code> lets them through). The exact native code that writes <code>playerListPos</code> was not traced. The research notes place the kind 3 replacement in <code>RetroEngineBase::Setup</code> (unconfirmed by name).
+
+The launch paths that read the last kind (all calls to <code>GetLastKind</code>, below):
+* <code>0x1403546D9</code>: the menu scene's launch state (function <code>0x140354080</code>). A kind that the row check <code>RowHasKind(game, mode, kind, a, b)</code> (<code>0x1403E0FA0</code>, called at <code>0x140354705</code>) rejects becomes Sonic, or Sonic & Tails in Sonic 2.
+* <code>0x14033A422</code>: the game scene's setup from a queued start request (function <code>0x14033A070</code>). It stores the kind at <code>+0xC9</code> and then opens the 16-byte save view with it. A pick in the popup can reach the game this way too, so a mod that changes the kind must handle both paths.
+
+=== Saves: SlotIndex and the save views ===
+
+Origins keeps its classic-game saves as records per (mode, game, kind) slot. Every record lookup goes through <code>SlotIndex(mode, game, kind)</code> at <code>0x14045DA50</code>. Its tables are indexed <code>[game * 7 + kind]</code> (74 slots). It has '''no slot for kinds 7 and up''': callers then get a null record and crash.
+
+Records are reached through four '''views''', each <code>View(this, out, a, b, kind)</code>, which fill <code>out = {vtable, record*, owner}</code>:
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Address
+!Record size
+!Contents
+|-
+|<code>0x140459B60</code>||0x10||Byte 0 is 1 when there is a save, byte 1 is the zone, and bit 25 of the u32 at +4 means cleared
+|-
+|<code>0x140459420</code>||0xA0||Sonic 1 keeps its classic save here (the first 0xA0 bytes of the engine save data)
+|-
+|<code>0x140459360</code>||0x8000||The classic game's save RAM (not used by Sonic 1)
+|-
+|<code>0x14045A190</code>||0x10001||Not decoded
+|}
+
+Origins keeps a separate, complete save RAM array per character. Entering a classic game loads the last-played character's array.
+
+=== The CONTINUE head (main menu) ===
+
+The main menu's CONTINUE button shows the head of the character last played in that (mode, game). Origins stores one "last kind" per (mode 0 to 3, game) in its save:
+
+* <code>GetLastKind(save, mode, game)</code> at <code>0x14045A110</code> (it reads save bytes <code>+0x06</code>, <code>+0x0A</code>, <code>+0x12</code> or <code>+0x0E</code>);
+* <code>SetLastKind(save, mode, game, kind)</code> at <code>0x14045CB50</code>.
+
+The main menu reads it at <code>0x1403E509D</code>, in its fill function <code>0x1403E4F10</code>, which builds the table of the buttons' kinds. The CONTINUE button reads it at <code>0x1403E92AD</code>, in <code>0x1403E8FC0</code>, to find the kind whose save must exist (<code>0x1403E70D0</code>). The launch reads above use it too.
+
+The head is drawn by <code>SetIconChara(menu, layer, kind)</code> at <code>0x1403E7830</code>, called at <code>0x1403E8436</code> (the main menu's fill) and <code>0x1403E94D3</code> (after a pick in the select). It rejects kinds above 6. It reads a crop table at <code>0x140D59518</code>, whose kind 0 entry is <code>00 00 00 00 FF FF FF FF</code>: crop 0 on cast <code>pattern_chara_1</code> and none (−1) on <code>pattern_chara_2</code>. It then calls <code>SetCropIndex</code>. The layout of the remaining entries is assumed from that first one.
+
+The head texture is <code>menu_main_menu_icon_chara_s.dds</code> in <code>ui_mainmenu.pac</code> (block <code>.004</code>). It is BC7, 480×96, holding 4 cells of 120×96 (Sonic, Tails, Knuckles, Amy), and is drawn at 4 texels per pixel. The scene is <code>menu_main_menu_island.swif</code>, which is in each of the 12 language archives <code>ui_mainmenu_&lt;language&gt;.pac</code> (de, en, es, fr, it, ja, ko, pl, pt, ru, zh, zhs). Its layer <code>ref_icon_chara</code> has the casts <code>pattern_chara_1</code> and <code>_2</code> and the animations <code>PRM_chara_1</code> and <code>_2</code>.
+
+The CONTINUE button is greyed out in Classic mode even in the vanilla game (that mode has no resume).
+
+== The menu archives ==
+
+=== Which archive the popup uses ===
+
+The scene <code>menu_main_menu_chara_select</code> exists in two archives under <code>image/x64/raw/ui/</code>:
+* <code>ui_gamestage.pac</code>: '''the popup over the classic games' title screens loads this one'''. Editing only <code>ui_mainmenu.pac</code> changes nothing in the popup.
+* <code>ui_mainmenu.pac</code>: the main menu's own copy of the same scene.
+
+In both, the scene file (<code>.swif</code>) is in the root, while the textures (<code>menu_main_menu_chara_select_chara_sonic.dds</code>, <code>_tails</code>, <code>_knuckles</code>, <code>_amy</code>, <code>_tails_parts</code>, <code>_btn_bg</code>, <code>_icon_save</code>) are in a dependency block: <code>.000</code> in <code>ui_gamestage.pac</code>, <code>.004</code> in <code>ui_mainmenu.pac</code>.
+
+=== PACx v403 (split) layout ===
+
+Origins' <code>.pac</code> files are a '''PACx v4.03''' outer archive around '''PACx v4.02''' inner archives.
+
+'''Outer (PACx403)''': a 0x30-byte header (signature <code>PACx</code>, <code>403</code>, <code>L</code>), with the fields used here:
+
+{| class="wikitable" style="margin: auto;" width="90%"
+!Offset
+!Meaning
+|-
+|0x0C||File size
+|-
+|0x10||Root offset
+|-
+|0x14||Root compressed size
+|-
+|0x18||Root uncompressed size
+|-
+|0x24||Size of the root chunk table, padded to 8
+|-
+|0x30||Root chunk table: <code>u32 count</code>, then <code>{u32 compressed, u32 uncompressed}</code> per chunk
+|}
+
+After the table come the dependency '''blocks''' (<code>.pac.000</code>, <code>.pac.001</code>, ...), each starting on a 16-byte boundary. The root follows them, and the file is padded to 16. Every block and the root are split into '''64 KB pieces''', each compressed on its own as an '''LZ4 block''' (a chunk whose compressed and uncompressed sizes are equal is stored raw).
+
+'''Root (PACx402)''': a 0x30-byte header whose sizes at 0x10 to 0x24 are, in order, the node trees, the dependency section, the data entries, the string table, the file data and the offset table (0x0C is the total size).
+* '''Dependency section''': <code>u64 count</code>, <code>u64 → entries</code>. Each 0x20-byte entry holds <code>u64 → name</code>, <code>u32 compressed size</code>, <code>u32 size</code>, <code>u32 offset of the block in the outer file</code>, <code>u32 chunk count</code> and <code>u64 → chunk table</code> (<code>{u32 compressed, u32 size}</code> per chunk). '''Each block's chunk table lives in the root''', so a block that grows needs more table entries in the root.
+* '''Data entries''' (0x30 bytes): <code>u32 uid</code>, <code>u32 size</code>, <code>u64 0</code>, <code>u64 → data</code>, <code>u64 0</code>, <code>u64 → extension</code>, <code>u64 flags</code>. A file stored in a block is listed in the root with flags 1 and data pointer 0, and the block (itself a PACx402 archive, without a dependency section) holds its data.
+* '''Names''' are radix trees of fragments, as documented by HedgeLib's PACx v4 code. Each node is 0x28 bytes: <code>u64 → fragment</code>, <code>u64 → data</code>, <code>u64 → child indices</code>, <code>i32 parent</code>, <code>i32 global index</code>, <code>i32 data index</code>, <code>u16 child count</code>, <code>u8 has data</code>, <code>u8 full path size</code>.
+* '''Offset table''': the position of every pointer, as deltas >> 2 in 1, 2 or 4 bytes (top bits <code>01</code>, <code>10</code> or <code>11</code>), padded with zeros to 8. With it, bytes can be inserted anywhere and every pointer fixed up.
+
+Rebuilding an archive with nothing changed reproduces the original byte for byte, provided unchanged 64 KB chunks are written back as their original compressed bytes.
+
+=== The scene: main_menu_chara_select ===
+
+<code>menu_main_menu_chara_select.swif</code> is a SurfRide '''SWIF''' file (the "version 5" layout used by Origins; structures as in DeaTh-G's surfboard templates). All pointers are u64 absolute file offsets, 8-aligned, and listed in the <code>SOF0</code> chunk. Relevant layers:
+
+* <code>lay</code>: the window. Its card casts are <code>obj_btn_1</code> to <code>obj_btn_7</code> (each inside <code>lay_btn_N</code>). The save line under the cards is <code>null_save_stage</code> with the text <code>sysf_save_stage</code>.
+* <code>ref_btn</code>: the card template that every <code>obj_btn_N</code> instances. It holds the picture groups <code>null_char_1</code> to <code>null_char_7</code> (one per kind, for example <code>null_char_1</code> containing <code>sonic_1</code>), the name texts <code>sysf_btn_name_1</code> and <code>_2</code>, and the save icon. Its animations are the shared states (<code>in</code>, <code>loop</code>, <code>out</code>, <code>over</code>, <code>loop_act</code>, <code>go_away</code>, <code>press</code>), then <code>PRM_chara_1</code> to <code>PRM_chara_7</code>, <code>PRM_save_icon_on</code> and <code>PRM_save_icon_off</code>.
+
+'''How a card's picture works:''' <code>PRM_chara_&lt;kind+1&gt;</code> only switches the <code>Display</code> of the groups <code>null_char_1</code> to <code>_7</code> (and of <code>sysf_btn_name_2</code>). The shared state animations key the groups' sprite frames, but never touch a group they don't know. A new group's <code>Display</code> and crop index therefore stay as its pattern set them.
+
+The card pictures are BC7 textures. <code>menu_main_menu_chara_select_chara_sonic.dds</code> is 2640×1320 (BC7, DXGI format 98, one mip). The <code>.swif</code> declares textures at '''half''' their DDS size (1320×660 here), and crops are stored as normalised <code>(left, top, right, bottom)</code> floats.
+
+=== Text keys ===
+
+Names come from <code>image/x64/raw/text/text_menu_&lt;language&gt;.pac</code>. These are small PACx403 archives whose content is all in the root, holding a '''cnvrs-text''' file (BINA 2.1):
+* root: <code>u8 version (6)</code>, <code>u8 languages (1)</code>, <code>u16 entry count</code>, <code>u32 0</code>, <code>u64 → entries</code>, <code>u64 → language name</code>, <code>u64 0</code>;
+* entries (0x30 bytes each, '''sorted by id'''): <code>u64 id</code>, <code>u64 → key</code>, <code>u64 → attributes</code>, <code>u64 → UTF-16 text</code>, <code>u64 length</code>, <code>u64 0</code>;
+* the id is a hash of the key, <code>h = h * 127 + byte</code> (mod 2<sup>32</sup>), and the game looks keys up by id.
+
+== Adding cards ==
+
+This approach is confirmed working in game. It has two halves: '''archive edits''' made once at build time, and '''runtime patches''' from a mod DLL (loaded by HiteModLoader through HedgeModManager; hooks via MinHook or similar).
+
+=== Archive edits (64 generic card slots) ===
+
+Instead of one picture group per new character, which would need a hide track per group in every animation, the scene gets '''one generic group whose crop index picks the picture'''. The steps below are done in both <code>ui_gamestage.pac</code> and <code>ui_mainmenu.pac</code>.
+
+# '''Texture:''' append rows of cells (for example 64 cells of 440×536 DDS pixels, filled with transparent BC7 blocks) below <code>menu_main_menu_chara_select_chara_sonic.dds</code> in its dependency block. Update the DDS height, the file's size in the block and in the root's entry, and the block's chunk table in the root.
+# '''Crops:''' in the <code>.swif</code>'s texture list, rescale that texture's existing crops to the taller texture (the same pixels). Add one crop per cell, and set the texture's declared height (half the DDS height) and crop count.
+# '''Casts''' (layer <code>ref_btn</code>): add a group <code>null_char_extra</code> as the next sibling of the game's last <code>null_char_N</code>. Give it a child image cast <code>chara_extra</code>, copied from Sonic's <code>sonic_1</code> but with the cell's size and '''one crop reference per slot''' (<code>{u16 texture list, u16 texture, u16 crop}</code>, crop index 0 = slot 1).
+# '''Animations''' (layer <code>ref_btn</code>): for each slot ''s'', add <code>PRM_extra_&lt;s&gt;</code> and <code>PRM_extra_&lt;s&gt;_2</code>, copied from <code>PRM_chara_1</code>'s header. Each has constant keys at frame 0: <code>Display = 0</code> on <code>null_char_1</code> to <code>_7</code>, <code>Display = 1</code> on <code>null_char_extra</code>, '''<code>CropIndex0 = s − 1</code>''' on <code>chara_extra</code>, and <code>Display</code> of <code>sysf_btn_name_2</code> set to 1 only in the <code>_2</code> variant.
+# '''Hide the new group in the game's patterns:''' add <code>Display = 0</code> on <code>null_char_extra</code> to each of <code>PRM_chara_1</code> to <code>_7</code>.
+# '''Text:''' in every <code>text_menu_&lt;language&gt;.pac</code>, add the keys <code>MAINMENU_character_name_extra&lt;s&gt;_1</code> and <code>_2</code> for each slot, with room for 31 UTF-16 units each. Re-sort the entries by id and check that no two keys share a hash.
+
+All edits are '''append-only''': new structures go after the last chunk (before <code>SOF0</code>), existing pointer fields are repointed at them, and the new pointers are added to <code>SOF0</code>. Nothing existing moves. Done this way, the archives rebuild byte-identically when no slots are added.
+
+The same idea gives the CONTINUE head its new characters. In <code>ui_mainmenu.pac</code>, append 120×96 cells below <code>menu_main_menu_icon_chara_s.dds</code>. In each language's <code>menu_main_menu_island.swif</code>, rescale the four existing crops and add one crop per cell (crop <code>4 + slot − 1</code>). Then give both <code>pattern_chara_1</code> and <code>_2</code> a crop reference for every crop.
+
+'''Filling slots without rebuilding:''' store the 64 KB chunks that hold the cells and name texts as '''LZ4 blocks of literals only''', so those bytes sit in the file uncompressed. A descriptor (<code>raw/ui/cards.json</code>) records where those runs, each slot's cell rows and each name's text and length are. At startup the DLL writes each installed character's picture and name into a cached copy of each archive and serves the copies. The game archives are never modified.
+
+=== Runtime patches ===
+
+# '''Kind table:''' copy the 7 vanilla entries into memory allocated within ±2 GB of the executable, so rip-relative references reach it. Add one entry per new kind (7 and up), with the pattern <code>PRM_extra_&lt;slot&gt;</code> (or <code>_2</code>) and the name keys <code>MAINMENU_character_name_extra&lt;slot&gt;_1</code> and <code>_2</code>. Repoint the three <code>lea</code>s in the build function at the copy.
+# '''Range checks:''' redirect the six "kind ≤ 6" call sites (five in the build function, one at <code>0x1403E0F10 + 0x47</code>) to a stub returning "kind ≤ highest kind" (<code>cmp cl, imm8 / setbe al / ret</code>).
+# '''Second name line:''' redirect the <code>KindHasTails</code> call at build <code>+0xAB1</code> so new kinds can show two lines.
+# '''Rows:''' hook <code>RowPicker</code> (<code>0x1403E0D80</code>) and return your own 7-byte row with the new kinds included. Skip game 2 (S3&K).
+# '''Launch:''' hook <code>KindAllowedInGame</code> (<code>0x140331080</code>) to accept the new kinds outside S3&K. Without this, they start as Sonic & Tails.
+# '''Saves:''' hook <code>SlotIndex</code> (<code>0x14045DA50</code>) to give new kinds Sonic's slot, so callers get a valid record and don't crash. Then wrap the four views so a new kind's record pointer is swapped for a buffer of your own after the original fills <code>out</code>. Origins' own save file is never written with a new kind.
+# '''Last kind:''' hook <code>SetLastKind</code> (<code>0x14045CB50</code>) so it never stores a kind above 6 in Origins' save (store 0 instead), and remember the real one yourself.
+# '''More than 7 cards:''' hook <code>NextEnabledIndex</code> and <code>PrevEnabledIndex</code> as described in [[#Paging (NextEnabledIndex / PrevEnabledIndex)|Paging]], plus the build function to reset the page.
+# '''CONTINUE head (optional):''' redirect the four <code>GetLastKind</code> call sites (<code>0x1403E509D</code>, <code>0x1403E92AD</code>, <code>0x1403546D9</code>, <code>0x14033A422</code>) to return your remembered kind when Origins says 0. Let it through the row check at <code>0x140354705</code>. Wrap the two <code>SetIconChara</code> calls (<code>0x1403E8436</code>, <code>0x1403E94D3</code>): draw Sonic's head, then <code>SetCropIndex(layer, "pattern_chara_1", 4 + slot − 1)</code>.
+
+Patch only after checking every function's first bytes and every call site's <code>E8 rel32</code> target. If anything differs, patch nothing.
+
+=== Re-finding the functions ===
+
+These are the exact bytes to compare before hooking (at the start of each function, unless noted). Search the executable for them after an update.
+
+{| class="mw-collapsible wikitable" style="margin: auto;" width="90%"
+!Address
+!Function
+!Bytes
+|-
+|<code>0x1403E0D80</code>||RowPicker||<code>48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 20</code>
+|-
+|<code>0x14045DA50</code>||SlotIndex||<code>48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 0F B6 E9</code>
+|-
+|<code>0x14045CB50</code>||SetLastKind||<code>44 0F BE D2 4C 8B D9 84 D2 74 3C</code>
+|-
+|<code>0x140331080</code>||KindAllowedInGame||<code>80 F9 06 77 2A 0F BE D2 85 D2 74 1C</code>
+|-
+|<code>0x1403BFBB0</code>||NextEnabledIndex||<code>48 89 5C 24 08 48 89 7C 24 10 4C 8B 99 F8 02 00 00 45 33 C9</code>
+|-
+|<code>0x1403BFC40</code>||PrevEnabledIndex||<code>48 89 5C 24 08 48 89 7C 24 10 4C 8B 99 F8 02 00 00 45 33 C0</code>
+|-
+|<code>0x1403C0810</code>||MenuItemContainer::Update||<code>48 89 5C 24 20 57 48 83 EC 40 8B 81 18 03 00 00</code>
+|-
+|<code>0x1403E0030</code>||Popup build (vtable slot 6)||<code>48 89 54 24 10 55 53 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 78 F2 FF</code>
+|-
+|<code>0x140459B60</code>, <code>0x14045A190</code>||Save views (0x10, 0x10001)||<code>48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 41 0F B6 C0 48 8B DA</code>
+|-
+|<code>0x140459420</code>, <code>0x140459360</code>||Save views (0xA0, 0x8000)||<code>48 89 5C 24 08 57 48 83 EC 20 41 0F B6 C0 48 8B DA</code>
+|-
+|<code>0x14045A110</code>||GetLastKind||<code>48 0F BE C2 4C 8B C9 83 F8 07 77 4B</code>
+|-
+|<code>0x1403E0FA0</code>||RowHasKind||<code>40 53 48 83 EC 20 41 0F B6 C1 41 0F B6 D8</code>
+|-
+|<code>0x1403E7830</code>||SetIconChara||<code>48 85 D2 0F 84 8D 00 00 00 48 89 5C 24 08 57 48 83 EC 20 41 0F B6 C8</code>
+|-
+|<code>0x140483A00</code>||SetCropIndex||<code>40 53 48 83 EC 20 41 8B D8 E8</code>
+|-
+|<code>0x1403E1140</code>||UpdateSaveInfo||<code>40 55 53 41 57 48 8D AC 24 40 FF FF FF 48 81 EC C0 01 00 00 8B DA</code>
+|-
+|<code>0x140D59518</code>||Head crop table (data)||<code>00 00 00 00 FF FF FF FF</code>
+|-
+|<code>0x140D58748</code>||Sonic 1 row table (data)||The 49 bytes listed in [[#The row tables|The row tables]]
+|}
+
+The call sites are checked as an <code>E8</code> opcode whose <code>rel32</code> lands on the expected function. The <code>lea</code> sites are checked as <code>48/4C 8D</code> with a rip-relative ModRM whose target is the kind table.
+
+== Saves and pitfalls ==
+
+* '''Per-character records:''' give each new character its own record buffers for all four views, kept in a file of your own (for example under <code>%APPDATA%\SEGA\SonicOrigins\</code>), never in Origins' save.
+* '''CONTINUE loaded the wrong character before per-kind saves:''' while new kinds shared Sonic's record, "continue" on an extra's card restored whichever character was stored in Sonic's shared record (picking Metal Sonic loaded Big). New games were fine. Separate records fixed it.
+* '''Kinds 4 and 6 in Sonic 1:''' putting Sonic 2's full row (<code>0 1 2 5 3 4 6</code>) into Sonic 1's table crashed when the popup opened. Sonic 1 appears to have no setup for kind 4 or 6 (kind 3 works in Sonic 1: picture, name and launch as Sonic & Tails).
+* '''The 7-card window:''' the layout has exactly 7 card casts and the rows are 7 wide in code, so more characters need paging (above), not wider rows.
+* '''Kinds 7 and up with no save slot:''' <code>SlotIndex</code> returns no slot, and callers crash on the null record. Map them to a vanilla slot first, then swap the record.
+* '''Never send a new kind to Origins:''' the scripts' <code>NOTIFY_PLAYER_SET</code> callback with an unknown ID (7) crashes the game. With an extra's ID in <code>stage.playerListPos</code>, <code>NOTIFY_SPECIAL_RETRY</code> (special stage results in Sonic 1 and 2) left the results screen blank or showing garbage. Report the character as Sonic for these calls.
+* '''Which archive:''' edits to <code>ui_mainmenu.pac</code> alone don't show in the popup. Use <code>ui_gamestage.pac</code>.
+
+== Credits and references ==
+
+* '''NoSwap''' (source to be published). The references for everything above are its tools and DLL headers:
+** <code>tools/origins_pacx.py</code>: split PACx403/402 reader and writer, with pointer relocation;
+** <code>tools/origins_pac.py</code>: small unsplit archives and LZ4;
+** <code>tools/surfride.py</code>: SWIF reader and append-only editor;
+** <code>tools/bc7.py</code>: exact solid-block BC7;
+** <code>tools/cnvrs_text.py</code>: cnvrs-text;
+** <code>tools/origins_cards.py</code> and <code>tools/build_origins_menu.py</code>: the card slots;
+** <code>native/src/NoSwapS3K.cpp</code>, <code>native/src/MenuCards.h</code> and <code>native/src/Roster.h</code>: the hooks, card writing and kind registry.
+* '''HedgeLib''' by Radfordhound: the PACx v4 layout (node trees, data entries).
+* '''HedgeArcPack''' (HedgeLib): the standard tool for these archives.
+* '''HedgeModManager''' and '''HiteModLoader''' (hedge-dev): loading code and file mods into Origins.
+* '''DeaTh-G's surfboard templates''': the SurfRide SWIF structures.
+* '''The RSDK decompilation projects''' by Rubberduckycooly and chuliRMG (RSDKv3, RSDKv4 and RSDKv5(U); original Retro Engine by Christian Whitehead / Evening Star), and the script decompilations: character IDs and engine behaviour on the classic-game side.
+* '''Origins Ultrafix''': its <code>Ultrafix3kFixes</code> headers were the reference for RSDK and S3&K types and some fixed addresses.
+* '''MinHook''' by Tsuda Kageyu: function hooking.

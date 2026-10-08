@@ -1,0 +1,206 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Converted from make_configs.py (kept as make_configs.legacy.py) by tools/noswap.py convert; docs/character-json.md. Keys starting with _ are comments.",
+  "id": "vector",
+  "name": "VECTOR",
+  "full_name": "Vector",
+  "credits": {
+    "short": "Sprites: Akimaca",
+    "full": "Vector (The Crocodile In Sonic 1) by Akimaca; original sprites by SEGA / Sonic Team",
+    "artists": ["Akimaca"],
+    "url": "https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/227570/",
+    "terms": "Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit where it's due!!!",
+    "_source_txt": "SOURCE.txt (kept in the folder) has the sheet's full story: https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/227570/ (uploaded by Akimaca) Vector - \"Vector, The Crocodile In Sonic 1\" (custom sheet; header reads \"Vector\" / \"The Crocodile In Sonic 1\") Source link: not yet known (no link file); the sheet itself names its artist. Text on the sheet: \"Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit wh"
+  },
+  "sheet": {"file": "Vector.png", "background": ["#db70d2", "#9f1394"], "feet_y": 20},
+  "base": "sonic",
+  "flags": {"super": false, "drop_dash": false, "roll": false, "no_roll": false, "private": false, "crossover": false},
+  "card": null,
+  "games": {"sonic1": true, "sonic2": true, "soniccd": true, "s3k": true, "mania": true},
+  "palette": {
+    "own": {
+      "74": "#004800",
+      "75": "#009000",
+      "76": "#24b400",
+      "77": "#48d800",
+      "78": "#6c2400",
+      "79": "#b49000",
+      "80": "#fcd800",
+      "81": "#fcfcfc",
+      "82": "#b4b4b4",
+      "83": "#4848b4",
+      "84": "#fc0000",
+      "85": "#fcfc00"
+    },
+    "shared": {"#000000": 1, "#010101": 1, "#242490": 2, "#909090": 8, "#484848": 9, "#900000": 13, "#480000": 14},
+    "other_colours": "nearest",
+    "strict": false
+  },
+  "frames": {
+    "STOPPED": [9, 60, 42, 57],
+    "WAITING1": [56, 59, 43, 58],
+    "WAITING2": [103, 61, 38, 56],
+    "WAITING3": [148, 75, 37, 42],
+    "WAITING4": [194, 56, 39, 61],
+    "LOOKING_UP": [239, 54, 42, 63],
+    "LOOKING_DOWN": [290, 82, 52, 35],
+    "WALKING1": [8, 136, 44, 56],
+    "WALKING2": [56, 134, 45, 58],
+    "WALKING3": [105, 134, 45, 58],
+    "WALKING4": [156, 136, 43, 56],
+    "WALKING5": [207, 134, 50, 58],
+    "WALKING6": [265, 134, 48, 58],
+    "RUNNING1": [9, 215, 66, 37],
+    "RUNNING2": [82, 215, 65, 37],
+    "RUNNING3": [154, 215, 66, 37],
+    "RUNNING4": [227, 215, 65, 37],
+    "SKIDDING1": [327, 150, 57, 42],
+    "SKIDDING2": [391, 150, 55, 42],
+    "SPIN_DASH1": [772, 704, 38, 37],
+    "SPIN_DASH2": [815, 704, 38, 37],
+    "SPIN_DASH3": [858, 704, 38, 37],
+    "SPIN_DASH4": [901, 704, 38, 37],
+    "SPIN_DASH5": [944, 704, 38, 37],
+    "SPIN_DASH6": [988, 703, 39, 38],
+    "JUMPING1": [256, 291, 40, 40],
+    "JUMPING2": [299, 291, 40, 40],
+    "JUMPING3": [342, 291, 40, 40],
+    "JUMPING4": [385, 291, 40, 40],
+    "JUMPING5": [430, 291, 40, 40],
+    "BOUNCING": [352, 47, 28, 70],
+    "HURT": [138, 271, 41, 60],
+    "DYING": [10, 439, 55, 52],
+    "DROWNING": [69, 433, 55, 58],
+    "FAN_ROTATE1": [415, 366, 77, 34],
+    "FAN_ROTATE2": [502, 367, 54, 33],
+    "FAN_ROTATE3": [561, 365, 68, 35],
+    "BREATHING": [455, 134, 49, 58],
+    "PUSHING1": [489, 295, 60, 36],
+    "PUSHING2": [555, 294, 60, 37],
+    "PUSHING3": [621, 295, 60, 36],
+    "PUSHING4": [687, 294, 60, 37],
+    "FLAILING_11": [11, 271, 52, 60],
+    "FLAILING_12": [72, 268, 51, 63],
+    "CLINGING_ON1": [233, 370, 82, 30],
+    "CLINGING_ON2": [320, 372, 83, 28],
+    "WATER_SLIDE": [193, 268, 49, 63],
+    "CONTINUE1": [641, 351, 56, 49],
+    "CONTINUE2": [698, 351, 56, 49],
+    "BORED1": [812, 547, 34, 50],
+    "BORED2": [848, 548, 34, 49],
+    "BORED3": [886, 547, 34, 50],
+    "SHOULDER_DASH": [139, 462, 62, 29],
+    "SHOULDER_DASH_UP": [265, 429, 29, 62],
+    "SHOULDER_DASH_DOWN": [305, 440, 50, 51],
+    "VICTORY": [66, 527, 40, 44]
+  },
+  "animations": {
+    "Stopped": {"frames": ["STOPPED"]},
+    "Waiting": {
+      "frames": ["WAITING1", "WAITING2", "WAITING3", "WAITING4"],
+      "loop": 0
+    },
+    "Looking Up": {"frames": ["LOOKING_UP"], "loop": 0},
+    "Looking Down": {"frames": ["LOOKING_DOWN"], "loop": 0},
+    "Walking": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Running": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Skidding": {"frames": ["SKIDDING1", "SKIDDING2"]},
+    "Super Peel Out": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Spin Dash": {
+      "frames": ["SPIN_DASH1", "SPIN_DASH2", "SPIN_DASH3", "SPIN_DASH4", "SPIN_DASH5", "SPIN_DASH6"]
+    },
+    "Jumping": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4", "JUMPING5"],
+      "anchor": "center"
+    },
+    "Bouncing": {"frames": ["BOUNCING"], "anchor": "center"},
+    "Hurt": {"frames": ["HURT"], "anchor": "center"},
+    "Dying": {"frames": ["DYING"], "anchor": "center"},
+    "Drowning": {"frames": ["DROWNING"], "anchor": "center"},
+    "Fan Rotate": {
+      "frames": ["FAN_ROTATE1", "FAN_ROTATE2", "FAN_ROTATE3"],
+      "anchor": "center"
+    },
+    "Breathing": {"frames": ["BREATHING"], "anchor": "center"},
+    "Pushing": {
+      "frames": ["PUSHING1", "PUSHING2", "PUSHING3", "PUSHING4"]
+    },
+    "Flailing 1": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Flailing 2": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Hanging": {"frames": ["BOUNCING"], "anchor": "center"},
+    "Clinging On": {"frames": ["CLINGING_ON1", "CLINGING_ON2"], "anchor": "center"},
+    "Corkscrew H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"]
+    },
+    "Water Slide": {"frames": ["HURT", "WATER_SLIDE"], "anchor": "center"},
+    "Continue": {"frames": ["CONTINUE1", "CONTINUE2"]},
+    "Continue Up": {"frames": ["BOUNCING"], "loop": 0},
+    "Super Transform": {"frames": ["STOPPED"], "loop": 0}
+  },
+  "animations_sonic2": {
+    "Flailing 3": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Grabbed": {"frames": ["HURT"], "anchor": "center"},
+    "Twirl H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Bored!": {"frames": ["BORED1", "BORED2", "BORED3"], "loop": 0}
+  },
+  "ability_animations": {
+    "41": {"name": "Shoulder Dash", "frames": ["SHOULDER_DASH"], "anchor": "center"},
+    "45": {"name": "Shoulder Dash Up", "frames": ["SHOULDER_DASH_UP"], "anchor": "center"},
+    "46": {"name": "Shoulder Dash Down", "frames": ["SHOULDER_DASH_DOWN"], "anchor": "center"}
+  },
+  "special_stage": {
+    "Special Stage": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4", "JUMPING5"],
+      "anchor": "center"
+    }
+  },
+  "s3k_victory": {"frames": ["VICTORY", "WAITING4"]},
+  "ui": {
+    "life_icon": {"rect": [566, 538, 16, 16], "trim": false},
+    "life_name": {"rect": [583, 539, 39, 7]},
+    "monitor_1up": {"rect": [566, 539, 16, 14], "trim": false},
+    "sign_face": {"rect": [449, 523, 48, 32], "trim": false},
+    "mini_1": {"rect": [506, 536, 22, 35], "remap": "+128"},
+    "mini_2": {"rect": [533, 536, 22, 35], "remap": "+128"}
+  },
+  "ending": {
+    "end_idle": {"rect": [17, 511, 42, 60], "remap": "+128"},
+    "end_pose_1": {"frame": "VICTORY", "remap": "+128"},
+    "end_pose_2": {"frame": "WAITING4", "remap": "+128"},
+    "end_pose_3": {"rect": [51, 654, 68, 70], "remap": "+128"},
+    "good_1": {"rect": [144, 515, 38, 56], "remap": "+128"},
+    "good_2": {"rect": [185, 515, 38, 56], "remap": "+128"},
+    "good_3": {"rect": [231, 514, 42, 57], "remap": "+128"},
+    "good_4": {"rect": [278, 515, 47, 56], "remap": "+128"},
+    "good_5": {"rect": [328, 515, 47, 56], "remap": "+128"},
+    "good_6": {"rect": [384, 527, 40, 44], "remap": "+128"}
+  },
+  "abilities": {
+    "_notes": [
+      "extra 12: Vector. Chaotix air dash (aim_dash) with the sheet's \"Shoulder dash\"; a heavy power type.",
+      "Straight ahead, or straight UP with up held (the user's pick, so he differs from Blaze), or down-diagonal. He",
+      "breaks walls like Knuckles (breaks_walls, the user's pick 2026-09-27: a power type, as Heavy)",
+      "a shorter, heavier burst than Blaze's 16 / 0x70000"
+    ],
+    "abilities": ["aim_dash", "physics", "breaks_walls"],
+    "dash_frames": 14,
+    "dash_speed": "0x60000",
+    "diag_x": "0x44000",
+    "diag_y": "0x44000",
+    "up_x": 0,
+    "up_y": "0x60000",
+    "physics": {"top_speed": 0.95, "acceleration": 0.85, "air_acceleration": 0.9}
+  }
+}

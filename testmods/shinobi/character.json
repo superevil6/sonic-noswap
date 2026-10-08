@@ -1,0 +1,862 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Made with the NoSwap character editor (tools/noswap.py ui) from Bean's layout; docs/character-json.md explains every key. Keys starting with _ are comments.",
+  "id": "shinobi",
+  "key": "noswap.joe-musashi",
+  "name": "JOE",
+  "full_name": "Joe Musashi",
+  "credits": {
+    "short": "Sprites: Eddo (tSR)",
+    "full": "Joe Musashi sprites from The Super Shinobi II / Shinobi III (Mega Drive / Genesis), ripped by Eddo (contributor Kiselyok), The Spriters Resource asset 20808. Shinobi and its sprites are owned by SEGA",
+    "artists": [
+      "Eddo",
+      "Kiselyok"
+    ],
+    "url": "https://www.spriters-resource.com/sega_genesis/shinobi3/asset/20808/",
+    "terms": "Shinobi and all sprites here are owned by Sega, so no credit needed, but do not steal or claim as your own.",
+    "_terms": "copied word for word from the sheet's footer (testmods/shinobi/Shinobi3_JoeMusashi.png)",
+    "_url": "The Spriters Resource, asset 20808 (Sega Genesis: Shinobi 3 / The Super Shinobi 2); link checked 2026-10-02"
+  },
+  "sheet": {
+    "file": "Shinobi3_JoeMusashi.png",
+    "background": [
+      "#367594"
+    ],
+    "_background": "the sheet's empty colours (guessed from its corners: check them)",
+    "feet_y": 20
+  },
+  "base": "sonic",
+  "flags": {
+    "super": false,
+    "drop_dash": false,
+    "roll": true,
+    "no_roll": false,
+    "private": false,
+    "crossover": true
+  },
+  "card": null,
+  "games": {
+    "sonic1": true,
+    "sonic2": true,
+    "soniccd": true,
+    "s3k": true,
+    "mania": true
+  },
+  "palette": {
+    "own": {
+      "74": "#6c6c48",
+      "75": "#b4b490",
+      "76": "#fcfcfc",
+      "77": "#480000",
+      "78": "#242424",
+      "79": "#902400",
+      "80": "#d84824",
+      "81": "#484848",
+      "82": "#909090",
+      "83": "#242400",
+      "84": "#6c2424",
+      "85": "#6c6c6c",
+      "86": "#b4b4b4",
+      "87": "#90906c",
+      "88": "#904848",
+      "89": "#240000"
+    },
+    "_own": "slot -> colour: the character's own colours, in slots 74-95",
+    "shared": {
+      "#000000": 1
+    },
+    "other_colours": "nearest",
+    "strict": false
+  },
+  "frames": {
+    "STAND": [
+      6,
+      5,
+      32,
+      61
+    ],
+    "GUARD": [
+      255,
+      3,
+      38,
+      63
+    ],
+    "THROW_ARM": [
+      302,
+      8,
+      59,
+      58
+    ],
+    "PUSH": [
+      367,
+      10,
+      46,
+      56
+    ],
+    "WALK1": [
+      51,
+      4,
+      24,
+      62
+    ],
+    "WALK2": [
+      84,
+      4,
+      24,
+      62
+    ],
+    "WALK3": [
+      118,
+      5,
+      32,
+      61
+    ],
+    "WALK4": [
+      154,
+      4,
+      26,
+      62
+    ],
+    "WALK5": [
+      187,
+      4,
+      23,
+      62
+    ],
+    "WALK6": [
+      218,
+      5,
+      31,
+      61
+    ],
+    "RUN1": [
+      9,
+      517,
+      49,
+      56
+    ],
+    "RUN2": [
+      60,
+      517,
+      54,
+      56
+    ],
+    "RUN3": [
+      124,
+      515,
+      39,
+      58
+    ],
+    "RUN4": [
+      171,
+      514,
+      46,
+      59
+    ],
+    "RUN5": [
+      224,
+      517,
+      54,
+      56
+    ],
+    "RUN6": [
+      289,
+      515,
+      39,
+      58
+    ],
+    "THROW1": [
+      6,
+      152,
+      46,
+      55
+    ],
+    "THROW2": [
+      60,
+      155,
+      69,
+      52
+    ],
+    "THROW3": [
+      135,
+      155,
+      62,
+      52
+    ],
+    "THROW4": [
+      213,
+      156,
+      45,
+      51
+    ],
+    "AIRTHROW1": [
+      9,
+      902,
+      46,
+      62
+    ],
+    "AIRTHROW2": [
+      64,
+      905,
+      66,
+      59
+    ],
+    "AIRTHROW3": [
+      138,
+      905,
+      53,
+      59
+    ],
+    "AIRTHROW4": [
+      201,
+      904,
+      36,
+      59
+    ],
+    "CROUCH_IN": [
+      8,
+      661,
+      31,
+      45
+    ],
+    "CROUCH": [
+      49,
+      667,
+      28,
+      39
+    ],
+    "SLIDE_KICK": [
+      203,
+      717,
+      71,
+      37
+    ],
+    "JUMP1": [
+      10,
+      827,
+      41,
+      64
+    ],
+    "JUMP2": [
+      55,
+      824,
+      31,
+      67
+    ],
+    "JUMP3": [
+      95,
+      823,
+      34,
+      68
+    ],
+    "JUMP4": [
+      134,
+      825,
+      54,
+      66
+    ],
+    "JUMP5": [
+      194,
+      825,
+      32,
+      66
+    ],
+    "JUMP6": [
+      233,
+      838,
+      57,
+      53
+    ],
+    "JUMP7": [
+      296,
+      833,
+      47,
+      58
+    ],
+    "JUMP8": [
+      351,
+      834,
+      59,
+      57
+    ],
+    "FLIP_START": [
+      3,
+      1090,
+      57,
+      53
+    ],
+    "FLIP1": [
+      71,
+      1097,
+      40,
+      33
+    ],
+    "FLIP2": [
+      120,
+      1097,
+      36,
+      35
+    ],
+    "FLIP3": [
+      164,
+      1098,
+      40,
+      33
+    ],
+    "FLIP4": [
+      215,
+      1095,
+      36,
+      35
+    ],
+    "FLIP_SPREAD": [
+      262,
+      1084,
+      56,
+      63
+    ],
+    "FLIP5": [
+      332,
+      1106,
+      40,
+      33
+    ],
+    "CAST1": [
+      8,
+      1189,
+      41,
+      62
+    ],
+    "CAST2": [
+      52,
+      1195,
+      62,
+      56
+    ],
+    "CAST3": [
+      122,
+      1199,
+      44,
+      52
+    ],
+    "CAST4": [
+      178,
+      1198,
+      69,
+      53
+    ],
+    "CAST5": [
+      257,
+      1189,
+      52,
+      62
+    ],
+    "CAST6": [
+      316,
+      1177,
+      45,
+      74
+    ],
+    "CAST7": [
+      366,
+      1155,
+      45,
+      96
+    ],
+    "CAST_UP": [
+      7,
+      1257,
+      45,
+      76
+    ],
+    "KNEEL": [
+      241,
+      1294,
+      26,
+      39
+    ],
+    "MIJIN1": [
+      208,
+      1294,
+      26,
+      39
+    ],
+    "MIJIN2": [
+      58,
+      1294,
+      26,
+      39
+    ],
+    "MIJIN3": [
+      91,
+      1294,
+      26,
+      39
+    ],
+    "MIJIN4": [
+      127,
+      1288,
+      32,
+      45
+    ],
+    "HANG1": [
+      5,
+      1355,
+      27,
+      75
+    ],
+    "HANG2": [
+      44,
+      1355,
+      36,
+      71
+    ],
+    "HURT": [
+      10,
+      1546,
+      54,
+      56
+    ],
+    "HURT2": [
+      113,
+      1547,
+      52,
+      55
+    ],
+    "DIE1": [
+      9,
+      1618,
+      51,
+      62
+    ],
+    "DIE2": [
+      68,
+      1630,
+      61,
+      50
+    ],
+    "KUNAI": [
+      188,
+      164,
+      9,
+      1
+    ],
+    "HEAD": [
+      14,
+      4,
+      16,
+      12
+    ]
+  },
+  "animations": {
+    "Stopped": {
+      "frames": [
+        "STAND"
+      ]
+    },
+    "Waiting": {
+      "frames": [
+        "GUARD"
+      ]
+    },
+    "Looking Down": {
+      "frames": [
+        "CROUCH"
+      ]
+    },
+    "Spin Dash": {
+      "frames": [
+        "CROUCH"
+      ]
+    },
+    "Walking": {
+      "frames": [
+        "WALK1",
+        "WALK2",
+        "WALK3",
+        "WALK4",
+        "WALK5",
+        "WALK6"
+      ],
+      "align": true
+    },
+    "Running": {
+      "frames": [
+        "RUN1",
+        "RUN2",
+        "RUN3",
+        "RUN4",
+        "RUN5",
+        "RUN6"
+      ],
+      "align": true
+    },
+    "Skidding": {
+      "frames": [
+        "CROUCH_IN"
+      ]
+    },
+    "Pushing": {
+      "frames": [
+        "PUSH"
+      ]
+    },
+    "Jumping": {
+      "frames": [
+        "JUMP1"
+      ]
+    },
+    "Bouncing": {
+      "frames": [
+        "JUMP5"
+      ]
+    },
+    "Hurt": {
+      "frames": [
+        "HURT"
+      ]
+    },
+    "Dying": {
+      "frames": [
+        "DIE1"
+      ]
+    },
+    "Drowning": {
+      "frames": [
+        "DIE1"
+      ]
+    },
+    "Hanging": {
+      "frames": [
+        {
+          "frame": "HANG1",
+          "offset": [
+            0,
+            13
+          ]
+        },
+        {
+          "frame": "HANG2",
+          "offset": [
+            0,
+            13
+          ]
+        }
+      ],
+      "anchor": "center"
+    },
+    "Clinging On": {
+      "frames": [
+        {
+          "frame": "HANG1",
+          "offset": [
+            0,
+            13
+          ]
+        }
+      ],
+      "anchor": "center"
+    },
+    "Water Slide": {
+      "frames": [
+        "SLIDE_KICK"
+      ]
+    },
+    "Flailing 1": {
+      "frames": [
+        "HURT2"
+      ]
+    },
+    "Super Transform": {
+      "frames": [
+        "CAST_UP"
+      ]
+    }
+  },
+  "animations_sonic2": {},
+  "ability_animations": {
+    "41": {
+      "name": "Somersault",
+      "frames": [
+        "FLIP1",
+        "FLIP2",
+        "FLIP3",
+        "FLIP4"
+      ],
+      "anchor": "center"
+    },
+    "43": {
+      "name": "Shuriken Throw",
+      "frames": [
+        "THROW1",
+        "THROW2",
+        "THROW3",
+        "THROW4"
+      ],
+      "speed": 0
+    },
+    "44": {
+      "name": "Shuriken Throw Air",
+      "frames": [
+        "AIRTHROW1",
+        "AIRTHROW2",
+        "AIRTHROW3",
+        "AIRTHROW4"
+      ],
+      "speed": 0
+    },
+    "47": {
+      "name": "Wall Cling",
+      "frames": [
+        "FLIP_START"
+      ]
+    },
+    "42": {
+      "name": "Ninjutsu Cast",
+      "frames": [
+        "CAST5",
+        "CAST6",
+        "CAST7",
+        "CAST_UP"
+      ],
+      "speed": 0
+    },
+    "48": {
+      "name": "Mijin",
+      "frames": [
+        "KNEEL",
+        "MIJIN1",
+        "MIJIN2",
+        "MIJIN3",
+        "MIJIN4"
+      ],
+      "speed": 0
+    },
+    "49": {
+      "name": "Rolling",
+      "frames": [
+        "SLIDE_KICK"
+      ]
+    }
+  },
+  "special_stage": {},
+  "ui": {
+    "life_icon": {
+      "rect": [
+        14,
+        3,
+        16,
+        16
+      ],
+      "trim": false
+    },
+    "monitor_1up": {
+      "rect": [
+        14,
+        4,
+        16,
+        14
+      ],
+      "trim": false
+    },
+    "sign_face": {
+      "head": "HEAD"
+    },
+    "mini_1": {
+      "frame": "KNEEL"
+    },
+    "mini_2": {
+      "frame": "CROUCH"
+    },
+    "_mini": "mini_1 / mini_2 kneeling and crouching: the shared mini boxes are 36x48 (his standing frames, 61 px, would grow every package's UI sheets)"
+  },
+  "ending": {
+    "_ending": "Sonic 1's ending: idle, three poses (small, medium, large), six good-ending frames; all inside the shared boxes (noswap_common.UiSheets: taller art would grow every package's sheets)",
+    "end_idle": {
+      "frame": "STAND"
+    },
+    "end_pose_1": {
+      "frame": "STAND"
+    },
+    "end_pose_2": {
+      "frame": "THROW_ARM"
+    },
+    "end_pose_3": {
+      "frame": "CAST_UP"
+    },
+    "good_1": {
+      "frame": "STAND"
+    },
+    "good_2": {
+      "frame": "CROUCH_IN"
+    },
+    "good_3": {
+      "frame": "CROUCH"
+    },
+    "good_4": {
+      "frame": "JUMP1"
+    },
+    "good_5": {
+      "frame": "JUMP5"
+    },
+    "good_6": {
+      "frame": "FLIP_START"
+    }
+  },
+  "sounds": {
+    "_ninjutsu": "The Revenge of Shinobi's \"Ninjitsu\" (sfx/SOURCE.txt)",
+    "ninjutsu": "sfx/Ninjitsu.wav"
+  },
+  "abilities": {
+    "abilities": [
+      "double_jump",
+      "wall_cling",
+      "melee",
+      "ninjutsu",
+      "no_stomp"
+    ],
+    "double_jump": 1.0,
+    "cling_frames": 90,
+    "cling_hold": 30,
+    "cling_slide": "0x8000",
+    "climb_speed": "0x10000",
+    "wall_jump_x": "0x50000",
+    "wall_jump_y": "0x68000",
+    "cling_lock": 10,
+    "ledge_hop": "0x40000",
+    "ledge_forward": "0x20000",
+    "melee_sfx": "Insta Shield",
+    "melee_sfx_s3k": "Global/InstaShield.wav",
+    "melee_reach": [
+      10,
+      10,
+      10,
+      10
+    ],
+    "melee_ticks": 3,
+    "shot": {
+      "motion": "straight",
+      "speed": "0x70000",
+      "lifetime": 40,
+      "max_alive": 3,
+      "cooldown": 10,
+      "pose": 10,
+      "x": 20,
+      "y": -10,
+      "radius": 6,
+      "art": {
+        "sheet": "Shinobi3_JoeMusashi.png",
+        "drawing": [
+          188,
+          164,
+          9,
+          1
+        ],
+        "background": [
+          "#367594"
+        ],
+        "ticks": 4,
+        "hitbox": [
+          -6,
+          -6,
+          6,
+          6
+        ],
+        "crop": true,
+        "turns": [
+          "none"
+        ]
+      },
+      "s3k": {
+        "sound": "Global/InstaShield.wav"
+      },
+      "v4": {
+        "sound": "Insta Shield"
+      },
+      "cd": {
+        "sound": "SFX_G_RELEASE"
+      },
+      "_shot": "Shuriken: the thin kunai streak from his own throw frame (sheet 188,164, 9x1: the blade and its grey tip), straight ahead at 7 px a frame plus his own speed, 3 out at once, gone at a wall, after 40 frames or at its first hit"
+    },
+    "_abilities": "Joe Musashi's kit (the user's approved design, 2026-10-01): shuriken on Y, a somersault double jump, Sticks' wall cling with a stronger kick off the wall, and Ninjutsu (up + Y after breaking a monitor). Speeds are 16.16 fixed point.",
+    "_double_jump": "the somersault: a second jump at his full jump, once per jump, in his own curled flip frames (slot 41)",
+    "_wall_cling": "Sticks' and Trip's wall cling (1.5 s on a wall, then sliding; up / down climb), with a stronger kick off the wall: jump while clinging pushes him 5 px a frame away and 6.5 up",
+    "_melee": "only the throw pose (slots 43 / 44: his kunai throw frames); Y throws the shuriken",
+    "ninjutsu": [
+      "ikazuchi",
+      "kariu",
+      "fushin",
+      "mijin"
+    ],
+    "_ninjutsu": "Ninjutsu (tools/ninjutsu.py): a broken monitor stores one magic at random (at most one, shown as the game's own monitor icon at the top); up + Y casts it: Ikazuchi the lightning shield, Kariu a screen-wide hit with a dark flash, Fushin a higher jump for 10 s, Mijin a half-screen blast and then a normal hit on him",
+    "ninja_cast": 24,
+    "ninja_cast_ticks": 6,
+    "ninja_mijin": 40,
+    "ninja_mijin_ticks": 8,
+    "ninja_fushin": 600,
+    "ninja_fushin_jump": 1.35,
+    "ninja_kariu": {
+      "hit": 8,
+      "reach_x": 212,
+      "reach_y": 128,
+      "reach_cd": 200,
+      "flash": [
+        64,
+        128,
+        192,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        240,
+        220,
+        200,
+        180,
+        160,
+        140,
+        120,
+        100,
+        80,
+        60,
+        40,
+        20
+      ],
+      "sfx": "Fire Dash",
+      "sfx_s3k": "Global/FireDash.wav",
+      "sfx_cd": "SFX_G_EXPLOSION"
+    },
+    "ninja_mijin_blast": {
+      "hit": 20,
+      "reach_x": 128,
+      "reach_y": 96,
+      "reach_cd": 112,
+      "sfx": "Explosion",
+      "sfx_s3k": "Global/Explosion.wav",
+      "sfx_cd": "SFX_G_EXPLOSION"
+    },
+    "ninja_sfx": "Menu Select",
+    "ninja_sfx_s3k": "Global/Grab.wav",
+    "ninja_sfx_cd": "SFX_G_SELECT",
+    "ninja_cast_sfx": "Release",
+    "ninja_cast_sfx_s3k": "own:ninjutsu",
+    "ninja_cast_sfx_cd": "SFX_G_RELEASE",
+    "_no_stomp": "no_stomp (the user, 2026-10-02): his jump is his own jump pose and isn't an attack (a badnik hurts him); rolling and the Spin Dash's release are his slide (\"Rolling\", slot 49: flags roll), which attacks and breaks walls: his Slide Kick frame; the Spin Dash charges crouched"
+  },
+  "s3k_victory": {
+    "frames": [
+      "CAST6",
+      "CAST_UP"
+    ]
+  },
+  "ball": {
+    "size": "medium",
+    "colours": "auto",
+    "use_for": [
+      "Special Stage"
+    ],
+    "_ball": "Sonic 1's special stage only: his roll is his slide kick (slot 49) and his jump his own pose (no_stomp)"
+  }
+}

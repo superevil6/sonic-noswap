@@ -1,0 +1,8 @@
+Ninjitsu.wav = "The Revenge of Shinobi/Ninjitsu.wav", extracted alone (unchanged) from the zip of:
+  The Revenge of Shinobi / The Super Shinobi (Sega Genesis), "Sound Effects", The Sounds Resource, asset 609064
+  https://www.sounds-resource.com/sega_genesis/revengeofshinobisupershinobi/asset/609064/
+  Uploaded By: GRA2itous (submitted September 25, 2026). No ripper named.
+  Terms: none stated on the page, and the zip has no readme (credited anyway).
+Used for: Joe's Ninjutsu cast (ninja_cast_sfx_s3k: Sonic 3 & Knuckles and Sonic Mania).
+Note: a substitute. The task asked for Shinobi III, which has no sound assets on The Sounds Resource; The Revenge of
+Shinobi is Joe Musashi's previous Genesis game and names this clip. The Revenge of Shinobi (c) SEGA.

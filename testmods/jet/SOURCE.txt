@@ -1,0 +1,26 @@
+Jet the Hawk (custom sheet, Sonic 1/2/3 style) by Gabriel Frag (Gabriel_aka_Frag), 2011 ("the current work")
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/96370/  (from "Jet Link.txt";
+submitted Sep 18, 2017). Sheet: Jet.png (a copy of testmods/Jet.png, 996x2287).
+
+Text on the sheet (top right, under the "made by GABRIEL FRAG" banner), exactly as written:
+"Feel free to use this sheet in anyway.
+And if you use this in any manner i would
+appriciate if you credit me.
+Don't steal or claim as your own.
+And if you put this up on a website
+leave the tag and credits."
+
+Usage terms: free to use in any way, with credit; don't claim it as our own; on a website keep his tag and credits.
+Credit in release: Jet the Hawk sprites by Gabriel Frag (Gabriel_aka_Frag). Jet the Hawk (c) SEGA.
+
+What we do: frames are only cut (the Water Slide pair is mirrored). The Tornado frames compose the sheet's own
+wind-swoosh pieces (SPARE PARTS) ahead of his whirl-around swing; nothing is redrawn, resized or recoloured in the
+cutting. Palette: the built frames use 40 colours; #e0e0e0, #e00000 and #800000 are exactly Sonic's slots 6, 12
+and 13; the 22 most-used others keep their exact values in the extras' own slots 74-95. The extras have only 22
+own slots, so 15 rarer colours (about 4,300 of 115,000 pixels) share the slot of their nearest colour: board /
+sole greys #737478 and #a2a5a2 -> Sonic's #808080 / #a0a0a0, dark reds #8c1606 / #5e0100 -> Sonic's #800000 /
+#400000, #0b100a -> #080000, #daffd4 and #fffbff -> #e0e0e0, #191919 -> #202020, #9797b9 -> #a0a0c0,
+#b9b9dc and #ffb9b9 -> #c0c0e0, #b4ffa5 -> #b3ffa4, #86e78a -> #6df565, the eyes' lightest blue #54bde1 ->
+#33a1ce, and a board green #178617 -> #069432 (listed in make_configs.py MERGED). The HUD icons are 16-px crops
+of the sheet's front head; the signpost shows that head on the game's own board (Items2). The "JET" HUD name
+tag isn't on the sheet: our own lettering in the HUD font the other extras use, in his gold.

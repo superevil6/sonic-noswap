@@ -1,0 +1,883 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Axel Stone (Streets of Rage 2), made with the NoSwap toolset (detect, palette fill, the hit-box fit, the generic ball); docs/character-json.md explains every key. Keys starting with _ are comments.",
+  "id": "axel",
+  "key": "noswap.axel",
+  "name": "AXEL",
+  "full_name": "Axel Stone",
+  "credits": {
+    "short": "Sprites: Yawackhary (tSR)",
+    "full": "Axel Stone sprites from Streets of Rage 2 / Bare Knuckle II (Mega Drive / Genesis), ripped by Yawackhary, The Spriters Resource asset 10976. Streets of Rage and its sprites are owned by SEGA (sprites: Sega / Ancient)",
+    "artists": [
+      "Yawackhary"
+    ],
+    "url": "https://www.spriters-resource.com/sega_genesis/sor2/asset/10976/",
+    "terms": "Ripped by Yawackhary, no credit needed but don't steal. Sprites: Sega / Ancient",
+    "_terms": "copied word for word from the sheet's footer (testmods/axel/SoR2_Axel.png); the asset page (checked 2026-10-02) states no terms of its own",
+    "_url": "The Spriters Resource, asset 10976 (Sega Genesis: Streets of Rage 2, Playable Characters, contributor Yawackhary); link checked 2026-10-02"
+  },
+  "sheet": {
+    "file": "SoR2_Axel.png",
+    "background": [
+      "#ccffcc",
+      "#000000"
+    ],
+    "_background": "#ccffcc is the sheet's empty colour; #000000 is only his drop shadow under the feet (a separate object in the game, used nowhere else on his frames but 2 px of one unused frame), so it's left out: a crop, no colour changed",
+    "feet_y": 20
+  },
+  "base": "sonic",
+  "flags": {
+    "super": false,
+    "drop_dash": false,
+    "roll": true,
+    "no_roll": false,
+    "private": false,
+    "crossover": true
+  },
+  "card": {
+    "scale": 4,
+    "_scale": "his Stopped frame at 4x: at 8x (616 px) he's taller than the card's 536-px cell"
+  },
+  "games": {
+    "sonic1": true,
+    "sonic2": true,
+    "soniccd": true,
+    "s3k": true,
+    "mania": true
+  },
+  "palette": {
+    "own": {
+      "74": "#204080",
+      "75": "#202020",
+      "76": "#a06020",
+      "77": "#a0a0e0",
+      "78": "#e0a060",
+      "79": "#602000",
+      "80": "#606060",
+      "81": "#e08000",
+      "82": "#e02000",
+      "83": "#6060c0"
+    },
+    "_own": "slot -> colour: his own colours, in slots 74-95 (the editor's Fill from sheet, exact colours only; #6060c0 moved from the base's slot 4 to its own slot: 2-5 are Sonic's blues, which his Super palette changes)",
+    "shared": {
+      "#e0e0e0": 6,
+      "#a0a0a0": 7,
+      "#e0e000": 15,
+      "#800000": 13
+    },
+    "_shared": "colours exactly equal to one of the base's slots (Fill from sheet)",
+    "other_colours": "nearest",
+    "strict": true
+  },
+  "frames": {
+    "STAND1": [
+      8,
+      11,
+      42,
+      77
+    ],
+    "STAND2": [
+      64,
+      13,
+      39,
+      75
+    ],
+    "STAND3": [
+      112,
+      15,
+      39,
+      73
+    ],
+    "WALK1": [
+      160,
+      8,
+      25,
+      78
+    ],
+    "WALK2": [
+      202,
+      8,
+      26,
+      79
+    ],
+    "WALK3": [
+      240,
+      9,
+      46,
+      78
+    ],
+    "WALK4": [
+      298,
+      8,
+      25,
+      79
+    ],
+    "WALK5": [
+      337,
+      8,
+      26,
+      79
+    ],
+    "WALK6": [
+      376,
+      9,
+      44,
+      78
+    ],
+    "CROUCH": [
+      8,
+      131,
+      40,
+      61
+    ],
+    "JUMP_UP": [
+      56,
+      106,
+      38,
+      86
+    ],
+    "JUMP_TUCK": [
+      160,
+      113,
+      56,
+      79
+    ],
+    "FLYING_KICK": [
+      224,
+      139,
+      84,
+      53
+    ],
+    "JUMP_PUNCH": [
+      320,
+      109,
+      56,
+      83
+    ],
+    "JAB_READY": [
+      80,
+      203,
+      40,
+      77
+    ],
+    "JAB": [
+      8,
+      204,
+      61,
+      76
+    ],
+    "HOOK1": [
+      8,
+      307,
+      52,
+      77
+    ],
+    "HOOK2": [
+      72,
+      309,
+      63,
+      75
+    ],
+    "HOOK3": [
+      144,
+      314,
+      53,
+      70
+    ],
+    "GRAND1": [
+      8,
+      560,
+      73,
+      48
+    ],
+    "GRAND2": [
+      88,
+      560,
+      73,
+      48
+    ],
+    "GRAND3": [
+      168,
+      539,
+      73,
+      69
+    ],
+    "GRAND4": [
+      248,
+      531,
+      78,
+      77
+    ],
+    "GRAND5": [
+      336,
+      499,
+      51,
+      109
+    ],
+    "GRAND6": [
+      400,
+      496,
+      52,
+      112
+    ],
+    "GRAND7": [
+      464,
+      509,
+      51,
+      99
+    ],
+    "WING1": [
+      528,
+      730,
+      87,
+      78
+    ],
+    "WING2": [
+      8,
+      818,
+      73,
+      102
+    ],
+    "WING3": [
+      88,
+      817,
+      69,
+      103
+    ],
+    "WING4": [
+      168,
+      848,
+      91,
+      72
+    ],
+    "CLINCH": [
+      208,
+      304,
+      39,
+      80
+    ],
+    "ARMS_UP": [
+      480,
+      297,
+      39,
+      86
+    ],
+    "SQUAT": [
+      144,
+      748,
+      46,
+      60
+    ],
+    "LEAN_BACK": [
+      250,
+      745,
+      51,
+      62
+    ],
+    "BACKFLIP": [
+      312,
+      753,
+      57,
+      54
+    ],
+    "HURT": [
+      152,
+      931,
+      50,
+      77
+    ],
+    "HURT_BENT": [
+      96,
+      944,
+      45,
+      64
+    ],
+    "KNOCKED": [
+      216,
+      955,
+      67,
+      53
+    ],
+    "GET_UP": [
+      560,
+      957,
+      41,
+      51
+    ],
+    "HEAD": [
+      19,
+      10,
+      18,
+      17
+    ]
+  },
+  "_frames": "The sheet draws him facing left: every use is mirrored (\"flip\"), the faithful-art rule's allowed mirroring. He stays his own size (about 77 px standing; Sonic is about 40)",
+  "animations": {
+    "Stopped": {
+      "frames": [
+        {
+          "frame": "STAND1",
+          "flip": true
+        }
+      ]
+    },
+    "Waiting": {
+      "frames": [
+        {
+          "frame": "STAND1",
+          "flip": true
+        },
+        {
+          "frame": "STAND2",
+          "flip": true
+        },
+        {
+          "frame": "STAND3",
+          "flip": true
+        },
+        {
+          "frame": "STAND2",
+          "flip": true
+        }
+      ]
+    },
+    "Looking Up": {
+      "frames": [
+        {
+          "frame": "GRAND7",
+          "flip": true
+        }
+      ]
+    },
+    "Looking Down": {
+      "frames": [
+        {
+          "frame": "CROUCH",
+          "flip": true
+        }
+      ]
+    },
+    "Spin Dash": {
+      "frames": [
+        {
+          "frame": "CROUCH",
+          "flip": true
+        }
+      ]
+    },
+    "Walking": {
+      "frames": [
+        {
+          "frame": "WALK1",
+          "flip": true
+        },
+        {
+          "frame": "WALK2",
+          "flip": true
+        },
+        {
+          "frame": "WALK3",
+          "flip": true
+        },
+        {
+          "frame": "WALK4",
+          "flip": true
+        },
+        {
+          "frame": "WALK5",
+          "flip": true
+        },
+        {
+          "frame": "WALK6",
+          "flip": true
+        }
+      ],
+      "align": true
+    },
+    "Running": {
+      "frames": [
+        {
+          "frame": "WALK1",
+          "flip": true
+        },
+        {
+          "frame": "WALK2",
+          "flip": true
+        },
+        {
+          "frame": "WALK3",
+          "flip": true
+        },
+        {
+          "frame": "WALK4",
+          "flip": true
+        },
+        {
+          "frame": "WALK5",
+          "flip": true
+        },
+        {
+          "frame": "WALK6",
+          "flip": true
+        }
+      ],
+      "align": true
+    },
+    "Skidding": {
+      "frames": [
+        {
+          "frame": "LEAN_BACK",
+          "flip": true
+        }
+      ]
+    },
+    "Pushing": {
+      "frames": [
+        {
+          "frame": "CLINCH",
+          "flip": true
+        }
+      ]
+    },
+    "Jumping": {
+      "frames": [
+        {
+          "frame": "JUMP_TUCK",
+          "flip": true
+        }
+      ]
+    },
+    "Bouncing": {
+      "frames": [
+        {
+          "frame": "JUMP_UP",
+          "flip": true
+        }
+      ]
+    },
+    "Hurt": {
+      "frames": [
+        {
+          "frame": "HURT",
+          "flip": true
+        }
+      ]
+    },
+    "Dying": {
+      "frames": [
+        {
+          "frame": "KNOCKED",
+          "flip": true
+        }
+      ]
+    },
+    "Drowning": {
+      "frames": [
+        {
+          "frame": "KNOCKED",
+          "flip": true
+        }
+      ]
+    },
+    "Flailing 1": {
+      "frames": [
+        {
+          "frame": "HURT_BENT",
+          "flip": true
+        }
+      ]
+    },
+    "Super Transform": {
+      "frames": [
+        {
+          "frame": "GRAND7",
+          "flip": true
+        }
+      ]
+    }
+  },
+  "_animations": "SoR2 has no run: his walk is the run too. Left out (hanging, water slide...): the fallback frames (tools/anim_fallbacks.py) The jump, Spin Dash and roll are his own (no_stomp); the ball is only Sonic 1's special stage.",
+  "animations_sonic2": {},
+  "ability_animations": {
+    "41": {
+      "name": "Flying Kick",
+      "frames": [
+        {
+          "frame": "FLYING_KICK",
+          "flip": true
+        }
+      ]
+    },
+    "43": {
+      "name": "Punch Combo",
+      "frames": [
+        {
+          "frame": "JAB_READY",
+          "flip": true
+        },
+        {
+          "frame": "JAB",
+          "flip": true
+        },
+        {
+          "frame": "JAB_READY",
+          "flip": true
+        },
+        {
+          "frame": "JAB",
+          "flip": true
+        },
+        {
+          "frame": "HOOK1",
+          "flip": true
+        },
+        {
+          "frame": "HOOK2",
+          "flip": true
+        },
+        {
+          "frame": "HOOK3",
+          "flip": true
+        }
+      ],
+      "speed": 0,
+      "align": true
+    },
+    "44": {
+      "name": "Jump Punch",
+      "frames": [
+        {
+          "frame": "JUMP_PUNCH",
+          "flip": true
+        },
+        {
+          "frame": "JUMP_PUNCH",
+          "flip": true
+        },
+        {
+          "frame": "JUMP_PUNCH",
+          "flip": true
+        },
+        {
+          "frame": "JUMP_PUNCH",
+          "flip": true
+        }
+      ],
+      "speed": 0
+    },
+    "45": {
+      "name": "Grand Upper",
+      "frames": [
+        {
+          "frame": "GRAND1",
+          "flip": true
+        },
+        {
+          "frame": "GRAND2",
+          "flip": true
+        },
+        {
+          "frame": "GRAND1",
+          "flip": true
+        },
+        {
+          "frame": "GRAND2",
+          "flip": true
+        },
+        {
+          "frame": "GRAND3",
+          "flip": true
+        },
+        {
+          "frame": "GRAND4",
+          "flip": true
+        },
+        {
+          "frame": "GRAND5",
+          "flip": true
+        },
+        {
+          "frame": "GRAND6",
+          "flip": true
+        },
+        {
+          "frame": "GRAND7",
+          "flip": true
+        }
+      ],
+      "speed": 0,
+      "align": true
+    },
+    "46": {
+      "name": "Dragon Wing",
+      "frames": [
+        {
+          "frame": "WING1",
+          "flip": true
+        },
+        {
+          "frame": "WING2",
+          "flip": true
+        },
+        {
+          "frame": "WING3",
+          "flip": true
+        },
+        {
+          "frame": "WING4",
+          "flip": true
+        },
+        {
+          "frame": "WING4",
+          "flip": true
+        }
+      ],
+      "speed": 0,
+      "align": true
+    },
+    "49": {
+      "name": "Rolling",
+      "frames": [
+        {
+          "frame": "GRAND1",
+          "flip": true
+        },
+        {
+          "frame": "GRAND2",
+          "flip": true
+        }
+      ],
+      "speed": 40
+    }
+  },
+  "special_stage": {},
+  "ui": {
+    "life_icon": {
+      "rect": [
+        20,
+        11,
+        16,
+        16
+      ],
+      "trim": false
+    },
+    "life_name": {
+      "text": "AXEL"
+    },
+    "monitor_1up": {
+      "rect": [
+        20,
+        11,
+        16,
+        14
+      ],
+      "trim": false
+    },
+    "sign_face": {
+      "head": "HEAD",
+      "flip": true
+    },
+    "mini_1": {
+      "rect": [
+        13,
+        11,
+        36,
+        48
+      ],
+      "trim": false
+    },
+    "mini_2": {
+      "rect": [
+        66,
+        13,
+        36,
+        48
+      ],
+      "trim": false
+    },
+    "_ui": "His head (life icon, 1-UP, signpost) and his upper body (the minis) are crops of his standing frames: the shared UI boxes every package keeps are 16x16, 16x14 and 36x48 (taller art would grow every package's sheets). UI elements can't be mirrored, so these face left as drawn"
+  },
+  "ending": {
+    "_ending": "Sonic 1's ending poses must fit the shared boxes (noswap_common.UiSheets: about 60-68 px tall for most): his crouching / kneeling / squatting frames; the large pose is his raised fist",
+    "end_idle": {
+      "frame": "SQUAT"
+    },
+    "end_pose_1": {
+      "frame": "CROUCH"
+    },
+    "end_pose_2": {
+      "frame": "ARMS_UP"
+    },
+    "end_pose_3": {
+      "frame": "GRAND7"
+    },
+    "good_1": {
+      "frame": "SQUAT"
+    },
+    "good_2": {
+      "frame": "GET_UP"
+    },
+    "good_3": {
+      "frame": "GET_UP"
+    },
+    "good_4": {
+      "frame": "LEAN_BACK"
+    },
+    "good_5": {
+      "frame": "BACKFLIP"
+    },
+    "good_6": {
+      "frame": "BACKFLIP"
+    }
+  },
+  "sounds": {
+    "_grand_upper": "the user's clip (sfx/SOURCE.txt): his Grand Upper yell",
+    "grand_upper": "sfx/GrandUpper.wav"
+  },
+  "abilities": {
+    "abilities": [
+      "melee",
+      "screw_kick",
+      "physics",
+      "no_stomp"
+    ],
+    "_abilities": "Axel's kit (the user's approved design, 2026-10-02): Y the punch combo (jab, jab, hook); Y while running the Grand Upper; the jump pressed again in mid-air the flying jump kick; up + Y the Dragon Wing (10 rings); brawler physics. Speeds are 16.16 fixed point.",
+    "melee_sfx": "Insta Shield",
+    "melee_sfx_s3k": "Global/InstaShield.wav",
+    "melee_ticks": 4,
+    "melee_stop": true,
+    "melee_reach": [
+      20,
+      36,
+      20,
+      36,
+      26,
+      28,
+      22
+    ],
+    "melee_air_reach": [
+      28,
+      28,
+      28,
+      28
+    ],
+    "melee_run": {
+      "sfx_s3k": "own:grand_upper",
+      "speed": "0x40000",
+      "boost": "0x60000",
+      "reach": [
+        36,
+        36,
+        36,
+        36,
+        49,
+        50,
+        35,
+        35,
+        28
+      ],
+      "top": [
+        -27,
+        -27,
+        -27,
+        -27,
+        -49,
+        -57,
+        -89,
+        -92,
+        -79
+      ],
+      "bottom": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "melee_up": {
+      "rings": 10,
+      "radial": true,
+      "reach": [
+        42,
+        44,
+        46,
+        51,
+        51
+      ]
+    },
+    "kick_jump": true,
+    "kick_x": "0x50000",
+    "kick_y": "0x40000",
+    "kick_bounce": "0x30000",
+    "kick_sfx": "Insta Shield",
+    "kick_sfx_s3k": "Global/InstaShield.wav",
+    "physics": {
+      "top_speed": 0.95,
+      "acceleration": 0.85,
+      "air_acceleration": 0.9,
+      "jump": 1.0
+    },
+    "melee_top": [
+      -57,
+      -56,
+      -57,
+      -56,
+      -57,
+      -55,
+      -50
+    ],
+    "melee_bottom": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "melee_air_top": [
+      -63,
+      -63,
+      -63,
+      -63
+    ],
+    "melee_air_bottom": [
+      20,
+      20,
+      20,
+      20
+    ],
+    "_melee": "the punch combo (slot 43: jab, jab, hook) and the jump punch in the air (44): each frame's box is the hit-box editor's Fit to sprite (reach to his fist's furthest pixel, top / bottom his drawing's), so it covers ground badniks under his high fists",
+    "_melee_run": "the Grand Upper (slot 45): Y at 4 px a frame or more on the ground; held at 6 px a frame or more the way he faces through the low flaming dash and the rising uppercut, an attack all the way (boxes fitted as the combo's)",
+    "_melee_up": "the Dragon Wing (slot 46): up + Y on the ground, costing 10 rings (with fewer, up + Y is the plain punch combo, so the button is never dead and no rings go below 0); the flame wing hits all around him (radial), its reach the flame's furthest pixel sideways",
+    "_screw_kick": "the flying jump kick: the jump pressed again in mid-air dives forward-down (5 px along, 4 down a frame) in his flying kick until he lands, an attack, then a small hop (Rouge's Screw Kick on the jump button: kick_jump). Y in mid-air stays the Super transformation when he can, else the jump punch",
+    "_physics": "a brawler: 85% acceleration (90% in the air), 95% top speed, Sonic's jump",
+    "_no_stomp": "no_stomp (the user, 2026-10-02): his jump is his own jump pose and isn't an attack (a badnik hurts him); rolling and the Spin Dash's release are his slide (\"Rolling\", slot 49: flags roll), which attacks and breaks walls: the Grand Upper's low dash (GRAND1 / GRAND2, its sparks at his feet), a crop of his own sheet; the jump his tucked jump (JUMP_TUCK); the Spin Dash charges crouched"
+  },
+  "s3k_victory": {
+    "frames": [
+      {
+        "frame": "GRAND7",
+        "flip": true
+      }
+    ]
+  },
+  "ball": {
+    "size": "medium",
+    "colours": {
+      "outline": "#204080",
+      "dark": "#6060c0",
+      "mid": "#a0a0e0",
+      "light": "#e0e0e0",
+      "shine": "#e0a060"
+    },
+    "use_for": [
+      "Special Stage"
+    ]
+  }
+}

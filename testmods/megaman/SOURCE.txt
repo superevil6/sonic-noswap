@@ -1,0 +1,20 @@
+Mega Man (Mega Man 7, SNES) sprite sheet, ripped by Mister Man for The Spriters Resource:
+https://www.spriters-resource.com/snes/mm7/asset/31570/
+Sheet: testmods/megaman/MegaMan.png (1012x1458, magenta page, labelled sections), read in place.
+
+Text on the sheet (its footer), exactly as written:
+"Mega Man from Mega Man 7 (SNES) ripped by Mister Man. Please do not steal. Only for tSR."
+
+Usage terms: a rip of Capcom's game art; the ripper asks that it isn't stolen (credit to him and The Spriters Resource).
+Credit in release: Mega Man (Mega Man 7, SNES) ripped by Mister Man, The Spriters Resource; Mega Man (c) Capcom.
+A CROSSOVER character (extras.py "crossover"): shipped only as his own download, never in the all-in-one bundle.
+
+What we do: the sheet faces left, so frames are cut whole and mirrored (build/source.png is a working copy with each
+used frame's pixels copied exactly, mirrored, into a cell of its own); make_configs.py lists which rows are what. The
+Charge Shot is the sheet's own teleport drops (TP2 / TP3), turned a quarter. The charge flash is a runtime palette
+effect using the sheet's own Mega Buster charge palettes (the palettes section, read pixel for pixel); the art files
+keep his normal colours. The small Buster shot is Sonic 3 & Knuckles' Lightning Shield spark at half size (as Gamma's;
+the sheet's muzzle flash is part of the Fire frames, not a loose drawing). The HUD icon is his head cropped to 16x16 from
+the idle frame; the signpost shows that head on the game's own board, enlarged 1.4x (the user's signpost exception).
+The "MEGA MAN" HUD tag isn't on the sheet: our lettering in the HUD font the other extras use. Nothing is redrawn,
+recoloured or resized; all 15 colours are exact in his own slots (none merged).

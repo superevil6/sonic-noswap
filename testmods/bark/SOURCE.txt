@@ -1,0 +1,16 @@
+Bark the Polar Bear (Sonic 1 Style) custom sprite sheet by deltaConduit:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/541696/ (from "Bark Link.txt").
+Sheet: testmods/Bark.png (914x489, dark blue #242490 page, every sprite in a #9090fc / #6c6cd8 cell under a yellow label),
+read in place.
+
+Terms, printed on the sheet: "ORIGINAL SPRITES BY SEGA, SONIC TEAM & DELTACONDUIT. FREE TO USE, BUT GIVE CREDIT. DO NOT
+EDIT. DON'T USE THESE SPRITES FOR EXE STUFF."
+Credit (README): Original sprites by SEGA, Sonic Team & deltaConduit, with the link above. Public. Bark (c) SEGA.
+
+What we do, strictly by those terms: frames are cut out of their cells as drawn (crops); no scaling (he stands 52 px;
+Sonic is about 40), no recolouring, no merged colours (15 colours, each exact: black in Sonic's slot 1, 14 in slots
+74-87), no pieces put together into new frames, nothing .exe-themed. One crop beyond a cell: the Sonic 1 ending's big
+pose (ENDING 8, 145x186) loses its bottom 9 rows (shoe soles) to fit the pose box every package shares. The HUD icon and
+"BARK" tag (1-UP), 1-UP picture, signpost board (GOAL SIGN), continue icons and ending poses are the sheet's own.
+
+Not used: the title, the head icons by it, the colour strip, the doodle, SLAM GROUND (LEFT).

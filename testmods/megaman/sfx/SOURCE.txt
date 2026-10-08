@@ -1,0 +1,8 @@
+Buster.wav = "Megaman Buster.wav", ChargedBuster.wav = "Megaman Charged Buster.wav", supplied by the user (2026-10-02;
+their copies are in the repo's sfx/ folder). Their tags: album "Mega Man 4", title "Mega Man 4 SFX", (c) 1991 Capcom.
+  Source: Mega Man 4 (NES), "Effects", The Sounds Resource, asset 397145, uploaded by J-Sinn
+  https://www.sounds-resource.com/nes/mm4/asset/397145/
+  Terms: none stated on the page. Credit (the user's): "Mega Buster sounds: Mega Man © Capcom, ripped by J-Sinn (The
+  Sounds Resource)".
+Used for: his Mega Buster shot ("shot" "s3k" "sound") and his Charge Shot at full charge ("shot2": its only level), in
+Sonic 3 & Knuckles and Sonic Mania. Sonic 1 / 2 / CD keep the games' sounds.

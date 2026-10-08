@@ -1,0 +1,11 @@
+https://www.spriters-resource.com/custom_edited/mariocustoms/asset/202710/
+
+Mario - "Mario (Sonic 1-Style)" custom sheet (testmods/Mario.png).
+Text on the sheet: "MARIO (SONIC 1-STYLE) MADE BY JON GANDEE. GIVE CREDIT IF USED"
+Usage terms: free to use with credit. No no-editing clause; we made no edits anyway (frames are cut, the ball is
+turned in quarter turns, the HUD icon, signpost board and continue minis are the sheet's own; only the "MARIO"
+HUD tag is drawn in the game's HUD letter style).
+Fireball: Sonic 3 & Knuckles' own Fire Shield "Fire Attack" flame (SEGA / Sonic Team), shrunk to half size with
+nearest-neighbour (the user's approved exception for this character).
+Mario is a Nintendo character.
+Credit in release: Jon Gandee; fireball flame from Sonic 3 & Knuckles (SEGA / Sonic Team).

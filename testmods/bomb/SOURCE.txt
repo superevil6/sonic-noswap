@@ -1,0 +1,14 @@
+Heavy & Bomb (Sonic 1 style) custom sprite sheet by Akimaca:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/228293/ (from "HeavyBomb Link.txt").
+Sheet: testmods/HeavyBomb.png (1124x606), shared with Heavy (testmods/heavy), read in place.
+
+Terms, printed on the sheet: "Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use, just give credit where
+it's due!!!"
+Credit (README): Original sprites by SEGA, Sonic Team & Akimaca, with the link above. Public. Bomb (c) SEGA.
+
+What we do: frames are cut out of their cells as drawn (he already faces right; nothing is mirrored); the UI art
+(life counter, signpost, continue icons) as drawn. Only the "Normal" palette; not the palette variants or the
+"Scrapped/Test" box. The Extras (Detonating, Explosion) make his Self-Destruct. His jump / Spin Dash / special stage ball is
+Sonic Mania's plain spin ball (SEGA / Sonic Team) in his colours, resized nearest-neighbour to 24 px (tools/generic_ball.py, not the artist's art): his Labyrinth spin is him turning round, not a ball. No scaling except the EXPLOSION
+frames, a pixel-exact 2x (nearest-neighbour) so the blast drawn matches its reach; no crops beyond a cell; every
+colour exact.

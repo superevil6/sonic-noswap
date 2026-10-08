@@ -1,0 +1,202 @@
+{
+ "format": "noswap-registry/1",
+ "note": "NoSwap's character build numbers, by key (tools/registry.py). n gives the build ID (6 + n), the art's Extra<n> file names and the Mania save select order. Given once, never changed or reused: don't edit by hand.",
+ "characters": {
+  "noswap.metal-sonic": {
+   "n": 1,
+   "folder": "metal-sonic"
+  },
+  "noswap.fang": {
+   "n": 2,
+   "folder": "fang"
+  },
+  "noswap.big": {
+   "n": 3,
+   "folder": "big"
+  },
+  "noswap.shadow": {
+   "n": 4,
+   "folder": "shadow"
+  },
+  "noswap.blaze": {
+   "n": 5,
+   "folder": "blaze"
+  },
+  "noswap.silver": {
+   "n": 6,
+   "folder": "silver"
+  },
+  "noswap.mighty": {
+   "n": 7,
+   "folder": "mighty"
+  },
+  "noswap.ray": {
+   "n": 8,
+   "folder": "ray"
+  },
+  "noswap.rouge": {
+   "n": 9,
+   "folder": "rouge"
+  },
+  "noswap.charmy": {
+   "n": 10,
+   "folder": "charmy"
+  },
+  "noswap.espio": {
+   "n": 11,
+   "folder": "espio"
+  },
+  "noswap.vector": {
+   "n": 12,
+   "folder": "vector"
+  },
+  "noswap.cream": {
+   "n": 13,
+   "folder": "cream"
+  },
+  "noswap.robotnik": {
+   "n": 14,
+   "folder": "robotnik"
+  },
+  "noswap.max": {
+   "n": 15,
+   "folder": "max"
+  },
+  "noswap.tikal": {
+   "n": 16,
+   "folder": "tikal"
+  },
+  "noswap.mario": {
+   "n": 17,
+   "folder": "mario"
+  },
+  "noswap.trip": {
+   "n": 18,
+   "folder": "trip"
+  },
+  "noswap.gamma": {
+   "n": 20,
+   "folder": "gamma"
+  },
+  "noswap.jet": {
+   "n": 21,
+   "folder": "jet"
+  },
+  "noswap.mecha-sonic": {
+   "n": 22,
+   "folder": "mecha-sonic"
+  },
+  "noswap.sticks": {
+   "n": 23,
+   "folder": "sticks"
+  },
+  "noswap.chaos": {
+   "n": 24,
+   "folder": "chaos"
+  },
+  "noswap.flicky": {
+   "n": 25,
+   "folder": "flicky"
+  },
+  "noswap.tails-doll": {
+   "n": 26,
+   "folder": "tails-doll"
+  },
+  "noswap.bean": {
+   "n": 27,
+   "folder": "bean"
+  },
+  "noswap.bark": {
+   "n": 28,
+   "folder": "bark"
+  },
+  "noswap.heavy": {
+   "n": 29,
+   "folder": "heavy"
+  },
+  "noswap.bomb": {
+   "n": 30,
+   "folder": "bomb"
+  },
+  "noswap.honey": {
+   "n": 31,
+   "folder": "honey"
+  },
+  "noswap.omega": {
+   "n": 32,
+   "folder": "omega"
+  },
+  "noswap.sally": {
+   "n": 33,
+   "folder": "sally"
+  },
+  "noswap.marine": {
+   "n": 34,
+   "folder": "marine"
+  },
+  "noswap.mephiles": {
+   "n": 35,
+   "folder": "mephiles"
+  },
+  "noswap.emerl": {
+   "n": 36,
+   "folder": "emerl"
+  },
+  "noswap.megaman": {
+   "n": 37,
+   "folder": "megaman"
+  },
+  "noswap.ray-poward": {
+   "n": 38,
+   "folder": "ray-poward"
+  },
+  "noswap.sparkster": {
+   "n": 39,
+   "folder": "sparkster"
+  },
+  "noswap.ristar": {
+   "n": 40,
+   "folder": "ristar"
+  },
+  "noswap.headdy": {
+   "n": 41,
+   "folder": "headdy"
+  },
+  "noswap.john-morris": {
+   "n": 42,
+   "folder": "john-morris"
+  },
+  "noswap.ecco": {
+   "n": 43,
+   "folder": "ecco"
+  },
+  "noswap.nights": {
+   "n": 45,
+   "folder": "nights"
+  },
+  "noswap.joe-musashi": {
+   "n": 46,
+   "folder": "shinobi"
+  },
+  "noswap.gilius": {
+   "n": 47,
+   "folder": "gilius"
+  },
+  "noswap.pulseman": {
+   "n": 48,
+   "folder": "pulseman"
+  },
+  "noswap.axel": {
+   "n": 49,
+   "folder": "axel"
+  }
+ },
+ "retired": {
+  "noswap.r25__": {
+   "n": 19
+  },
+  "noswap.r50__": {
+   "n": 44
+  }
+ }
+}

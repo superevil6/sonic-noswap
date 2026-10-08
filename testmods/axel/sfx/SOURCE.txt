@@ -1,0 +1,8 @@
+GrandUpper.wav = "Axel Grand Upper.wav", supplied by the user (2026-10-02; their copy is in the repo's sfx/ folder).
+  Source: ripped by Nai255, The Sounds Resource (the user; Nai255 ripped the Streets of Rage 2 (Sega Genesis) "Sound
+  Effects" pack, asset 393998, whose readme says "No credit needed, but feedback is welcome"). Credit (the user's):
+  "Grand Upper voice: Streets of Rage 2 © SEGA, ripped by Nai255 (The Sounds Resource)".
+Used for: Axel's Grand Upper (melee_run "sfx_s3k": Sonic 3 & Knuckles and Sonic Mania).
+Not used: The Sounds Resource's Streets of Rage 2 (Sega Genesis) pack (asset 393998, "Sound Effects ripped by Nai255 /
+No credit needed, but feedback is welcome") names its clips only by number (00-49.wav, V00-V52.wav), so no voice could
+be picked by name. Streets of Rage (c) SEGA.

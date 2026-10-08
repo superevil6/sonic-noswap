@@ -1,0 +1,20 @@
+Tikal the Echidna (custom sheet, Sonic 1/2 style)
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/268711/  (from "Tikal Link.txt")
+
+Text on the sheet: "Tikal sprites made by SunnyVies. If used, please give credit. No permission needed."
+"Special thanks to the people whose work was used as a reference: Skylights1, E-122-Psi, CreamTheRabbit,
+Cylent Nite, Mod. Gen Project Team, Deebs and NinjaRaccoon"
+
+Usage terms: free to use with credit; no permission needed.
+What we do: frames are only cut (two left-facing "Mid-air punch" frames and half of the "Rotation" turn are
+mirrored). Nothing is redrawn, resized or recoloured. Her 14 main colours each keep their exact value in a
+palette slot of their own (74-86); #e0e0e0 and #a06040 are exactly Sonic's slots 6 and 11; black shares Sonic's
+slot 1 (#080000), as for the other extras. Five one-off shades used on a few frames get their own slots
+(88-92). The remaining stray shades (a few hundred pixels in all, e.g. #efb710, #e9b110 next to the gold
+#f3bb10, near-blacks like #090909) are near-identical duplicates and merge into their twin's slot. The two
+half-faded "Spirit Transform" frames aren't used: they are blended semi-transparent art with dozens of
+in-between colours that no palette slots could hold exactly. A single pixel of the sheet's "LOOP" bracket
+touching three idle frames is left out (a crop). The HUD name tag "TIKAL" isn't on the sheet; it is our own
+lettering in the game's HUD style (the font the other extras' tags use), not an edit of her sprites.
+Credit in release: SunnyVies (sprites); thanks to Skylights1, E-122-Psi, CreamTheRabbit, Cylent Nite,
+Mod. Gen Project Team, Deebs and NinjaRaccoon.

@@ -1,0 +1,21 @@
+Mecha Sonic (Mk II) custom sheet by Domenico, with the original Sonic & Knuckles in-game sprites (SEGA) in its top rows
+("In-game sprites"). https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/183703/ (from
+"MechaSonic Link.txt"). Sheet: testmods/MechaSonic.png (711x787), read in place (no copy here).
+
+Text on the sheet (credits box), exactly as written:
+"Custome Mecha Sonic sprites made by Domenico.
+Give credit if used. This sheet is only to be hosted
+at http://www.themysticalforestzone.com/"
+A small Sonic-and-Mecha picture at the bottom right is marked "Credit to Cylent Nite" (not used).
+
+Usage terms: give credit; the sheet itself is only to be hosted at the artist's site, so it is never shipped (only the
+built game files are).
+Credit in release: Mecha Sonic sprites by Domenico; in-game sprites from Sonic & Knuckles (SEGA). Mecha Sonic (c) SEGA.
+
+What we do: frames are only cut (the Fan Rotate pair and the turn use a mirrored pose); the afterburner frames are
+placed by his body so the flame grows behind him; the last one is cut together with its own trailing sparks. The
+continue icons are his spare side heads without the tips of their back spikes (1 and 3 columns). The HUD icons are
+16-px crops of the sheet's front head; the signpost shows that head on the game's own board (Items2). The "MECHA" HUD
+name tag isn't on the sheet: our own lettering in the HUD font the other extras use. Palette: the built frames use 20
+colours; #808080 is exactly Sonic's slot 8 and the other 19 keep their exact values in the extras' own slots 74-92.
+Nothing is merged, redrawn, resized or recoloured.

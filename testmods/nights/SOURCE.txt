@@ -1,0 +1,20 @@
+NiGHTS sprite sheet, from The Spriters Resource (the user's link, 2026-09-30).
+
+USED: "NiGHTS (Sonic 3-Style)" by Hyperknux6, Custom / Edited > NiGHTS Customs, asset 16645:
+  https://www.spriters-resource.com/custom_edited/nightscustoms/asset/16645/
+  Sheet: testmods/nights/NiGHTS_S3style.png (346x371, RGB, white #ffffff background). The sheet says "no credit
+  needed"; he's credited anyway. NiGHTS / NiGHTS into Dreams (c) SEGA / Sonic Team.
+
+Layout (frame names in character.json, found with `noswap detect`):
+  STAND1 FLOAT1 STAND2 FLOAT2   standing / floating (top row)
+  FLY1 FLY2                     flying (facing right)
+  DRILL1-4                      the drill dash's blur
+  SWIM1-10                      swimming (facing right)
+  LOOP_*                        the paraloop: 8 frames round a circle, NiGHTS heading 8 ways (counterclockwise from
+                                LOOP_R at the bottom right)
+
+What we do: frames cut whole, as drawn, and positioned; nothing redrawn, recoloured or resized. Every colour is exact in
+Origins (21 own slots + 5 of Sonic's). Mania: 7 rare shades go to the nearest global colour (the approved Mania
+exception): #f7f7f7, #e52e27, #606080, #f4f4f4, #ee35cb, #ff00ff, #f78697. The spin ball is Mania's plain ball
+(testmods/_shared/mania_ball.png, SEGA) in his own purples. The HUD icon is a 16x16 crop of his head from STAND1; the
+signpost is the top of his standing frame on the game's own board (sign_face default).

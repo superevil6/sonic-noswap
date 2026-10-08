@@ -1,0 +1,9 @@
+Big the Cat (custom sheet): "Remix: Bigger, Better, Refined" - testmods/Big2.png (782x1048)
+https://www.deviantart.com/ajlew/art/Big-The-Cat-Sprite-Sheet-717939798 (a re-upload by ajlew; the user found it there)
+Printed on the sheet: by DBurraki; "Credit & Many Thanks to... Cylent Nite".
+Terms printed on the sheet: "DO: Use this sheet as you like, but GIVE CREDIT. DO NOT: Claim this sheet as your own or
+otherwise steal." (It's also marked "ONLY FOR THE SPRITERS RESOURCE", a hosting note.)
+Credit in release: DBurraki (the sheet), Cylent Nite (thanked on the sheet), and the DeviantArt link (re-upload by ajlew).
+
+The old sheet (18173.png: Oppolo, Cylent Nite, AkumaTh and Reo, spriters-resource asset 18173) is retired; its config is
+kept unused as make_configs_old.py.

@@ -1,0 +1,35 @@
+{
+  "Groups": [
+    {
+      "Name": "Main",
+      "DisplayName": "Mania Lock-On",
+      "Elements": [
+        {
+          "Name": "Enabled",
+          "DisplayName": "SONIC MANIA button",
+          "Description": [
+            "Show the SONIC MANIA button in the main menu (the Museum / My Data / Options island).",
+            "It only appears when the Sonic Mania decompilation is found."
+          ],
+          "Type": "bool",
+          "DefaultValue": true
+        },
+        {
+          "Name": "Path",
+          "DisplayName": "Decompilation folder",
+          "Description": [
+            "The folder of your Windows build of the Sonic Mania decompilation: the one with RSDKv5U.exe,",
+            "Game.dll and Data.rsdk (or the full path of RSDKv5U.exe). Examples: C:\\Games\\ManiaDecomp,",
+            "or on Linux (Proton) /home/you/Games/ManiaDecomp.",
+            "Leave it empty to look in Steam's Sonic Mania folder (where most people put the decompilation).",
+            "If the button doesn't show, ManiaLockOn.log in this mod's folder says where it looked."
+          ],
+          "Type": "string",
+          "DefaultValue": ""
+        }
+      ]
+    }
+  ],
+  "IniFile": "ManiaLockOn.ini",
+  "Enums": {}
+}

@@ -1,0 +1,44 @@
+Dynamite Headdy (Sega Genesis) sprite sheet: testmods/headdy/Headdy.png (265x6247), from The Spriters Resource:
+https://www.spriters-resource.com/sega_genesis/dynahead/asset/11723/
+
+Verbatim from the sheet's footer: "Dynamite Headdy ripped by Sonicfan32. Credit is optional, but don't steal. This game
+belongs to Treasure and Sega."
+Credit (README): Dynamite Headdy ripped by Sonicfan32 (The Spriters Resource, asset 11723); Dynamite Headdy (c) Treasure
+and Sega. A separate download (extras.py "crossover": never in the all-in-one bundle).
+
+Layout: a page (#3f48cc) of Genesis hardware sprite boxes (dark teal #002424; navy #00006c: the same frame on the other
+priority layer), in sections: TITLE (the big title-screen Headdy: not used), then IN-GAME: BODY 1-10 (his headless body
+poses) and HEAD 1-20 (head sets), SCENE 3-2, SPOTLIGHT, USA only, END (JPN / USA). The body's green neck bolt (#00fc00) is
+where the game puts the head.
+
+What we do (make_configs.py): Genesis art at 1x. Headdy is a composite, as in his game: each frame is a body with a head
+put on at its neck bolt (the head box's bottom, 12 px in from its right edge, on the bolt), both copied exactly into
+build/source.png. The thrown head is drawn at runtime (tools/head_throw.py), his body headless meanwhile. Crops, mirroring
+and placing existing pieces only; nothing redrawn, recoloured or resized. The HUD tag "HEADDY" is our lettering in the HUD
+font the other extras use; the life icon / 1-UP are a crop of his standing head, the signpost that head on the game's
+own board. All 11 colours exact (black in Sonic's slot 1, the rest in 74-83). The frames used are listed in make_configs.py.
+
+Head sections (y ranges on the sheet; each has HEAD 1's layout: row 1 the head at rest / blinking, row 2 shocked, rows
+3-4 the flying head by aim, then spinning and front views). HEAD 1 is his normal head (built: head variant 0). The
+others are power-up heads, listed for the monitor_swap module (their names and effects as best identified from the art
+and the game; unverified ones marked "?"):
+  HEAD 1   y 504-820    normal head (row 3 flying out: boxes 69, 68, 66, 70, 67; row 4 back: 75, 73, 71, 74, 72)
+  HEAD 2   y 820-1111   grey steel head: Hammer Head (a heavier, stronger head)
+  HEAD 3   y 1111-1377  green crest head (? a power-up head)
+  HEAD 4   y 1377-1643  red head in goggles (? speed / dash head)
+  HEAD 5   y 1643-1885  purple spiked ball: Spike Head (sticks to walls and ceilings so he can climb)
+  HEAD 6   y 1885-2151  dark blue hooded head (?)
+  HEAD 7   y 2151-2507  flaming head (? Hot Head: fire)
+  HEAD 8   y 2507-2748  outline-only head (with BODY 2's outline body: invisible / invincible)
+  HEAD 9   y 2986-3156  tiny head (with BODY 3's tiny body: Mini Head, shrinks him)
+  HEAD 10  y 3351-3612  black bomb: Bang Head (explodes)
+  HEAD 11  y 3612-3819  green nozzle head: Vacuum Head (sucks enemies in)
+  HEAD 12  y 3861-4086  pink pig: Pig Head (eats)
+  HEAD 13  y 4086-4261  numbered display head (? counter)
+  HEAD 14  y 4311-4460  big speaker head with lips (with BODY 5: ? a shout attack)
+  HEAD 15  y 4494-4627  nightcap: Sleep Head (with BODY 6 lying down: sleeps to heal)
+  HEAD 16  y 4669-4943  normal head with signs ("Bye Bye"): not a power-up
+  HEAD 17  y 5275-5342  normal head looking up (with BODY 10's hanging body)
+  HEAD 18  y 5483-5558  purple rocket head (? shooting stage)
+  HEAD 19  y 5558-5625  orange plane head (? shooting stage)
+  HEAD 20  y 5625-5708  brown bird head (? shooting stage)

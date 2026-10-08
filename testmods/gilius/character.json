@@ -1,0 +1,898 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Gilius Thunderhead (Golden Axe), a crossover extra (a separate download). Made with the NoSwap toolset: frames from `noswap detect`, all flipped (the sheet faces left). docs/character-json.md explains every key.",
+  "id": "gilius",
+  "key": "noswap.gilius",
+  "name": "GILIUS",
+  "full_name": "Gilius Thunderhead",
+  "credits": {
+    "short": "Sprites: Ragey, Bad Moon (tSR)",
+    "full": "Gilius Thunderhead sprites from Golden Axe (Arcade), ripped by Ragey, The Spriters Resource asset 272278; his Earthquake magic from Golden Axe II (Mega Drive / Genesis), ripped by Bad Moon, The Spriters Resource asset 169246. Golden Axe and its sprites are owned by SEGA",
+    "artists": [
+      "Ragey",
+      "Bad Moon"
+    ],
+    "url": "https://www.spriters-resource.com/arcade/goldenaxe/asset/272278/",
+    "terms": "No terms stated (Gilius.png and Gilius_Magic_GA2.png pages, checked 2026-10-02).",
+    "_terms": "no terms stated on either page (checked 2026-10-02); credit the rippers anyway. The magic sheet: https://www.spriters-resource.com/sega_genesis/goldenaxe2/asset/169246/"
+  },
+  "sheet": {
+    "file": "Gilius_sheet.png",
+    "background": [
+      "#ff00ff"
+    ],
+    "_background": "Gilius_sheet.png is Gilius.png (transparent) on a #ff00ff ground, pixel for pixel otherwise (tools need a background colour); under it, Bad Moon's Earthquake pieces from Gilius_Magic_GA2.png, pasted pixel for pixel by make_sheet.py",
+    "feet_y": 20
+  },
+  "base": "sonic",
+  "flags": {
+    "super": false,
+    "drop_dash": false,
+    "roll": true,
+    "no_roll": false,
+    "private": false,
+    "crossover": true
+  },
+  "card": null,
+  "games": {
+    "sonic1": true,
+    "sonic2": true,
+    "soniccd": true,
+    "s3k": true,
+    "mania": true
+  },
+  "palette": {
+    "own": {
+      "74": "#946331",
+      "75": "#b59400",
+      "76": "#b5845b",
+      "77": "#734210",
+      "78": "#e6b594",
+      "79": "#e6c563",
+      "80": "#ce9c7b",
+      "81": "#526321",
+      "82": "#6b843a",
+      "83": "#849c52",
+      "84": "#ffffc5",
+      "85": "#ffd6b5",
+      "86": "#adc57b",
+      "87": "#debd5b",
+      "88": "#efd684",
+      "89": "#f7f7f7",
+      "90": "#947300",
+      "91": "#b090b0",
+      "92": "#f8fcf8",
+      "93": "#482448",
+      "94": "#f8d800",
+      "95": "#d89000"
+    },
+    "_own": "74-90 his own colours; 91-95 his Earthquake art's (Gilius_Magic_GA2.png: rock and dust purples / white, the spikes' golds). 22 slots for 23 colours: his rarest shade, #ffffff (37 px, the axe's shine), is drawn as the nearest, #f8fcf8 (other_colours nearest): a palette limit, not an edit",
+    "shared": {
+      "#000000": 1
+    },
+    "other_colours": "nearest",
+    "strict": false
+  },
+  "frames": {
+    "WALK1": [
+      3,
+      11,
+      49,
+      51
+    ],
+    "WALK2": [
+      57,
+      7,
+      52,
+      55
+    ],
+    "WALK3": [
+      115,
+      9,
+      54,
+      53
+    ],
+    "WALK4": [
+      173,
+      3,
+      54,
+      59
+    ],
+    "WALK5": [
+      231,
+      6,
+      52,
+      56
+    ],
+    "WALK6": [
+      289,
+      9,
+      50,
+      53
+    ],
+    "STAND_BIG": [
+      365,
+      8,
+      52,
+      78
+    ],
+    "PORTRAIT": [
+      385,
+      101,
+      32,
+      32
+    ],
+    "CHOP1": [
+      3,
+      253,
+      37,
+      64
+    ],
+    "CHOP2": [
+      45,
+      253,
+      50,
+      64
+    ],
+    "CHOP3": [
+      99,
+      240,
+      40,
+      77
+    ],
+    "CHOP4": [
+      145,
+      267,
+      70,
+      50
+    ],
+    "CHOP5": [
+      219,
+      271,
+      51,
+      46
+    ],
+    "SPIN1": [
+      3,
+      337,
+      55,
+      48
+    ],
+    "SPIN2": [
+      65,
+      339,
+      72,
+      46
+    ],
+    "SPIN3": [
+      146,
+      341,
+      90,
+      45
+    ],
+    "SPIN4": [
+      247,
+      338,
+      59,
+      47
+    ],
+    "SPIN5": [
+      314,
+      336,
+      74,
+      48
+    ],
+    "SPIN6": [
+      3,
+      419,
+      73,
+      49
+    ],
+    "SPIN7": [
+      86,
+      420,
+      56,
+      48
+    ],
+    "RUN1": [
+      3,
+      572,
+      34,
+      45
+    ],
+    "RUN2": [
+      41,
+      572,
+      39,
+      45
+    ],
+    "RUN3": [
+      87,
+      570,
+      37,
+      47
+    ],
+    "RUN4": [
+      129,
+      572,
+      34,
+      45
+    ],
+    "RUN5": [
+      167,
+      572,
+      39,
+      45
+    ],
+    "RUN6": [
+      213,
+      570,
+      37,
+      47
+    ],
+    "DASH": [
+      267,
+      570,
+      51,
+      36
+    ],
+    "PUSH1": [
+      61,
+      635,
+      39,
+      47
+    ],
+    "PUSH2": [
+      107,
+      635,
+      39,
+      47
+    ],
+    "CAST1": [
+      153,
+      635,
+      50,
+      47
+    ],
+    "CAST2": [
+      207,
+      622,
+      44,
+      60
+    ],
+    "CAST3": [
+      257,
+      621,
+      56,
+      61
+    ],
+    "JUMP_UP": [
+      91,
+      692,
+      54,
+      69
+    ],
+    "JUMP_TOP": [
+      149,
+      686,
+      37,
+      75
+    ],
+    "CROUCH": [
+      257,
+      714,
+      42,
+      47
+    ],
+    "HURT": [
+      3,
+      777,
+      55,
+      34
+    ],
+    "DIE": [
+      65,
+      779,
+      46,
+      32
+    ],
+    "SKID": [
+      49,
+      820,
+      39,
+      47
+    ],
+    "FLAIL": [
+      3,
+      892,
+      31,
+      39
+    ],
+    "SPRING": [
+      3,
+      1033,
+      38,
+      57
+    ],
+    "AIR2": [
+      99,
+      1036,
+      35,
+      54
+    ],
+    "JUMP_AXE": [
+      91,
+      1097,
+      46,
+      50
+    ],
+    "FRONT": [
+      235,
+      1093,
+      46,
+      54
+    ],
+    "WAVE": [
+      285,
+      1082,
+      54,
+      65
+    ],
+    "HEAD": [
+      257,
+      1093,
+      16,
+      16
+    ],
+    "POT_ICON": [
+      393,
+      106,
+      16,
+      16
+    ],
+    "ROCK_BIG": [
+      3,
+      1160,
+      62,
+      64
+    ],
+    "ROCK_SMALL": [
+      70,
+      1160,
+      31,
+      32
+    ],
+    "GSPIKE_R": [
+      106,
+      1160,
+      64,
+      23
+    ],
+    "WSPIKE_R": [
+      175,
+      1160,
+      64,
+      30
+    ],
+    "DUST_B_R": [
+      244,
+      1160,
+      64,
+      31
+    ],
+    "DUST_M_R": [
+      313,
+      1160,
+      64,
+      13
+    ],
+    "DUST_S_R": [
+      3,
+      1230,
+      48,
+      7
+    ],
+    "GSPIKE_L": [
+      56,
+      1230,
+      32,
+      22
+    ],
+    "WSPIKE_L": [
+      93,
+      1230,
+      32,
+      30
+    ],
+    "DUST_B_L": [
+      130,
+      1230,
+      48,
+      31
+    ],
+    "DUST_M_L": [
+      183,
+      1230,
+      48,
+      13
+    ],
+    "DUST_S_L": [
+      236,
+      1230,
+      48,
+      7
+    ]
+  },
+  "animations": {
+    "Stopped": {
+      "frames": [
+        {
+          "frame": "WALK1",
+          "flip": true
+        }
+      ]
+    },
+    "Waiting": {
+      "frames": [
+        {
+          "frame": "FRONT",
+          "flip": true
+        }
+      ]
+    },
+    "Looking Up": {
+      "frames": [
+        {
+          "frame": "CAST2",
+          "flip": true
+        }
+      ]
+    },
+    "Looking Down": {
+      "frames": [
+        {
+          "frame": "CROUCH",
+          "flip": true
+        }
+      ]
+    },
+    "Spin Dash": {
+      "frames": [
+        {
+          "frame": "CROUCH",
+          "flip": true
+        }
+      ]
+    },
+    "Walking": {
+      "frames": [
+        {
+          "frame": "WALK1",
+          "flip": true
+        },
+        {
+          "frame": "WALK2",
+          "flip": true
+        },
+        {
+          "frame": "WALK3",
+          "flip": true
+        },
+        {
+          "frame": "WALK4",
+          "flip": true
+        },
+        {
+          "frame": "WALK5",
+          "flip": true
+        },
+        {
+          "frame": "WALK6",
+          "flip": true
+        }
+      ],
+      "align": true
+    },
+    "Running": {
+      "frames": [
+        {
+          "frame": "RUN1",
+          "flip": true
+        },
+        {
+          "frame": "RUN2",
+          "flip": true
+        },
+        {
+          "frame": "RUN3",
+          "flip": true
+        },
+        {
+          "frame": "RUN4",
+          "flip": true
+        },
+        {
+          "frame": "RUN5",
+          "flip": true
+        },
+        {
+          "frame": "RUN6",
+          "flip": true
+        }
+      ],
+      "align": true
+    },
+    "Skidding": {
+      "frames": [
+        {
+          "frame": "SKID",
+          "flip": true
+        }
+      ]
+    },
+    "Pushing": {
+      "frames": [
+        {
+          "frame": "PUSH1",
+          "flip": true
+        },
+        {
+          "frame": "PUSH2",
+          "flip": true
+        }
+      ]
+    },
+    "Jumping": {
+      "frames": [
+        {
+          "frame": "JUMP_AXE",
+          "flip": true
+        }
+      ]
+    },
+    "Bouncing": {
+      "frames": [
+        {
+          "frame": "SPRING",
+          "flip": true
+        }
+      ]
+    },
+    "Hurt": {
+      "frames": [
+        {
+          "frame": "HURT",
+          "flip": true
+        }
+      ]
+    },
+    "Dying": {
+      "frames": [
+        {
+          "frame": "DIE",
+          "flip": true
+        }
+      ]
+    },
+    "Drowning": {
+      "frames": [
+        {
+          "frame": "DIE",
+          "flip": true
+        }
+      ]
+    },
+    "Flailing 1": {
+      "frames": [
+        {
+          "frame": "FLAIL",
+          "flip": true
+        }
+      ]
+    },
+    "Super Transform": {
+      "frames": [
+        {
+          "frame": "WAVE",
+          "flip": true
+        }
+      ]
+    }
+  },
+  "animations_sonic2": {},
+  "ability_animations": {
+    "41": {
+      "name": "Spinning Axe Slash",
+      "frames": [
+        {
+          "frame": "SPIN2",
+          "flip": true
+        },
+        {
+          "frame": "SPIN3",
+          "flip": true
+        },
+        {
+          "frame": "SPIN4",
+          "flip": true
+        },
+        {
+          "frame": "SPIN5",
+          "flip": true
+        },
+        {
+          "frame": "SPIN6",
+          "flip": true
+        }
+      ],
+      "anchor": "center"
+    },
+    "42": {
+      "name": "Earthquake Cast",
+      "frames": [
+        {
+          "frame": "CAST1",
+          "flip": true
+        },
+        {
+          "frame": "CAST2",
+          "flip": true
+        },
+        {
+          "frame": "CAST3",
+          "flip": true
+        }
+      ],
+      "speed": 0
+    },
+    "43": {
+      "name": "Axe Chop",
+      "frames": [
+        {
+          "frame": "CHOP2",
+          "flip": true
+        },
+        {
+          "frame": "CHOP3",
+          "flip": true
+        },
+        {
+          "frame": "CHOP4",
+          "flip": true
+        },
+        {
+          "frame": "CHOP5",
+          "flip": true
+        }
+      ],
+      "speed": 0
+    },
+    "45": {
+      "name": "Earthquake Rocks",
+      "frames": [
+        "ROCK_BIG",
+        "ROCK_SMALL"
+      ],
+      "anchor": "center",
+      "speed": 0
+    },
+    "46": {
+      "name": "Earthquake Burst",
+      "frames": [
+        "GSPIKE_R",
+        "WSPIKE_R",
+        "DUST_B_R",
+        "DUST_M_R",
+        "DUST_S_R"
+      ],
+      "speed": 0
+    },
+    "47": {
+      "name": "Earthquake Burst Small",
+      "frames": [
+        "GSPIKE_L",
+        "WSPIKE_L",
+        "DUST_B_L",
+        "DUST_M_L",
+        "DUST_S_L"
+      ],
+      "speed": 0
+    },
+    "48": {
+      "name": "Magic Pot",
+      "frames": [
+        "POT_ICON"
+      ],
+      "anchor": "center",
+      "speed": 0
+    },
+    "49": {
+      "name": "Rolling",
+      "frames": [
+        {
+          "frame": "DASH",
+          "flip": true
+        }
+      ]
+    }
+  },
+  "special_stage": {},
+  "ui": {
+    "life_icon": {
+      "rect": [
+        257,
+        1093,
+        16,
+        16
+      ],
+      "trim": false
+    },
+    "monitor_1up": {
+      "rect": [
+        257,
+        1094,
+        16,
+        14
+      ],
+      "trim": false
+    },
+    "sign_face": {
+      "head": "HEAD"
+    },
+    "mini_1": {
+      "frame": "RUN1"
+    },
+    "mini_2": {
+      "frame": "RUN4"
+    },
+    "_mini": "running frames: the shared mini boxes are 36x48 (his crouch and skid, 42 / 39 wide, would grow every package's UI sheets)"
+  },
+  "ending": {
+    "_ending": "all inside the shared boxes (noswap_common.UiSheets: a bigger pose would grow every package's UI sheets): good_4 / good_6 his axe jump and an airborne pose",
+    "end_idle": {
+      "frame": "WALK1"
+    },
+    "end_pose_1": {
+      "frame": "WALK1"
+    },
+    "end_pose_2": {
+      "frame": "FRONT"
+    },
+    "end_pose_3": {
+      "frame": "WAVE"
+    },
+    "good_1": {
+      "frame": "WALK1"
+    },
+    "good_2": {
+      "frame": "CROUCH"
+    },
+    "good_3": {
+      "frame": "CROUCH"
+    },
+    "good_4": {
+      "frame": "JUMP_AXE"
+    },
+    "good_5": {
+      "frame": "SPRING"
+    },
+    "good_6": {
+      "frame": "AIR2"
+    }
+  },
+  "sounds": {
+    "_magic_earth": "Golden Axe II's earth magic (sfx/SOURCE.txt)",
+    "magic_earth": "sfx/MagicEarth1.wav"
+  },
+  "abilities": {
+    "abilities": [
+      "melee",
+      "pot_magic",
+      "double_jump",
+      "physics",
+      "no_stomp"
+    ],
+    "_abilities": "Gilius' kit (the user's approved design, 2026-10-02): Y the overhead axe chop (melee, the box on the axe head per frame), the spinning axe slash on a mid-air jump (double_jump: a spinning hop that attacks all round him, in the golden-arc frames), pot magic (up + Y Earthquake after breaking monitors) and a sturdy dwarf's physics.",
+    "melee_sfx": "Insta Shield",
+    "melee_sfx_s3k": "Global/InstaShield.wav",
+    "melee_reach": [
+      10,
+      18,
+      34,
+      25
+    ],
+    "melee_top": [
+      -20,
+      -57,
+      -30,
+      -22
+    ],
+    "melee_bottom": [
+      20,
+      20,
+      20,
+      20
+    ],
+    "melee_ticks": 4,
+    "melee_stop": true,
+    "_melee": "the overhead chop (slot 43: wind-up, overhead, forward, down): the box out to the axe head's furthest pixel per frame, measured on the built frames (px from his centre: the wind-up's axe is behind him, so his body's 10)",
+    "double_jump": 0.8,
+    "_double_jump": "the spinning axe slash: a hop at 0.8 of his jump, spinning (an attack) until he starts to fall, once per jump",
+    "physics": {
+      "top_speed": 0.9,
+      "acceleration": 0.9
+    },
+    "_physics": "a sturdy dwarf: a slightly lower top speed and pick-up, his jump Sonic's",
+    "pots_max": 3,
+    "_pot_magic": "Pot magic (tools/pot_magic.py): each broken monitor adds a pot (at most 3, their pictures at the top: a crop of his portrait, slot 48); up + Y spends them all on the Earthquake (his magic pose, slot 42): a shake, a dark flash, Bad Moon's boulders (slot 45) bursting into spikes and dust where they land (46 / 47), and waves of hits on everything in the level's box. 1 pot: round him; 2: wider; 3: the whole screen, twice (a boss takes 1 / 1 / 2 hits)",
+    "pots_levels": [
+      {
+        "reach_x": 96,
+        "reach_y": 64,
+        "reach_cd": 80,
+        "pulses": 1,
+        "rocks": 2
+      },
+      {
+        "reach_x": 160,
+        "reach_y": 96,
+        "reach_cd": 140,
+        "pulses": 1,
+        "rocks": 4
+      },
+      {
+        "reach_x": 0,
+        "reach_y": 0,
+        "reach_cd": 220,
+        "pulses": 2,
+        "rocks": 6
+      }
+    ],
+    "pots_cast": 30,
+    "pots_cast_ticks": 10,
+    "pots_hit": 8,
+    "pots_gap": 50,
+    "pots_first": 14,
+    "pots_shake": 60,
+    "pots_flash": [
+      48,
+      96,
+      144,
+      96,
+      48,
+      24
+    ],
+    "pots_sfx": "Menu Select",
+    "pots_sfx_s3k": "Global/Grab.wav",
+    "pots_sfx_cd": "SFX_G_SELECT",
+    "pots_cast_sfx": "Release",
+    "pots_cast_sfx_s3k": "own:magic_earth",
+    "pots_cast_sfx_cd": "SFX_G_RELEASE",
+    "pots_quake_sfx": "Explosion",
+    "pots_quake_sfx_s3k": "Global/Explosion.wav",
+    "pots_quake_sfx_cd": "SFX_G_EXPLOSION",
+    "_no_stomp": "no_stomp (the user, 2026-10-02): his jump is his own jump pose and isn't an attack (a badnik hurts him); rolling and the Spin Dash's release are his slide (\"Rolling\", slot 49: flags roll), which attacks and breaks walls: his running dive (DASH, the run row's last frame: Golden Axe's dash attack), a crop of his own sheet; the jump his leaping axe pose (JUMP_AXE); the Spin Dash charges crouched"
+  },
+  "s3k_victory": {
+    "frames": [
+      {
+        "frame": "WAVE",
+        "flip": true
+      }
+    ]
+  },
+  "ball": {
+    "size": "medium",
+    "colours": {
+      "outline": "#947300",
+      "dark": "#526321",
+      "mid": "#6b843a",
+      "light": "#849c52",
+      "shine": "#e6c563"
+    },
+    "use_for": [
+      "Special Stage"
+    ],
+    "_ball": "the generic ball in his tunic's greens with a gold rim and shine: Sonic 1's special stage only (no_stomp)"
+  }
+}

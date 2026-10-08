@@ -1,0 +1,12 @@
+Honey the Cat (from Sonic the Fighters / Sonic Championship) sprite sheet by Xeric:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/139745/ (from "Honey Link.txt").
+Sheet: testmods/Honey.png (487x387), read in place.
+
+Terms, printed on the sheet: "If used, please give credit and link back to my DeviantART page -
+deviantart.com/xeric-studios"
+Credit (README): Xeric, https://www.deviantart.com/xeric-studios, and the link above. Public. Honey the Cat (c) SEGA.
+
+What we do: frames are cut as drawn (unlabelled: named by what they show in make_configs.py). No scaling. The sheet has
+28 colours, more than the 22 own palette slots: six that cover 1-2 pixels each are merged into their nearest slot
+(make_configs.py MERGED), the faithful-art rule's colour exception; the rest are exact. No continue icons or big ending
+pose on the sheet: her HUD head and her own poses stand in.

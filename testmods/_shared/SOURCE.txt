@@ -1,0 +1,5 @@
+mania_ball.png: Sonic Mania's plain spin ball, by SEGA / Sonic Team (Sonic Mania). Credited in the README.
+Cut from Sonic Mania's Data/Sprites/Players/Sonic1.gif (the first two frames of Sonic's "Jump" animation): rects
+(153,81,32,32) and (186,81,32,32), side by side, exact pixels and exact palette indices (the GIF's own palette):
+0 clear, 64-69 Sonic's six blues (64 darkest), 11 and 41 the sparkle (a pale cyan glint and white). Nothing redrawn.
+tools/generic_ball.py maps these indices to each character's own colours (BALL_COLOURS in their make_configs.py).

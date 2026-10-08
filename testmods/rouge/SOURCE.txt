@@ -1,0 +1,8 @@
+Rouge the Bat - "Custom Sprites (Sonic 1 Style)"
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/565796/  (from testmods/"Rouge Link.txt")
+Text on the sheet: "ORIGINAL SPRITES BY SEGA, SONIC TEAM & DELTACONDUIT
+FREE TO USE, BUT GIVE CREDIT. DO NOT EDIT EFFORTLESSLY."
+(The sheet also carries a "D" signature logo.)
+Usage terms: free to use with credit; do not edit effortlessly. We made no edits: frames are cut, and the HUD
+icon, name tag and goal sign board are crops of the sheet's own art.
+Credit in release: DeltaConduit; original sprites by SEGA / Sonic Team.

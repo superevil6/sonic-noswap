@@ -1,0 +1,11 @@
+Flicky (Sonic 1/CD-Style) sprite sheet by TheOrangePlumber (2026-04-20):
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/546165/ (from "Flicky Link.txt").
+Sheet: testmods/Flicky.png (600x500, mint #9dffd8 background, sprites in #4bb98d / #177e55 boxes), read in place.
+
+Credit, from the sheet: "Flicky (Sonic 1/CD-Style) Made By TheOrangePlumber". The sheet also says "Give Credits if
+Used" and "Do Not Make This .exe Related": he is never made Sonic.exe-themed (the "?" frame and the gun gag are unused).
+Public; credited in mods/NoSwap/README.md. Flicky (c) SEGA.
+
+What we do: frames are cut as drawn (no scaling: he is about 22 px tall; enlarging needs the user's approval), the
+"Normal" palette only, all 15 colours exact (black in Sonic's slot 1, the rest in slots 74-87). The HUD tag, life icon,
+1-UP picture, S1 signpost, mini continue icons and ending poses are the sheet's own.

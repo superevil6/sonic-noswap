@@ -1,0 +1,18 @@
+Shadow the Hedgehog - Sonic Megamix (Versions 3.0 to 5.0A)
+https://www.spriters-resource.com/sega_genesis/sonicthehedgehogmegamixhack/asset/97116/
+Sheet: testmods/ShadowMegamix.png (644x658).
+Credits on the sheet: "Ripped and improved by AsuharaMoon. Credits: Chimpo, GrandMasterGalvatron, Team Megamix."
+Terms: none stated on the sheet or page. The user approved using it with credit (2026-09-28); it is Shadow's sheet
+for release builds.
+Credit in release: Shadow the Hedgehog, from Sonic Megamix (Versions 3.0 to 5.0A): ripped and improved by AsuharaMoon;
+credits: Chimpo, GrandMasterGalvatron, Team Megamix. Shadow the Hedgehog (c) SEGA.
+What the build does to it (make_configs.py): recolours the sprites from the sheet's "Custom" palette to its own
+"Original" palette by position, merges 7 stray #400000 pixels into #420000, cuts frames out and sets them side by
+side. The Chaos Spear shot (tools/abilities.py) is a loose jet-flame streak (359,178, 15x9), cut exactly.
+Nothing is redrawn.
+
+Sign face: testmods/MegamixObjects.png, "Goal Signs - Sonic Megamix. Ripped by AsuharaMoon. Credits: Yuski, Shadowsoft
+Games, Chimpo, Team Megamix & Sonic Team" (https://www.spriters-resource.com/sega_genesis/sonicthehedgehogmegamixhack/asset/97514/).
+The "Versions 4.0-5.0A" group, Shadow's board (bottom row), 48x32 at 391,122, cut exactly without the pole (the pole
+cap's pixels behind his quills cleared); colours as his sprites (#4b4545 -> #424242, #202420 -> #212121).
+The earlier sheet (Gardow's, 18229.png) is described in SOURCE_gardow.txt; it is no longer used.

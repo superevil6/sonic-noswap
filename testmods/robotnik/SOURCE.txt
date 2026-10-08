@@ -1,0 +1,19 @@
+Dr. Robotnik - compilation sheet (sections: GENESIS, SMS / GG, SONIC'S GAMEWORLD, KNUX CHAOTIX, CD, SEGASONIC, EXTRAS)
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/272390/  (from "Robotnik Link.txt")
+
+Text on the sheet, exactly:
+  "NO EDITS"
+  "NO RECOLORS"
+  "NOT FOR EXE STUFF"
+  "SHEET BY DR. CHEESECRUMBZ"
+  "PERMISSION? YE. CREDITS? ALSO YE."
+
+Usage terms: free to use with credit; no edits, no recolours, not for ".EXE" (creepypasta) projects.
+What we do: frames are only cut. Nothing is redrawn, resized or recoloured. Every colour keeps its exact value
+in a palette slot of its own (74-94), so no game can swap it for its own nearest shade; only black (#000000)
+shares Sonic's slot 1. Near-identical duplicate shades on the sheet merge into their twin's slot:
+#080000 -> #000000, #919191 -> #909090, #464646 -> #484848, #910000 -> #900000,
+#b5b5b5 -> #b4b4b4, #fcb591 / #fcb691 -> #fcb490, #b56c46 / #b66c46 -> #b46c48. The HUD name tag
+"ROBOTNIK" isn't on the sheet; it is our own lettering in the game's HUD style, not an edit of his sprites.
+Credit in release: Dr. Cheesecrumbz (sheet); original sprites by SEGA / Sonic Team and the other games' makers.
+#202020 (9 pixels) has its own slot 94 rather than merging into black.

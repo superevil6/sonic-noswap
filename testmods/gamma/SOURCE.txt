@@ -1,0 +1,26 @@
+E-102 Gamma (custom sheet, testmods/Gamma2.png)
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/95734/  (from "Gamma2 Link.txt")
+"Gamma (E-102 Gamma)" by Nebula, contributor Cylent-Nite (submitted 2017-09-07). No usage terms on the page.
+
+Text on the sheet (verbatim):
+  CREDIT TO CYLENT NITE FOR ORIGINAL GAMMA SPRITES
+  CREDIT TO NEBULA FOR SPRITES
+  CREDIT TO QUICKSILVER TAI ALLISTER FOR POSES
+  CREDIT TO HC MISSILE FOR ORIGINAL BOOSTER AND CLAW
+  (and the logo "A Cylent Nite Creation")
+Usage terms: none beyond that; credit all four, never pass the sprites off as ours.
+
+What we do: only the machine-gun block (the bottom one, y 1520+) is used, its right-facing half. Frames are cut
+whole; build/source.png is a working copy with each used frame's pixels copied exactly into a cell of its own
+(the hover frames' separate booster-flame blobs kept where the sheet draws them). The large ending pose is an exact
+2x nearest-neighbour enlargement. Nothing is redrawn, recoloured, filtered or shrunk. The "GAMMA" HUD tag isn't on
+the sheet; it is our lettering in the game's HUD style (the font the other extras' tags use).
+Colours: the used frames have 28 colours and the extras have 22 own palette slots (74-95). #0c0c0c and #464646 go
+to Sonic's 1 (#080000) and 9 (#404040); 22 colours are exact in own slots; #b0b0b0 -> #aeaeae, #ececec -> #f4f4f4,
+#3b5ad8 -> #2c7cec and #03593c -> #009500 are merged (make_configs.py prints the pixel counts).
+Credit in release: Cylent Nite (original Gamma sprites), Nebula (sprites), Quicksilver Tai Allister (poses),
+HC Missile (original booster and claw).
+E-102 Gamma is SEGA / Sonic Team's.
+
+(Previous sheet, no longer used: testmods/Gamma.png, sprites by (==GODZILLA==), sheet by Rlan of the Sonic Fan
+Games HQ, asset 112331.)

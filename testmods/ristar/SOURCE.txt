@@ -1,0 +1,28 @@
+Ristar (Sega Genesis) sprite sheets, compiled by Drshnaps (http://www.drshnaps.com), listed on The Spriters Resource
+under Jermungandr (TSR assets 12659 and 12660:
+https://www.spriters-resource.com/sega_genesis/ristar/asset/12659/ and
+https://www.spriters-resource.com/sega_genesis/ristar/asset/12660/; neither sheet states terms of use):
+- testmods/ristar/Ristar_basic.png (899x1020): "Ristar - Basic Actions and Animations"
+- testmods/ristar/Ristar_special.png (380x1809): "Ristar Attacks and Arm Actions"
+(testmods/ristar/Ristar.png, the Game Gear sheet, is NOT used.)
+Periwinkle #8080ff page, white section lines and labels; every sprite faces right. 15 colours (Genesis palette).
+
+Verbatim from the sheets' footers: "Ristar - Basic Actions and Animations / Sprites captured from Ristar for the Sega
+Genesis / Sheet compiled by Drshnaps of http://www.drshnaps.com / Ristar is (c) Sega" and "Ristar Attacks and Arm
+Actions / Sprites captured from Ristar for the Sega Genesis / Sheet compiled by Drshnaps of http://www.drshnaps.com /
+Ristar is (c) Sega". The special sheet's header explains the arms: "Ristar is actually made up of five pieces: His body,
+his arms, and his hands. His arms are actually not sprites at all but vector lines that connect at his body and wrists."
+
+Usage terms: none printed beyond the compiler's and Sega's names. Credited.
+Credit (README): Ristar sprites compiled by Drshnaps, ripped by Jermungandr (The Spriters Resource); Ristar (c) Sega.
+
+A separate download (extras.py "crossover": never in the all-in-one bundle).
+
+What we do (make_configs.py): Genesis art at 1x. Frames are cut whole, as drawn (build/source.png is a working copy with
+each used frame's pixels copied exactly into a cell of its own). His arms are drawn at runtime as the game draws them:
+two 2 px black lines from his body to his hands (a runtime draw effect, tools/star_grab.py); his hands are the sheet's
+loose hands, turned by quarter turns and mirrored for 8 directions. The Meteor Strike row is turned by quarter turns for
+its directions. The wind-up is 8 of the 48 swing-on-handle frames, placed by the handle's ball. The HUD icon / 1-UP are
+a crop of the standing frame's face; the signpost is his star head on the game's own board at 1x. The "RISTAR" HUD tag
+isn't on the sheet: our lettering in the HUD font the other extras use. All 15 colours exact (black in Sonic's slot 1,
+the rest in 74-87); nothing redrawn, recoloured or resized.

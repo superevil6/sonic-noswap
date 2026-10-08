@@ -1,0 +1,21 @@
+Chaos (Chaos 0) sprite sheet: "Sonic Adventure Boss Chaos 0" by ssstGoldy20 (signed "BY SSST_GOLDI20" on the sheet), 2014:
+https://www.deviantart.com/ssstgoldy20/art/Sonic-Adventure-Boss-Chaos-0-497339391 (from "Chaos Link.txt").
+Sheet: testmods/Chaos.png (602x458, the original size, #ffffff background; the sprites' own whites are #f8f8f8), read
+in place (no copy here). The page's description: "chaos en forma normal". No usage terms on the page: credit the artist.
+
+Credit (README):
+  Chaos 0 sprites by ssstGoldy20 (signed SSST_GOLDI20). Chaos (c) SEGA:
+  https://www.deviantart.com/ssstgoldy20/art/Sonic-Adventure-Boss-Chaos-0-497339391
+
+Not used: the "PHOTO" at the top right (SEGA's official art: never used), the little signature portrait at the bottom
+left, the Chaos Emerald icons and the sheet's lettering.
+
+What we do: the sprites (the rise from a puddle, HIT, ATACK, RUN, FALL, JUMP) are cut from the sheet and chosen,
+repeated or mirrored as stand-ins (make_configs.py lists which frame plays what), and enlarged 1.1x with
+nearest-neighbour (he read as short; the user approved this for him only, 2026-09-27). The HUD icons are 16-px crops of his standing
+head; the signpost shows that pose's head and shoulders on the game's own board (Items2). The "CHAOS" HUD name tag
+isn't on the sheet: our own lettering in the HUD font the other extras use. His jump, Spin Dash and special-stage ball
+is Sonic Mania's plain spin ball (SEGA / Sonic Team) in his blues (tools/generic_ball.py, not the artist's art; it replaced his puddle). His Origins select card is the sheet's larger
+"PIXEL ART" Chaos (51x96, the same artist's), cropped as-is and enlarged 4x with nearest-neighbour (pixel-exact).
+Palette: the built frames use 15 colours, each kept exactly in the extras' own slots 74-88. Nothing is merged,
+redrawn, smoothed or recoloured.

@@ -1,0 +1,227 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Converted from make_configs.py (kept as make_configs.legacy.py) by tools/noswap.py convert; docs/character-json.md. Keys starting with _ are comments.",
+  "id": "espio",
+  "name": "ESPIO",
+  "full_name": "Espio",
+  "credits": {
+    "short": "Sprites: Akimaca",
+    "full": "Espio (The Chameleon In Sonic 1) by Akimaca; original sprites by SEGA / Sonic Team",
+    "artists": ["Akimaca"],
+    "url": "https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/228044/",
+    "terms": "Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit where it's due!!!",
+    "_source_txt": "SOURCE.txt (kept in the folder) has the sheet's full story: https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/228044/ (uploaded by Akimaca) Espio - \"Espio, The Chameleon In Sonic 1\" (custom sheet; the header also says \"UPDATE!\") Source link: not yet known (no link file); the sheet itself names its artist. Text on the sheet: \"Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit where it's due!!!\" (The "
+  },
+  "sheet": {"file": "Espio.png", "background": ["#9fca7a", "#609b2e"], "feet_y": 20},
+  "base": "sonic",
+  "flags": {"super": false, "drop_dash": false, "roll": false, "no_roll": false, "private": false, "crossover": false},
+  "card": null,
+  "games": {"sonic1": true, "sonic2": true, "soniccd": true, "s3k": true, "mania": true},
+  "palette": {
+    "own": {
+      "74": "#6c0090",
+      "75": "#9024b4",
+      "76": "#b448d8",
+      "77": "#d86cfc",
+      "78": "#6c2400",
+      "79": "#b46c24",
+      "80": "#fcb46c",
+      "81": "#fcfcfc",
+      "82": "#b4b4b4",
+      "83": "#006c00",
+      "84": "#48d800",
+      "85": "#fcd800",
+      "86": "#fcfc00"
+    },
+    "shared": {"#000000": 1, "#010101": 1, "#080000": 1, "#909090": 8, "#484848": 9},
+    "other_colours": "nearest",
+    "strict": false
+  },
+  "frames": {
+    "STOPPED": [17, 56, 28, 41],
+    "WAITING1": [54, 68, 43, 29],
+    "WAITING2": [100, 67, 39, 30],
+    "WAITING3": [142, 68, 35, 29],
+    "WAITING4": [182, 67, 39, 30],
+    "LOOKING_UP": [227, 59, 28, 38],
+    "LOOKING_DOWN": [265, 65, 31, 32],
+    "WALKING1": [12, 119, 39, 36],
+    "WALKING2": [55, 117, 44, 38],
+    "WALKING3": [104, 118, 41, 37],
+    "WALKING4": [151, 119, 41, 36],
+    "WALKING5": [198, 117, 46, 38],
+    "WALKING6": [250, 118, 43, 37],
+    "RUNNING1": [12, 181, 47, 31],
+    "RUNNING2": [65, 181, 51, 31],
+    "RUNNING3": [123, 181, 53, 31],
+    "RUNNING4": [180, 181, 53, 31],
+    "SKIDDING1": [359, 117, 37, 38],
+    "SKIDDING2": [397, 117, 35, 38],
+    "SPIN_DASH1": [507, 224, 28, 27],
+    "SPIN_DASH2": [545, 224, 28, 27],
+    "SPIN_DASH3": [585, 224, 28, 27],
+    "SPIN_DASH4": [623, 224, 28, 27],
+    "SPIN_DASH5": [666, 224, 28, 27],
+    "SPIN_DASH6": [707, 224, 29, 27],
+    "JUMPING1": [557, 179, 30, 30],
+    "JUMPING2": [596, 179, 30, 30],
+    "JUMPING3": [632, 179, 30, 30],
+    "JUMPING4": [668, 179, 30, 30],
+    "JUMPING5": [706, 179, 30, 30],
+    "BOUNCING": [303, 51, 28, 46],
+    "HURT": [334, 182, 42, 30],
+    "DYING": [409, 296, 35, 48],
+    "DROWNING": [449, 295, 35, 49],
+    "FAN_ROTATE1": [163, 316, 45, 28],
+    "FAN_ROTATE2": [215, 316, 36, 28],
+    "FAN_ROTATE3": [255, 316, 41, 28],
+    "BREATHING": [304, 119, 44, 36],
+    "PUSHING1": [240, 247, 34, 33],
+    "PUSHING2": [279, 246, 33, 34],
+    "PUSHING3": [316, 247, 35, 33],
+    "PUSHING4": [358, 246, 33, 34],
+    "FLAILING_11": [242, 177, 43, 35],
+    "FLAILING_12": [287, 175, 37, 37],
+    "CLINGING_ON1": [21, 319, 60, 25],
+    "CLINGING_ON2": [87, 319, 61, 25],
+    "WATER_SLIDE": [379, 182, 42, 30],
+    "CONTINUE1": [306, 299, 24, 45],
+    "CONTINUE2": [339, 299, 24, 45],
+    "CONTINUE3": [372, 299, 24, 45],
+    "WHIRLWIND1": [21, 232, 28, 49],
+    "WHIRLWIND2": [55, 232, 31, 49],
+    "WHIRLWIND3": [95, 232, 27, 49],
+    "WHIRLWIND4": [129, 232, 31, 49],
+    "WHIRLWIND5": [163, 232, 28, 49],
+    "WHIRLWIND6": [197, 232, 27, 49],
+    "VICTORY": [58, 379, 38, 35]
+  },
+  "animations": {
+    "Stopped": {"frames": ["STOPPED"]},
+    "Waiting": {
+      "frames": ["WAITING1", "WAITING2", "WAITING3", "WAITING4"],
+      "loop": 2
+    },
+    "Looking Up": {"frames": ["LOOKING_UP"], "loop": 0},
+    "Looking Down": {"frames": ["LOOKING_DOWN"], "loop": 0},
+    "Walking": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Running": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Skidding": {"frames": ["SKIDDING1", "SKIDDING2"]},
+    "Super Peel Out": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Spin Dash": {
+      "frames": ["SPIN_DASH1", "SPIN_DASH2", "SPIN_DASH3", "SPIN_DASH4", "SPIN_DASH5", "SPIN_DASH6"]
+    },
+    "Jumping": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4", "JUMPING5"],
+      "anchor": "center"
+    },
+    "Bouncing": {"frames": ["BOUNCING"], "anchor": "center"},
+    "Hurt": {"frames": ["HURT"], "anchor": "center"},
+    "Dying": {"frames": ["DYING"], "anchor": "center"},
+    "Drowning": {"frames": ["DROWNING"], "anchor": "center"},
+    "Fan Rotate": {
+      "frames": ["FAN_ROTATE1", "FAN_ROTATE2", "FAN_ROTATE3"],
+      "anchor": "center"
+    },
+    "Breathing": {"frames": ["BREATHING"], "anchor": "center"},
+    "Pushing": {
+      "frames": ["PUSHING1", "PUSHING2", "PUSHING3", "PUSHING4"]
+    },
+    "Flailing 1": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Flailing 2": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Hanging": {"frames": ["BOUNCING"], "anchor": "center"},
+    "Clinging On": {"frames": ["CLINGING_ON1", "CLINGING_ON2"], "anchor": "center"},
+    "Corkscrew H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"]
+    },
+    "Water Slide": {"frames": ["HURT", "WATER_SLIDE"], "anchor": "center"},
+    "Continue": {"frames": ["CONTINUE1", "CONTINUE2", "CONTINUE3"]},
+    "Continue Up": {"frames": ["BOUNCING"], "loop": 0},
+    "Super Transform": {"frames": ["STOPPED"], "loop": 0}
+  },
+  "animations_sonic2": {
+    "Flailing 3": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Grabbed": {"frames": ["HURT"], "anchor": "center"},
+    "Twirl H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Bored!": {
+      "frames": ["WAITING1", "WAITING2", "WAITING3", "WAITING4"],
+      "loop": 2
+    }
+  },
+  "ability_animations": {
+    "41": {
+      "name": "Whirlwind",
+      "frames": ["WHIRLWIND1", "WHIRLWIND2", "WHIRLWIND3", "WHIRLWIND4", "WHIRLWIND5", "WHIRLWIND6"],
+      "anchor": "center",
+      "speed": 120
+    },
+    "43": {
+      "name": "Leaf Swirl",
+      "frames": ["WHIRLWIND1", "WHIRLWIND2", "WHIRLWIND3", "WHIRLWIND4", "WHIRLWIND5", "WHIRLWIND6"],
+      "anchor": "feet",
+      "speed": 120
+    },
+    "44": {
+      "name": "Leaf Swirl Air",
+      "frames": ["WHIRLWIND1", "WHIRLWIND2", "WHIRLWIND3", "WHIRLWIND4", "WHIRLWIND5", "WHIRLWIND6"],
+      "anchor": "center",
+      "speed": 120
+    }
+  },
+  "special_stage": {
+    "Special Stage": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4", "JUMPING5"],
+      "anchor": "center"
+    }
+  },
+  "s3k_victory": {"frames": ["VICTORY", "BOUNCING"]},
+  "ui": {
+    "life_icon": {"rect": [405, 398, 16, 16], "trim": false},
+    "life_name": {"rect": [422, 399, 31, 7]},
+    "monitor_1up": {"rect": [405, 399, 16, 14], "trim": false},
+    "sign_face": {"rect": [350, 366, 48, 32], "trim": false},
+    "mini_1": {"rect": [459, 390, 18, 24], "remap": "+128"},
+    "mini_2": {"rect": [481, 390, 16, 24], "remap": "+128"}
+  },
+  "ending": {
+    "end_idle": {"rect": [28, 373, 25, 41], "remap": "+128"},
+    "end_pose_1": {"frame": "VICTORY", "remap": "+128"},
+    "end_pose_2": {"frame": "BOUNCING", "remap": "+128"},
+    "end_pose_3": {"rect": [53, 482, 50, 89], "remap": "+128"},
+    "good_1": {"rect": [113, 373, 24, 41], "remap": "+128"},
+    "good_2": {"rect": [141, 373, 25, 41], "remap": "+128"},
+    "good_3": {"rect": [170, 375, 30, 39], "remap": "+128"},
+    "good_4": {"rect": [209, 373, 30, 41], "remap": "+128"},
+    "good_5": {"rect": [245, 373, 30, 41], "remap": "+128"},
+    "good_6": {"rect": [281, 379, 38, 35], "remap": "+128"}
+  },
+  "abilities": {
+    "_notes": [
+      "extra 11: Espio (Chaotix / Heroes; the user picked pass-through for the invisibility)",
+      "Whirlwind: jump in mid-air to whirl in place, floating down and hitting enemies all around",
+      "Leaf Swirl: Y to whirl, then turn invisible (the post-hit blink: nothing hurts him) for 1.5 seconds",
+      "3 seconds was too long (user, 2026-09-25)"
+    ],
+    "abilities": ["umbrella", "melee"],
+    "umbrella_attack": true,
+    "umbrella_sink": "0x8000",
+    "float_frames": 40,
+    "melee_sfx": "Insta Shield",
+    "melee_reach": [10, 10, 10, 10, 10, 10],
+    "melee_ticks": 2,
+    "melee_blink": 90,
+    "melee_cooldown": 300
+  }
+}

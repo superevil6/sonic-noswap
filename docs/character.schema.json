@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noswap.invalid/schema/noswap-character-1.json",
+  "title": "NoSwap character (noswap-character/1)",
+  "description": "One NoSwap character in plain data: testmods/<id>/character.json (docs/character-json.md). Keys starting with _ are comments and are allowed anywhere. Wherever a number goes, a hex string such as \"0x30000\" or \"-0x20000\" is allowed too (16.16 fixed point: 0x10000 is 1 px per frame). `noswap check <folder>` validates a file against this schema and then checks the art, palette, abilities and credits.",
+  "type": "object",
+  "required": ["format", "id", "name", "credits", "sheet", "palette", "frames", "animations"],
+  "patternProperties": {"^_": {}},
+  "additionalProperties": false,
+  "properties": {
+    "format": {"const": "noswap-character/1"},
+    "id": {
+      "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Must equal the folder's name (its package folder). Never rename it once released."
+    },
+    "key": {
+      "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*\\.[a-z0-9][a-z0-9_.-]*$",
+      "description": "The character's permanent key, <creator>.<character> (e.g. \"someone.newchar\"). Saves, picks and its build numbers (tools/registry.py, data/registry.json) are tied to it: never change it once released. Left out: noswap.<id> (NoSwap's own characters)."
+    },
+    "name": {
+      "type": "string", "minLength": 1, "maxLength": 16, "pattern": "^[A-Z0-9 .!?'-]+$",
+      "description": "The in-game name (act results, HUD tag), in capitals."
+    },
+    "full_name": {"type": "string"},
+    "credits": {
+      "type": "object",
+      "required": ["full"],
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "short": {"type": "string", "maxLength": 40, "description": "The line under the Origins card: keep it to about 32 characters (40 at most)."},
+        "full": {"type": "string", "minLength": 1},
+        "artists": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "url": {"type": "string"},
+        "terms": {"type": "string", "description": "The sheet's own terms, copied verbatim."}
+      }
+    },
+    "sheet": {
+      "type": "object",
+      "required": ["file", "background", "feet_y"],
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "file": {"type": "string", "minLength": 1, "description": "The sprite sheet, relative to the character's folder."},
+        "background": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/colour"}},
+        "feet_y": {"$ref": "#/$defs/int"},
+        "angled_halves": {"type": "boolean"}
+      }
+    },
+    "base": {"enum": ["sonic", "tails", "knuckles"]},
+    "flags": {
+      "type": "object",
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "super": {"type": "boolean"}, "drop_dash": {"type": "boolean"}, "roll": {"type": "boolean"},
+        "no_roll": {"type": "boolean"}, "private": {"type": "boolean"}, "crossover": {"type": "boolean"}
+      }
+    },
+    "card": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "description": "The card is the Stopped frame enlarged this many times (a multiple of 4) instead of 8 (a tall character's frame at 8x is taller than the 536-px cell).",
+          "required": ["scale"],
+          "patternProperties": {"^_": {}},
+          "additionalProperties": false,
+          "properties": {"scale": {"type": "integer", "minimum": 4, "multipleOf": 4}}
+        },
+        {
+          "type": "object",
+          "required": ["sheet", "rect", "scale", "background"],
+          "patternProperties": {"^_": {}},
+          "additionalProperties": false,
+          "properties": {
+            "sheet": {"type": "string"}, "rect": {"$ref": "#/$defs/rect"},
+            "scale": {"type": "integer", "minimum": 4, "multipleOf": 4},
+            "background": {"$ref": "#/$defs/colour"}, "pivot": {"type": "integer"}, "baseline": {"type": "integer"}
+          }
+        }
+      ]
+    },
+    "games": {
+      "type": "object",
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "sonic1": {"type": "boolean"}, "sonic2": {"type": "boolean"}, "soniccd": {"type": "boolean"},
+        "s3k": {"type": "boolean"}, "mania": {"type": "boolean"}
+      }
+    },
+    "palette": {
+      "type": "object",
+      "required": ["own"],
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "own": {
+          "type": "object",
+          "description": "slot -> colour: the character's own colours, in the free global slots 74-95.",
+          "patternProperties": {"^_": {}, "^(7[4-9]|8[0-9]|9[0-5])$": {"$ref": "#/$defs/colour"}},
+          "additionalProperties": false
+        },
+        "shared": {
+          "type": "object",
+          "description": "sheet colour -> one of the base character's slots (1-15) it already matches.",
+          "patternProperties": {"^_": {}, "^#[0-9a-fA-F]{6}$": {"type": "integer", "minimum": 1, "maximum": 255}},
+          "additionalProperties": false
+        },
+        "other_colours": {"enum": ["nearest", "guess"]},
+        "strict": {"type": "boolean"}
+      }
+    },
+    "frames": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {"^_": {}, "^[^_].*$": {"$ref": "#/$defs/rect"}},
+      "additionalProperties": false
+    },
+    "animations": {"$ref": "#/$defs/animations"},
+    "animations_sonic2": {"$ref": "#/$defs/animations"},
+    "ability_animations": {
+      "type": "object",
+      "patternProperties": {
+        "^_": {},
+        "^[0-9]+$": {"allOf": [{"$ref": "#/$defs/animation"}, {"required": ["name"]}]}
+      },
+      "additionalProperties": false
+    },
+    "special_stage": {"$ref": "#/$defs/animations"},
+    "ball": {
+      "description": "the generic spin ball (tools/generic_ball.py: Sonic Mania's plain ball in his colours) for the animations in use_for",
+      "type": "object",
+      "patternProperties": {"^_": {}},
+      "properties": {
+        "size": {"enum": ["small", "medium", "large"]},
+        "colours": {"anyOf": [
+          {"const": "auto"},
+          {"type": "object", "required": ["dark", "mid", "light"], "patternProperties": {"^_": {}},
+           "properties": {"outline": {"$ref": "#/$defs/colour"}, "dark": {"$ref": "#/$defs/colour"},
+                          "mid": {"$ref": "#/$defs/colour"}, "light": {"$ref": "#/$defs/colour"},
+                          "shine": {"$ref": "#/$defs/colour"}},
+           "additionalProperties": false}]},
+        "use_for": {"type": "array", "minItems": 1,
+                    "items": {"enum": ["Spin Dash", "Jumping", "Rolling", "Special Stage"]}}
+      },
+      "additionalProperties": false
+    },
+    "s3k_victory": {
+      "type": "object",
+      "required": ["frames"],
+      "patternProperties": {"^_": {}},
+      "properties": {
+        "frames": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameRef"}},
+        "pose": {"type": "integer", "minimum": 0}, "align": {"type": "boolean"}
+      }
+    },
+    "snowboard": {
+      "type": "object",
+      "description": "S3&K Ice Cap 1's snowboard intro (Sonic-based characters): the poses standing on the official board, each list spread over the game's frames (Ground 5, Air 3, Sidewind 7). Left out: ducking, the spring pose, the twirl.",
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "properties": {
+        "ground": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameRef"}},
+        "air": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameRef"}},
+        "sidewind": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameRef"}}
+      }
+    },
+    "charge_palettes": {
+      "type": "object",
+      "description": "A charge shot's flash (abilities shot2 \"input\" \"charge\"; Pulseman's Voltteccer glow too): for each phase, own slot -> \"#rrggbb\" shown while it flashes (a runtime palette effect; the art is untouched).",
+      "patternProperties": {"^_": {}},
+      "additionalProperties": false,
+      "required": ["charge1", "charge2a", "charge2b"],
+      "properties": {
+        "charge1": {"type": "object", "patternProperties": {"^[0-9]+$": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}}, "additionalProperties": false},
+        "charge2a": {"type": "object", "patternProperties": {"^[0-9]+$": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}}, "additionalProperties": false},
+        "charge2b": {"type": "object", "patternProperties": {"^[0-9]+$": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}}, "additionalProperties": false}
+      }
+    },
+    "ui": {
+      "type": "object",
+      "patternProperties": {"^_": {}, "^(life_icon|life_name|monitor_1up|sign_face|mini_1|mini_2)$": {"$ref": "#/$defs/element"}},
+      "additionalProperties": false
+    },
+    "ending": {
+      "type": "object",
+      "patternProperties": {"^_": {}, "^(end_idle|end_pose_[1-3]|good_[1-6])$": {"$ref": "#/$defs/element"}},
+      "additionalProperties": false
+    },
+    "sounds": {
+      "type": "object",
+      "description": "The character's own sound files (tools/own_sounds.py): name -> a file in its folder (any format ffmpeg reads; up to 10 s). An S3&K sound field (*_sfx_s3k, a shot's s3k sound) set to \"own:<name>\" plays it in Sonic 3 & Knuckles and Sonic Mania.",
+      "patternProperties": {"^_": {}, "^[a-z0-9_]{1,24}$": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "abilities": {
+      "type": "object",
+      "required": ["abilities"],
+      "description": "The moves (tools/abilities.py's docstring lists them) and their numbers; `noswap check` knows every field name.",
+      "properties": {
+        "abilities": {"type": "array", "items": {"type": "string", "pattern": "^[a-z_0-9]+$"}}
+      }
+    }
+  },
+  "$defs": {
+    "int": {"anyOf": [{"type": "integer"}, {"$ref": "#/$defs/hex"}]},
+    "hex": {"type": "string", "pattern": "^-?0x[0-9a-fA-F]+$"},
+    "colour": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"},
+    "rect": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {"type": "integer", "minimum": 0},
+      "description": "[x, y, w, h] on the sheet."
+    },
+    "frameRef": {
+      "description": "A frame name, a raw rect, or {\"frame\": NAME, ...options} (flip, rotate, circle, anchor_box, offset), or a sheet2ani frame dict (rect / layers).",
+      "anyOf": [
+        {"type": "string", "minLength": 1},
+        {"$ref": "#/$defs/rect"},
+        {
+          "type": "object",
+          "properties": {
+            "frame": {"type": "string"}, "rect": {"$ref": "#/$defs/rect"},
+            "flip": {"type": "boolean"}, "rotate": {"enum": [0, 90, 180, 270]},
+            "circle": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer"}},
+            "anchor_box": {"$ref": "#/$defs/rect"},
+            "offset": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer"},
+                       "description": "[dx, dy] px this use of the frame moves after the automatic placement (anchor, align, ground line): +x right, +y down, as the frame is drawn (after flip / rotate)."},
+            "layers": {"type": "array", "minItems": 1}, "anchor_layer": {"type": "integer"}, "pivot_x": {"type": "integer"}
+          },
+          "anyOf": [{"required": ["frame"]}, {"required": ["rect"]}, {"required": ["layers"]}]
+        }
+      ]
+    },
+    "animation": {
+      "type": "object",
+      "required": ["frames"],
+      "patternProperties": {"^_": {}},
+      "properties": {
+        "frames": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/frameRef"}},
+        "name": {"type": "string", "minLength": 1},
+        "anchor": {"enum": ["feet", "center"]},
+        "align": {"type": "boolean"},
+        "loop": {"type": "integer", "minimum": 0},
+        "rot": {"type": "integer", "minimum": 0, "maximum": 4},
+        "speed": {"type": "integer", "minimum": 0, "maximum": 255},
+        "hitbox": {"type": "integer", "minimum": 0},
+        "hold": {"type": "integer", "minimum": 1},
+        "like": {"type": "string"}
+      }
+    },
+    "animations": {
+      "type": "object",
+      "patternProperties": {"^_": {}, "^[^_].*$": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/animation"}]}},
+      "additionalProperties": false
+    },
+    "element": {
+      "type": "object",
+      "patternProperties": {"^_": {}},
+      "properties": {
+        "frame": {"type": "string"}, "rect": {"$ref": "#/$defs/rect"}, "trim": {"type": "boolean"},
+        "text": {"type": "string", "minLength": 1, "description": "ui life_name only: the name tag typed in the HUD's letters (tools/hud_font.py; capitals, digits, space and . , : ; ! ?), at most 72 px wide. Left out (no life_name at all): the character's name."},
+        "pixel_colours": {"type": "object", "description": "a typed tag's colours: {\"f\": letter, \"1\": shadow} (default the HUD's #fcfc00 / #000000)"},
+        "head": {"anyOf": [{"type": "string"}, {"$ref": "#/$defs/rect"}], "description": "ui sign_face only: a head (a frame name or a rect) the build puts on the game's own signpost board (tools/sign_face.py)"},
+        "scale": {"anyOf": [{"const": "auto"}, {"type": "number", "minimum": 1, "maximum": 2}], "description": "ui sign_face with head: its nearest-neighbour enlargement; \"auto\" (the default) fills the board's 24-px face height"},
+        "flip": {"type": "boolean", "description": "mirrored left-right after the cut (art drawn facing left); for ui sign_face with head, the head on the board"},
+        "own": {"type": "boolean", "description": "ui sign_face: true uses the frame / rect exactly as drawn, never as a head on the official board"},
+        "remap": {
+          "anyOf": [
+            {"type": "string", "pattern": "^\\+[0-9]+$"},
+            {"type": "object", "patternProperties": {"^[0-9]+$": {"type": "integer", "minimum": 0, "maximum": 255}}, "additionalProperties": false}
+          ]
+        }
+      },
+      "anyOf": [{"required": ["frame"]}, {"required": ["rect"]}, {"required": ["text"]}, {"required": ["head"]}]
+    }
+  }
+}

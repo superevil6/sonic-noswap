@@ -1,0 +1,14 @@
+Sally Acorn (Genesis style) custom sprite sheet by E-122-Psi:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogmediacustoms/asset/156080/ (from "Sally Link.txt").
+Sheet: testmods/Sally.png (854x2540, mint #60e0c0 page, nothing labelled), read in place.
+
+Text on the sheet (credit box), exactly as written:
+"Sprites made by E-122-Psi. Permission not needed but please don't steal credit."
+
+Usage terms: no permission needed; credit E-122-Psi, never pass the sprites off as ours.
+Credit in release: Sally Acorn sprites made by E-122-Psi. Sally Acorn (c) SEGA / Archie Comics.
+
+What we do: frames are cut whole (build/source.png is a working copy with each used frame's pixels copied exactly into
+a cell of its own); make_configs.py lists which rows are what. The HUD icon, name tag, signpost board and continue
+icons are the sheet's own. Nothing is redrawn, recoloured, merged or resized: every colour has a slot of its own
+(black is Sonic's slot 1).

@@ -1,0 +1,17 @@
+Joe Musashi (Shinobi III / The Super Shinobi II, Sega Mega Drive / Genesis)
+
+Sheet: Shinobi3_JoeMusashi.png, ripped by Eddo (contributor Kiselyok), The Spriters Resource, asset 20808
+(https://www.spriters-resource.com/sega_genesis/shinobi3/asset/20808/).
+Its own words (the sheet's footer): "Joe Musashi from the Super Shinobi II (AKA Shinobi III) ripped by Eddo. All
+sprites are from the final version of the game, beta sprites will be on a different sheet. Shinobi and all sprites
+here are owned by Sega, so no credit needed, but do not steal or claim as your own."
+
+Credited anyway (README, the Origins card: "Sprites: Eddo (tSR)").
+
+Used as drawn (faithful art rule): crops of his frames, no scaling (he's about 60 px tall against Sonic's 40; the user
+allows integer scaling only, so he stays his own size, as the taller extras do). His shuriken is the thrown blade from
+his own throw frame (188,164, 9x1). His Ninjutsu icons are the games' own monitor pictures (no art drawn), his spin
+ball Sonic Mania's plain ball (SEGA) in his colours. Mania: 3 rare colours (#90906c, #904848, #240000) merge into the
+nearest global colour (the palette limit; to confirm with the user).
+
+A separate download (character.json flags.crossover). Shinobi and Joe Musashi (c) SEGA.

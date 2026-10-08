@@ -1,0 +1,919 @@
+{
+ "format": "noswap-character/1",
+ "_about": "Pulseman (Game Freak / SEGA, Mega Drive): a separate download (flags.crossover). Made with the toolset (noswap detect for the frames, renamed; exact colours, none merged). The Voltteccer is abilities.py voltteccer (tools/voltteccer.py, native/src/Voltteccer.h, native/mania/src/ManiaVoltteccer.h); the Volt Shot is Mega Man's charge shot system. Keys starting with _ are comments.",
+ "id": "pulseman",
+ "key": "noswap.pulseman",
+ "name": "PULSEMAN",
+ "full_name": "Pulseman",
+ "credits": {
+  "short": "Sprites: Jackster (tSR)",
+  "full": "Pulseman sprites from Pulseman (Sega Genesis / Mega Drive), ripped by Jackster, The Spriters Resource asset 14343. Pulseman (c) Game Freak / SEGA",
+  "artists": [
+   "Jackster"
+  ],
+  "url": "https://www.spriters-resource.com/sega_genesis/pulseman/asset/14343/",
+  "terms": "(none stated on the page)",
+  "_terms": "no terms stated on the page (checked 2026-10-02); credited anyway. The sheet's own tag says \"Pulseman Sprites / Ripped by Jackster\" (the tag and its Pikachu are never used as frames)"
+ },
+ "sheet": {
+  "file": "Pulseman.png",
+  "background": [
+   "#ffffff"
+  ],
+  "feet_y": 20
+ },
+ "base": "sonic",
+ "flags": {
+  "super": false,
+  "drop_dash": false,
+  "roll": false,
+  "no_roll": false,
+  "private": false,
+  "crossover": true
+ },
+ "card": null,
+ "games": {
+  "sonic1": true,
+  "sonic2": true,
+  "soniccd": true,
+  "s3k": true,
+  "mania": true
+ },
+ "palette": {
+  "own": {
+   "74": "#000000",
+   "75": "#21246b",
+   "76": "#ff494a",
+   "77": "#de244a",
+   "78": "#e6e3e6",
+   "79": "#b5b6ff",
+   "80": "#ff926b",
+   "81": "#ffb64a",
+   "82": "#6b6dde",
+   "83": "#de6d4a",
+   "84": "#e6e3c6",
+   "85": "#e64163",
+   "86": "#63c2e6",
+   "87": "#e6c2a5",
+   "88": "#000084",
+   "89": "#2161e6"
+  },
+  "_own": "every colour on his frames, exact (16; none merged)",
+  "shared": {},
+  "other_colours": "nearest",
+  "strict": true
+ },
+ "charge_palettes": {
+  "_charge_palettes": "the Volt Shot's charge flash and the Voltteccer's charged glow (runtime palette effects, the art untouched): his reds shown in his own electric blues / whites",
+  "charge1": {
+   "76": "#63c2e6",
+   "77": "#2161e6",
+   "80": "#63c2e6",
+   "85": "#2161e6"
+  },
+  "charge2a": {
+   "76": "#e6e3e6",
+   "77": "#b5b6ff",
+   "80": "#e6e3e6",
+   "85": "#b5b6ff"
+  },
+  "charge2b": {
+   "76": "#63c2e6",
+   "77": "#2161e6",
+   "80": "#63c2e6",
+   "85": "#2161e6"
+  }
+ },
+ "frames": {
+  "STAND1": [
+   127,
+   326,
+   28,
+   56
+  ],
+  "STAND2": [
+   158,
+   326,
+   28,
+   56
+  ],
+  "STAND3": [
+   189,
+   326,
+   28,
+   56
+  ],
+  "STAND4": [
+   221,
+   327,
+   27,
+   55
+  ],
+  "GUARD1": [
+   233,
+   73,
+   31,
+   56
+  ],
+  "GUARD2": [
+   267,
+   74,
+   32,
+   55
+  ],
+  "GUARD3": [
+   301,
+   75,
+   32,
+   54
+  ],
+  "WALK1": [
+   49,
+   202,
+   40,
+   53
+  ],
+  "WALK2": [
+   91,
+   203,
+   34,
+   52
+  ],
+  "WALK3": [
+   125,
+   204,
+   30,
+   51
+  ],
+  "WALK4": [
+   156,
+   203,
+   34,
+   52
+  ],
+  "WALK5": [
+   191,
+   202,
+   40,
+   53
+  ],
+  "RUN1": [
+   104,
+   141,
+   53,
+   48
+  ],
+  "RUN2": [
+   160,
+   143,
+   38,
+   46
+  ],
+  "RUN3": [
+   196,
+   144,
+   33,
+   45
+  ],
+  "RUN4": [
+   229,
+   143,
+   41,
+   46
+  ],
+  "RUN5": [
+   272,
+   141,
+   54,
+   48
+  ],
+  "RUN6": [
+   16,
+   146,
+   38,
+   43
+  ],
+  "FRONT": [
+   16,
+   202,
+   30,
+   53
+  ],
+  "CROUCH_IN": [
+   164,
+   79,
+   32,
+   50
+  ],
+  "CROUCH": [
+   199,
+   83,
+   31,
+   46
+  ],
+  "SKID": [
+   113,
+   77,
+   48,
+   52
+  ],
+  "LOOK_UP": [
+   426,
+   71,
+   27,
+   58
+  ],
+  "PUSH": [
+   457,
+   81,
+   36,
+   48
+  ],
+  "RISE": [
+   250,
+   326,
+   31,
+   56
+  ],
+  "JUMP_KICK": [
+   56,
+   132,
+   46,
+   57
+  ],
+  "PUNCH_UP": [
+   114,
+   12,
+   32,
+   53
+  ],
+  "PUNCH": [
+   150,
+   12,
+   44,
+   53
+  ],
+  "HURT1": [
+   141,
+   262,
+   51,
+   56
+  ],
+  "HURT2": [
+   193,
+   265,
+   48,
+   53
+  ],
+  "HURT3": [
+   242,
+   267,
+   39,
+   51
+  ],
+  "TUMBLE": [
+   445,
+   282,
+   50,
+   36
+  ],
+  "DOWN": [
+   16,
+   362,
+   54,
+   20
+  ],
+  "DOWN_ZAP": [
+   71,
+   362,
+   54,
+   20
+  ],
+  "CHARGE_UP": [
+   234,
+   194,
+   36,
+   61
+  ],
+  "WAVE": [
+   274,
+   207,
+   39,
+   48
+  ],
+  "BACK_POSE": [
+   315,
+   203,
+   30,
+   52
+  ],
+  "ZAP1": [
+   48,
+   264,
+   48,
+   54
+  ],
+  "ZAP2": [
+   100,
+   273,
+   40,
+   45
+  ],
+  "FRONT1": [
+   283,
+   265,
+   37,
+   53
+  ],
+  "FRONT2": [
+   324,
+   265,
+   37,
+   53
+  ],
+  "FRONT3": [
+   364,
+   263,
+   39,
+   55
+  ],
+  "FRONT4": [
+   406,
+   263,
+   39,
+   55
+  ],
+  "VOLT1": [
+   375,
+   141,
+   48,
+   48
+  ],
+  "VOLT2": [
+   349,
+   335,
+   48,
+   48
+  ],
+  "VOLT3": [
+   325,
+   141,
+   46,
+   48
+  ],
+  "VOLT4": [
+   300,
+   335,
+   46,
+   48
+  ],
+  "VOLT_SMALL1": [
+   346,
+   223,
+   32,
+   32
+  ],
+  "VOLT_SMALL2": [
+   307,
+   402,
+   32,
+   32
+  ],
+  "ORB1": [
+   382,
+   225,
+   28,
+   28
+  ],
+  "ORB2": [
+   343,
+   404,
+   28,
+   28
+  ],
+  "ORB_BIG1": [
+   456,
+   157,
+   32,
+   32
+  ],
+  "ORB_BIG2": [
+   430,
+   351,
+   32,
+   32
+  ],
+  "ZAP_BOLT1": [
+   413,
+   223,
+   22,
+   32
+  ],
+  "ZAP_BOLT2": [
+   374,
+   402,
+   22,
+   32
+  ],
+  "HEAD": [
+   127,
+   330,
+   29,
+   24
+  ]
+ },
+ "animations": {
+  "_animations": "the sheet draws him facing left: every frame is mirrored (\"flip\")",
+  "Stopped": {
+   "frames": [
+    {
+     "frame": "STAND1",
+     "flip": true
+    }
+   ]
+  },
+  "Waiting": {
+   "frames": [
+    {
+     "frame": "STAND1",
+     "flip": true
+    },
+    {
+     "frame": "STAND2",
+     "flip": true
+    },
+    {
+     "frame": "STAND3",
+     "flip": true
+    },
+    {
+     "frame": "STAND2",
+     "flip": true
+    },
+    {
+     "frame": "STAND4",
+     "flip": true
+    }
+   ],
+   "speed": 12
+  },
+  "Walking": {
+   "frames": [
+    {
+     "frame": "WALK1",
+     "flip": true
+    },
+    {
+     "frame": "WALK2",
+     "flip": true
+    },
+    {
+     "frame": "WALK3",
+     "flip": true
+    },
+    {
+     "frame": "WALK4",
+     "flip": true
+    },
+    {
+     "frame": "WALK5",
+     "flip": true
+    }
+   ],
+   "align": true
+  },
+  "Running": {
+   "frames": [
+    {
+     "frame": "RUN1",
+     "flip": true
+    },
+    {
+     "frame": "RUN2",
+     "flip": true,
+     "drop": [
+      [
+       196,
+       160,
+       2,
+       9
+      ]
+     ]
+    },
+    {
+     "frame": "RUN3",
+     "flip": true,
+     "drop": [
+      [
+       196,
+       176,
+       2,
+       7
+      ]
+     ]
+    },
+    {
+     "frame": "RUN4",
+     "flip": true
+    },
+    {
+     "frame": "RUN5",
+     "flip": true,
+     "drop": [
+      [
+       325,
+       151,
+       1,
+       5
+      ]
+     ]
+    },
+    {
+     "frame": "RUN6",
+     "flip": true
+    }
+   ],
+   "align": true
+  },
+  "Skidding": {
+   "frames": [
+    {
+     "frame": "SKID",
+     "flip": true
+    }
+   ]
+  },
+  "Pushing": {
+   "frames": [
+    {
+     "frame": "PUSH",
+     "flip": true
+    }
+   ]
+  },
+  "Looking Up": {
+   "frames": [
+    {
+     "frame": "LOOK_UP",
+     "flip": true,
+     "drop": [
+      [
+       426,
+       115,
+       4,
+       14
+      ]
+     ]
+    }
+   ]
+  },
+  "Looking Down": {
+   "frames": [
+    {
+     "frame": "CROUCH_IN",
+     "flip": true
+    },
+    {
+     "frame": "CROUCH",
+     "flip": true
+    }
+   ]
+  },
+  "Bouncing": {
+   "frames": [
+    {
+     "frame": "RISE",
+     "flip": true
+    }
+   ]
+  },
+  "Hurt": {
+   "frames": [
+    {
+     "frame": "HURT2",
+     "flip": true
+    }
+   ]
+  },
+  "Dying": {
+   "frames": [
+    {
+     "frame": "TUMBLE",
+     "flip": true
+    }
+   ]
+  },
+  "Drowning": {
+   "frames": [
+    {
+     "frame": "TUMBLE",
+     "flip": true
+    }
+   ]
+  },
+  "Flailing 1": {
+   "frames": [
+    {
+     "frame": "HURT1",
+     "flip": true
+    }
+   ]
+  },
+  "Super Transform": {
+   "frames": [
+    {
+     "frame": "CHARGE_UP",
+     "flip": true
+    }
+   ]
+  }
+ },
+ "animations_sonic2": {},
+ "ability_animations": {
+  "_ability_animations": "41 the Voltteccer (an attack; the code picks the frame: 0-3 the ball's crackling loop, 4-5 the small ball as it starts and ends); 43 / 44 the Volt Shot's throw pose on the ground / in the air (the arm out; the pose is the last frame)",
+  "41": {
+   "name": "Voltteccer",
+   "frames": [
+    {
+     "frame": "VOLT1",
+     "flip": true
+    },
+    {
+     "frame": "VOLT2",
+     "flip": true
+    },
+    {
+     "frame": "VOLT3",
+     "flip": true
+    },
+    {
+     "frame": "VOLT4",
+     "flip": true
+    },
+    {
+     "frame": "VOLT_SMALL1",
+     "flip": true
+    },
+    {
+     "frame": "VOLT_SMALL2",
+     "flip": true
+    }
+   ],
+   "anchor": "center",
+   "speed": 0
+  },
+  "43": {
+   "name": "Volt Shot",
+   "frames": [
+    {
+     "frame": "PUNCH_UP",
+     "flip": true
+    },
+    {
+     "frame": "PUNCH",
+     "flip": true
+    }
+   ],
+   "speed": 0
+  },
+  "44": {
+   "name": "Volt Shot Air",
+   "frames": [
+    {
+     "frame": "JUMP_KICK",
+     "flip": true
+    },
+    {
+     "frame": "PUNCH",
+     "flip": true
+    }
+   ],
+   "speed": 0
+  }
+ },
+ "special_stage": {},
+ "s3k_victory": {
+  "frames": [
+   {
+    "frame": "FRONT1",
+    "flip": true
+   },
+   {
+    "frame": "WAVE",
+    "flip": true
+   }
+  ],
+  "pose": 1
+ },
+ "ui": {
+  "life_icon": {
+   "rect": [
+    130,
+    338,
+    16,
+    16
+   ],
+   "trim": false,
+   "flip": true
+  },
+  "monitor_1up": {
+   "rect": [
+    130,
+    329,
+    16,
+    14
+   ],
+   "trim": false
+  },
+  "sign_face": {
+   "head": "HEAD",
+   "flip": true
+  },
+  "mini_1": {
+   "frame": "CROUCH"
+  },
+  "mini_2": {
+   "frame": "RUN3"
+  },
+  "_mini": "mini_1 / mini_2: a crouch and a run frame (the shared mini boxes are 36x48)"
+ },
+ "ending": {
+  "end_idle": {
+   "frame": "STAND1"
+  },
+  "end_pose_1": {
+   "frame": "STAND2"
+  },
+  "end_pose_2": {
+   "frame": "WAVE"
+  },
+  "end_pose_3": {
+   "frame": "CHARGE_UP"
+  },
+  "good_1": {
+   "frame": "STAND1"
+  },
+  "good_2": {
+   "frame": "CROUCH_IN"
+  },
+  "good_3": {
+   "frame": "CROUCH"
+  },
+  "good_4": {
+   "frame": "RISE"
+  },
+  "good_5": {
+   "frame": "JUMP_KICK"
+  },
+  "good_6": {
+   "frame": "WAVE"
+  }
+ },
+ "ball": {
+  "size": "medium",
+  "colours": {
+   "outline": "#21246b",
+   "dark": "#de244a",
+   "mid": "#ff494a",
+   "light": "#b5b6ff",
+   "shine": "#e6e3e6"
+  },
+  "use_for": [
+   "Jumping",
+   "Spin Dash",
+   "Rolling",
+   "Special Stage"
+  ],
+  "_colours": "his red and silver: the helmet's reds, the armour's lavender silver, his navy outline"
+ },
+ "abilities": {
+  "_abilities": "Pulseman's kit (the user's approved design, 2026-10-02): the Voltteccer (running charges it; a jump press while charged launches him as the electric ball, rebounding off everything for a few seconds, an attack throughout), the Volt Shot on Y (tap: a small orb; hold: Mega Man's charge shot, a bigger one), the normal jump in the generic ball. Speeds are 16.16 fixed point.",
+  "abilities": [
+   "voltteccer",
+   "melee"
+  ],
+  "_voltteccer": "The Voltteccer (tools/voltteccer.py): running at 5 px a frame or more for 75 frames (1.25 s) charges it (a sound; his reds flash his own electric blues: charge_palettes charge1); slower than 2 px a frame on the ground, or a hit, loses it. A jump press while charged launches the electric ball up-forward at 6 px a frame (gravity off) for 180 frames (3 s), rebounding off walls, floors, ceilings and anything that bounces him; an attack throughout and untouchable; then his jump ball with half its speed",
+  "volt_run": "0x50000",
+  "volt_charge": 49,
+  "volt_keep": "0x20000",
+  "volt_speed": "0x60000",
+  "volt_frames": 180,
+  "volt_ticks": 3,
+  "volt_sfx": "Lightning Jump",
+  "volt_sfx_s3k": "Global/LightningJump.wav",
+  "volt_sfx_cd": "SFX_G_RELEASE",
+  "volt_ready_sfx": "Lightning Shield",
+  "volt_ready_sfx_s3k": "Global/LightningShield.wav",
+  "volt_ready_sfx_cd": "SFX_G_SHIELD",
+  "_melee": "only the Volt Shot's throw pose (slots 43 / 44: the arm out; the pose is their last frame), and S3&K's fallback melee if its shot system is off",
+  "melee_sfx": "Lightning Jump",
+  "melee_sfx_s3k": "Global/LightningJump.wav",
+  "melee_reach": [
+   10,
+   10
+  ],
+  "melee_ticks": 4,
+  "shot": {
+   "_shot": "Volt Shot (tap Y): the sheet's small orb (28 px, cyan, flashing with its blue / grey copy), level ahead at 6 px a frame plus his own speed, gone at a wall, after 40 frames or at its first hit; 2 out at once, 10 frames apart",
+   "motion": "straight",
+   "speed": "0x60000",
+   "lifetime": 40,
+   "max_alive": 2,
+   "cooldown": 10,
+   "pose": 10,
+   "x": 18,
+   "y": -4,
+   "radius": 10,
+   "art": {
+    "sheet": "Pulseman.png",
+    "background": [
+     "#ffffff"
+    ],
+    "drawings": [
+     [
+      382,
+      225,
+      28,
+      28
+     ],
+     [
+      343,
+      404,
+      28,
+      28
+     ]
+    ],
+    "own_slots": true,
+    "ticks": 2,
+    "hitbox": [
+     -10,
+     -10,
+     10,
+     10
+    ]
+   },
+   "s3k": {
+    "sound": "Global/LightningJump.wav"
+   },
+   "v4": {
+    "sound": "Lightning Jump"
+   },
+   "cd": {
+    "sound": "SFX_G_SHIELD"
+   }
+  },
+  "shot2": {
+   "_shot2": "Charged Volt Shot (hold Y: Mega Man's charge shot system, his charge_start / charge_full): from 30 frames he flashes (charge_palettes), at 72 it's full; letting go fires the big orb with the red core (32 px, flashing), 8 px a frame plus his speed, passing through what it hits; one out at a time",
+   "motion": "straight",
+   "input": "charge",
+   "pierce": true,
+   "charge_start": 30,
+   "charge_full": 72,
+   "speed": "0x80000",
+   "lifetime": 50,
+   "max_alive": 1,
+   "cooldown": 8,
+   "pose": 10,
+   "x": 20,
+   "y": -4,
+   "radius": 14,
+   "art": {
+    "sheet": "Pulseman.png",
+    "background": [
+     "#ffffff"
+    ],
+    "drawings": [
+     [
+      346,
+      223,
+      32,
+      32
+     ],
+     [
+      307,
+      402,
+      32,
+      32
+     ]
+    ],
+    "own_slots": true,
+    "ticks": 2,
+    "hitbox": [
+     -14,
+     -14,
+     14,
+     14
+    ]
+   },
+   "s3k": {
+    "sound": "Global/Release.wav"
+   },
+   "v4": {
+    "sound": "Release"
+   },
+   "cd": {
+    "sound": "SFX_G_RELEASE"
+   }
+  }
+ }
+}

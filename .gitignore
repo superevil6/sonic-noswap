@@ -1,0 +1,81 @@
+# ---- Game data: never commit (SEGA's files; extract them from your own copy: tools/rsdk5_extract.py)
+/extracted
+*.rsdk
+*.pac
+*.acb
+*.awb
+*.mlp
+*.cpk
+
+# ---- Build output (tools/build_all.sh, tools/build_art.py, tools/make_release.py, tools/make_kit.py)
+# mods/ is the build's output, except each mod's hand-written files (mod.ini, settings, README)
+/mods/*
+!/mods/NoSwap/
+!/mods/NoSwapMania/
+!/mods/ManiaLockOn/
+/mods/NoSwap/*
+/mods/NoSwapMania/*
+/mods/ManiaLockOn/*
+!/mods/NoSwap/mod.ini
+!/mods/NoSwap/NoSwapS3K.ini
+!/mods/NoSwap/README.md
+!/mods/NoSwapMania/mod.ini
+!/mods/NoSwapMania/modSettings.ini
+!/mods/ManiaLockOn/mod.ini
+!/mods/ManiaLockOn/ConfigSchema.json
+!/mods/ManiaLockOn/README.md
+/dist/
+/kit/
+native/build/
+native/mania/build/
+native/lockon/build/
+*.dll
+*.so
+*.exe
+*.o
+*.ani
+*.bin
+*.act
+
+# ---- Character folders: only configs and credit notes are in git, never sheets, sounds or generated files
+# Sprite sheets and any other picture (download them: testmods/SHEETS.md)
+testmods/**/*.png
+testmods/**/*.gif
+testmods/**/*.jpg
+testmods/**/*.jpeg
+testmods/**/*.bmp
+testmods/**/*.aseprite
+# Sounds (testmods/<character>/sfx/SOURCE.txt says where each comes from)
+*.wav
+*.ogg
+*.mp3
+*.flac
+# Generated configs (tools/write_configs.py, make_configs.py, cd_config.py, extras.py UI manifests)
+testmods/*/*.json
+!testmods/*/character.json
+!testmods/metal-sonic/metal.json
+!testmods/metal-sonic/metal_s2.json
+testmods/*/build/
+testmods/*/preview/
+# The HUD font sheets (testmods/_fonts/SOURCE.txt) and the Mania spin ball (testmods/_shared/SOURCE.txt)
+testmods/_fonts/*
+!testmods/_fonts/SOURCE.txt
+testmods/_shared/*
+!testmods/_shared/SOURCE.txt
+
+# ---- Local files
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+.cache/
+compile_commands.json
+*.log
+kit-setup.json
+/backups/
+/contest/
+/sfx/
+/Music/
+Contest Intro/

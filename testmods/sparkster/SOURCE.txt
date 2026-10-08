@@ -1,0 +1,21 @@
+Sparkster (Rocket Knight Adventures, Sega Genesis) sprite sheet, "Rocket Knight Adventures - Sparkster/Rocket Knight",
+The Spriters Resource asset 29167: https://www.spriters-resource.com/sega_genesis/rocketkadventures/asset/29167/
+Sheet: testmods/sparkster/Sparkster.png (1408x1024, teal page and cells), read in place.
+
+Text on the sheet (its credits box), exactly as written:
+"Assets (c) Konami. Original rip by Jack Rost, re-ripped by UltraHype97. Give credit if used!"
+
+Usage terms: credit if used.
+Credit in release: Sparkster (Rocket Knight Adventures): original rip by Jack Rost, re-ripped by UltraHype97, The Spriters
+Resource; assets (c) Konami.
+A separate download (extras.py "crossover"): shipped only as his own mod, never in the all-in-one bundle.
+
+What we do (make_configs.py): Genesis art at 1x (he stands about 40-44 px). Frames are cut whole, as drawn (build/source.png
+is a working copy with each used frame's pixels copied exactly into a cell of its own: the main drawing and the small loose
+bits beside it, e.g. the sword's swooshes). The Rocket Dash's five angles are the sheet's own (its up frame is the sheet's
+reused frame); his charge flash alternates the sheet's Crouch and Backfire frames. The energy wave is the sheet's own
+Projectile frames (four 32x24 cells, cut as drawn). Not used: the pole hangs (no hang move, the user), swimming, the
+cutscene vehicles, the effects. The HUD icon is his face cropped to 16x16 from the Pleased cutscene frame; the signpost is
+his head from that frame on the game's own board, at 1x. The "SPARKSTER" HUD tag isn't on the sheet: our lettering in the
+HUD font the other extras use. His colours are the sheet's 15 plus black, all exact in his own slots (none merged).
+Nothing is redrawn, recoloured or resized.

@@ -1,0 +1,259 @@
+{
+  "format": "noswap-character/1",
+  "_about": "Converted from make_configs.py (kept as make_configs.legacy.py) by tools/noswap.py convert; docs/character-json.md. Keys starting with _ are comments.",
+  "id": "fang",
+  "name": "FANG",
+  "full_name": "Fang",
+  "credits": {
+    "short": "Sprites: Akimaca",
+    "full": "Fang (Sonic 1-Style) by Akimaca - https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/224261/",
+    "artists": ["Akimaca"],
+    "url": "https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/224261/",
+    "terms": "Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit where it's due!!!",
+    "_source_txt": "SOURCE.txt (kept in the folder) has the sheet's full story: Fang (Sonic 1-Style) by Akimaca https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/224261/ Artist note on the sheet: \"Original sprites by SEGA, Sonic Team & me (Akimaca). Free to use tho give credit where it's due!!!\" OK to ship with credit to Akimaca."
+  },
+  "sheet": {"file": "224261.png", "background": ["#a2c86e", "#598818"], "feet_y": 20},
+  "base": "sonic",
+  "flags": {"super": false, "drop_dash": false, "roll": false, "no_roll": false, "private": false, "crossover": false},
+  "card": null,
+  "games": {"sonic1": true, "sonic2": true, "soniccd": true, "s3k": true, "mania": true},
+  "palette": {
+    "own": {
+      "74": "#6c0090",
+      "75": "#9024b4",
+      "76": "#b448d8",
+      "77": "#d86cfc",
+      "78": "#6c2400",
+      "79": "#b44800",
+      "80": "#fc6c00"
+    },
+    "shared": {
+      "#000000": 1,
+      "#010101": 1,
+      "#242490": 2,
+      "#fcfcfc": 6,
+      "#b4b4b4": 7,
+      "#909090": 8,
+      "#484848": 9,
+      "#fc0000": 12,
+      "#fcfc00": 15
+    },
+    "other_colours": "guess",
+    "strict": false
+  },
+  "frames": {
+    "STOPPED": [10, 65, 30, 41],
+    "WAITING1": [51, 70, 34, 36],
+    "WAITING2": [89, 70, 34, 36],
+    "WAITING3": [133, 69, 39, 37],
+    "WAITING4": [181, 68, 39, 38],
+    "WAITING5": [227, 68, 39, 38],
+    "WAITING6": [272, 68, 39, 38],
+    "LOOKING_UP": [317, 65, 31, 41],
+    "LOOKING_DOWN": [358, 82, 40, 24],
+    "WALKING1": [14, 130, 34, 35],
+    "WALKING2": [54, 128, 38, 37],
+    "WALKING3": [98, 130, 33, 35],
+    "WALKING4": [138, 130, 34, 35],
+    "WALKING5": [177, 128, 40, 37],
+    "WALKING6": [226, 130, 33, 35],
+    "RUNNING1": [268, 125, 47, 40],
+    "RUNNING2": [323, 125, 45, 40],
+    "RUNNING3": [375, 125, 48, 40],
+    "RUNNING4": [431, 125, 44, 40],
+    "SKIDDING1": [189, 181, 45, 39],
+    "SKIDDING2": [239, 182, 45, 38],
+    "SPIN_DASH1": [592, 499, 28, 27],
+    "SPIN_DASH2": [630, 499, 28, 27],
+    "SPIN_DASH3": [673, 499, 28, 27],
+    "SPIN_DASH4": [714, 499, 29, 27],
+    "JUMPING1": [14, 190, 29, 30],
+    "JUMPING2": [48, 190, 30, 30],
+    "JUMPING3": [83, 190, 29, 30],
+    "JUMPING4": [115, 190, 30, 30],
+    "JUMPING5": [148, 190, 30, 30],
+    "BOUNCING": [413, 53, 27, 53],
+    "HURT": [15, 260, 40, 36],
+    "DYING": [160, 248, 34, 48],
+    "DROWNING": [200, 245, 34, 51],
+    "FAN_ROTATE1": [392, 267, 45, 29],
+    "FAN_ROTATE2": [446, 267, 24, 29],
+    "FAN_ROTATE3": [483, 267, 35, 29],
+    "BREATHING": [111, 258, 38, 38],
+    "PUSHING1": [385, 184, 28, 36],
+    "PUSHING2": [417, 183, 28, 37],
+    "PUSHING3": [449, 184, 28, 36],
+    "PUSHING4": [482, 183, 28, 37],
+    "FLAILING_11": [295, 183, 37, 37],
+    "FLAILING_12": [337, 185, 38, 35],
+    "HANGING1": [244, 269, 67, 27],
+    "HANGING2": [317, 269, 67, 27],
+    "WATER_SLIDE": [61, 260, 41, 36],
+    "CONTINUE1": [16, 318, 43, 43],
+    "CONTINUE2": [64, 319, 39, 42],
+    "POGO1": [1082, 632, 32, 34],
+    "POGO2": [1122, 617, 31, 49],
+    "POPGUN1": [1015, 486, 42, 41],
+    "POPGUN2": [1068, 486, 37, 41],
+    "POPGUN_AIR": [694, 612, 41, 54],
+    "VICTORY1": [109, 386, 28, 41],
+    "VICTORY2": [258, 386, 30, 41]
+  },
+  "animations": {
+    "Stopped": {"frames": ["STOPPED"]},
+    "Waiting": {
+      "frames": ["WAITING1", "WAITING2", "WAITING3", "WAITING4", "WAITING5", "WAITING6"],
+      "loop": 2
+    },
+    "Looking Up": {"frames": ["LOOKING_UP"], "loop": 0},
+    "Looking Down": {"frames": ["LOOKING_DOWN"], "loop": 0},
+    "Walking": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Running": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Skidding": {"frames": ["SKIDDING1", "SKIDDING2"]},
+    "Super Peel Out": {
+      "frames": ["RUNNING1", "RUNNING2", "RUNNING3", "RUNNING4"],
+      "rot": 2
+    },
+    "Spin Dash": {
+      "frames": ["SPIN_DASH1", "SPIN_DASH2", "SPIN_DASH3", "SPIN_DASH4"]
+    },
+    "Jumping": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4", "JUMPING5"],
+      "anchor": "center"
+    },
+    "Bouncing": {"frames": ["BOUNCING"], "anchor": "center"},
+    "Hurt": {"frames": ["HURT"], "anchor": "center"},
+    "Dying": {"frames": ["DYING"], "anchor": "center"},
+    "Drowning": {"frames": ["DROWNING"], "anchor": "center"},
+    "Fan Rotate": {
+      "frames": ["FAN_ROTATE1", "FAN_ROTATE2", "FAN_ROTATE3", "FAN_ROTATE2"],
+      "anchor": "center"
+    },
+    "Breathing": {"frames": ["BREATHING"], "anchor": "center"},
+    "Pushing": {
+      "frames": ["PUSHING1", "PUSHING2", "PUSHING3", "PUSHING4"]
+    },
+    "Flailing 1": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Flailing 2": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Hanging": {"frames": ["HANGING1", "HANGING2"], "anchor": "center"},
+    "Clinging On": {"frames": ["HANGING1", "HANGING2"], "anchor": "center"},
+    "Corkscrew H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"]
+    },
+    "Water Slide": {"frames": ["WATER_SLIDE"], "anchor": "center"},
+    "Continue": {"frames": ["CONTINUE1", "CONTINUE2"]},
+    "Continue Up": {"frames": ["LOOKING_UP"], "loop": 0},
+    "Super Transform": {"frames": ["STOPPED"], "loop": 0}
+  },
+  "animations_sonic2": {
+    "Flailing 3": {"frames": ["FLAILING_11", "FLAILING_12"]},
+    "Grabbed": {"frames": ["HURT"], "anchor": "center"},
+    "Twirl H": {
+      "frames": ["WALKING1", "WALKING2", "WALKING3", "WALKING4", "WALKING5", "WALKING6"],
+      "rot": 2
+    },
+    "Bored!": {"frames": ["WAITING1", "WAITING2"], "loop": 0}
+  },
+  "ability_animations": {
+    "41": {"name": "Pogo", "frames": ["POGO1", "POGO1", "POGO2"], "loop": 2, "speed": 60},
+    "43": {"frames": ["POPGUN1", "POPGUN2"], "anchor": "feet", "speed": 80, "name": "Popgun"},
+    "44": {"frames": ["POPGUN_AIR", "POPGUN_AIR"], "anchor": "center", "speed": 80, "name": "Popgun Air"}
+  },
+  "special_stage": {
+    "Special Stage": {
+      "frames": ["JUMPING1", "JUMPING2", "JUMPING3", "JUMPING4"],
+      "anchor": "center"
+    }
+  },
+  "s3k_victory": {"frames": ["VICTORY1", "VICTORY2"]},
+  "ui": {
+    "life_icon": {"rect": [119, 328, 16, 16], "trim": false},
+    "life_name": {"rect": [136, 328, 27, 9]},
+    "monitor_1up": {
+      "rect": [119, 329, 16, 14],
+      "trim": false,
+      "remap": {"2": 130, "3": 131, "4": 132, "5": 133}
+    },
+    "sign_face": {
+      "rect": [173, 312, 48, 32],
+      "trim": false,
+      "remap": {"2": 130, "3": 131, "4": 132, "5": 133}
+    },
+    "mini_1": {"rect": [233, 336, 24, 25], "remap": "+128"},
+    "mini_2": {"rect": [261, 336, 24, 25], "remap": "+128"}
+  },
+  "ending": {
+    "end_idle": {"rect": [28, 391, 34, 36], "remap": "+128"},
+    "end_pose_1": {"rect": [68, 392, 25, 35], "remap": "+128"},
+    "end_pose_2": {"rect": [50, 503, 63, 80], "remap": "+128"},
+    "end_pose_3": {"rect": [161, 453, 171, 177], "remap": "+128"},
+    "good_1": {"frame": "VICTORY1", "remap": "+128"},
+    "good_2": {"rect": [143, 386, 28, 41], "remap": "+128"},
+    "good_3": {"rect": [179, 385, 31, 42], "remap": "+128"},
+    "good_4": {"rect": [219, 386, 30, 41], "remap": "+128"},
+    "good_5": {"frame": "VICTORY2", "remap": "+128"},
+    "good_6": {"rect": [296, 392, 25, 35], "remap": "+128"}
+  },
+  "abilities": {
+    "_notes": [
+      "extra 2: Fang", "launch speed of each bounce (Sonic's jump is 0x68000)",
+      "(The melee numbers are only the cork gun's throw pose, slots 43 / 44: aim, then fired, the gun kicked up; in",
+      "the air \"Jump w. gun\"; the pose is their last frame. And S3&K's fallback melee if its shot system is off,",
+      "which reaches no further than his body.)",
+      "Cork gun (the user's design, 2026-09-28): a real projectile in all four games, motion \"straight\" and aimed with",
+      "the d-pad as Y is pressed, as Gamma's: back, back-up, up, forward-up, forward on the ground, all 8 in the air;",
+      "nothing held: the way he faces. 6.5 px per frame (diagonals the same overall), no gravity; gone at a wall,",
+      "floor or ceiling it flies into, after 40 frames (about 260 px), offscreen or at its first hit. One out at a",
+      "time, 2 s (120 frames) apart. It starts 20 px out along the aim from 8 px above his centre (the muzzle). The",
+      "throw pose for 10 frames. Art: the sheet's loose \"Cork\" drawings (7x7 each, on their dark cells: cut exactly),",
+      "one held per aim (\"aim_frames\"): level the side-on cork (narrow end back), forward-up the sheet's own diagonal",
+      "one, up the upright one; down and forward-down those two flipped; mirrored when it flies left. Hitbox 12x12.",
+      "Sound: his melee's (the Insta Shield whoosh; Sonic CD's melee played the Release sound)",
+      "598818\"], \"ticks\": 4, \"hitbox\": [-6, -6, 6, 6],",
+      "(Sonic 1/2: five frames, the fifth in the strip's second row)"
+    ],
+    "abilities": ["pogo", "melee"],
+    "pogo_speed": "0x70000",
+    "melee_sfx": "Insta Shield",
+    "melee_reach": [10, 10],
+    "melee_ticks": 4,
+    "shot": {
+      "motion": "straight",
+      "aim": true,
+      "speed": "0x68000",
+      "lifetime": 40,
+      "max_alive": 1,
+      "cooldown": 120,
+      "pose": 10,
+      "x": 20,
+      "y": -8,
+      "radius": 4,
+      "aim_frames": true,
+      "art": {
+        "sheet": "224261.png",
+        "crop": true,
+        "background": ["#598818"],
+        "ticks": 4,
+        "hitbox": [-6, -6, 6, 6],
+        "two_rows": true,
+        "drawings": [
+          [1008, 444, 7, 7], [990, 444, 7, 7], [999, 444, 7, 7], [990, 444, 7, 7, "flip_y"],
+          [999, 444, 7, 7, "flip_y"]
+        ]
+      },
+      "s3k": {"sound": "Global/InstaShield.wav"},
+      "v4": {"sound": "Insta Shield"},
+      "cd": {"sound": "SFX_G_RELEASE"}
+    }
+  },
+  "_extras_notes": [
+    "Fang's purples, oranges and browns in global palette slots 74+, which neither game uses",
+    "(Amy's colours end at 73). Neutral colours share Sonic's slots."
+  ]
+}

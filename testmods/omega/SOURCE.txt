@@ -1,0 +1,37 @@
+E-123 Omega (Sonic Battle style) custom sprite sheet by Gussprint:
+https://www.spriters-resource.com/custom_edited/sonicthehedgehogcustoms/asset/18261/ (from "Omega Link.txt").
+Sheet: testmods/Omega.png (530x8662, white page, rows labelled), read in place.
+
+Text on the sheet (credits box), exactly as written:
+"CHARACTER: E-123 Ω "Omega"
+FROM: "Sonic the Hedgehog" series
+STYLE: Sonic Battle
+COPYRIGHTED BY: SEGA/Sonic Team
+CUSTOM SPRITED BY: Gussprint
+REQUIREMENTS FOR USE: Give credit, alright?
+SPECIAL THANKS:
+Joe the EchidnaFox(For the Dash SFX)
+Frario(For pointing out MAJOR errors in the sprite)
+Drshnaps(For part of the Midair Attack SFX)
+Enterbrain(For part of the Midair Attack SFX)
+Ren "Foxx" Ramos(For Guard, Heal, Explosion and Upper Attack SFX)
+Sprites INC(For the 1st/3rd Attack SFX)
+SNK/Playmore(For the Shot Attack/Trap Attack SFX)
+Everybody else(For the nice comments, and pointing out some errors to me)"
+and: "With that said, here's the rundown of everything: Give credit to Gussprint, and do not, I repeat, DO NOT steal
+and/or claim as own." ("Brought to you by Gussprint. Give credit if used. Over and out.")
+
+Usage terms: give credit to Gussprint; never claim the sprites as ours.
+Credit in release: E-123 Omega sprites custom sprited by Gussprint (Sonic Battle style); the flame-shot fireball is the
+sheet's Shot Attack SFX, which the sheet credits to SNK/Playmore; the hover's jet flames are its Midair Action SFX.
+E-123 Omega (c) SEGA / Sonic Team.
+
+What we do: only the right-facing rows are used; frames are cut whole (build/source.png is a working copy with each used
+frame's pixels copied exactly into a cell of its own). The hover's jet flames are the sheet's own flame drawings placed
+under his feet in his fall pose. The fireball projectile is two frames of the Shot Attack SFX, each cropped to the ball
+and a little of its flame (the charged Flame Blast); the small Flame Shot is two whole frames of the Aim Attack SFX
+(its flame puffs), cut exactly, not scaled. The charge's red-orange flash is a runtime palette effect in his own
+colours (the files keep his own). The Origins card is his idle frame with one column off each side (a crop), 8x. Nothing is
+redrawn, recoloured or resized. Colours: his frames' 15 and 7 of the fireball's are exact in the 22 own slots; the
+fireball's rarer shades and the jet flames' 4 colours (which the Aim Attack puffs share) go to their nearest slot (make_configs.py prints the counts).
+The "OMEGA" HUD tag isn't on the sheet: our lettering in the HUD font the other extras use.

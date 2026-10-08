@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoSwap Character Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand"><span class="logo">NS</span><span>NoSwap <b>Character Editor</b></span></div>
+  <div class="who" id="who">no character open</div>
+  <div class="actions">
+    <button id="btn-open" title="Open a character folder">Open…</button>
+    <button id="btn-new" title="Make a new character from a sprite sheet">New…</button>
+    <button id="btn-revert" title="Throw away unsaved changes">Revert</button>
+    <button id="btn-save" class="primary" title="Save character.json (Ctrl+S)">Save</button>
+  </div>
+</header>
+<nav id="tabs">
+  <button data-tab="character">Character</button>
+  <button data-tab="sheet">Sheet &amp; frames</button>
+  <button data-tab="anims">Animations</button>
+  <button data-tab="abilities">Abilities</button>
+  <button data-tab="palette">Palette</button>
+  <button data-tab="hud">HUD &amp; ending</button>
+  <button data-tab="build">Build &amp; deploy</button>
+  <button data-tab="settings">Settings</button>
+</nav>
+<main id="main"><div class="welcome" id="boot-msg"><h1>Starting the editor…</h1>
+  <p class="muted" id="boot-slow" hidden>Still blank? The page's scripts didn't run: an add-on or a privacy setting in this
+  browser is probably blocking them for 127.0.0.1 (allow scripts there), or open the same address in another browser.
+  Reloading with Ctrl+Shift+R can also help.</p>
+  <noscript><p>JavaScript is off in this browser: the editor needs it (allow it for 127.0.0.1).</p></noscript></div></main>
+<aside id="check">
+  <div class="check-head">
+    <h2>Check</h2>
+    <span id="check-counts"></span>
+    <label class="small"><input type="checkbox" id="check-notes"> notes</label>
+    <button id="btn-check" class="small" title="Run the check on the saved file">Run</button>
+    <button id="btn-fold" class="small" title="Hide or show the check panel">⇥</button>
+  </div>
+  <div id="check-body" class="check-body"><p class="muted">Open a character to check it.</p></div>
+</aside>
+<div id="status"></div>
+<div id="toast"></div>
+<div id="modal" hidden><div class="modal-box" id="modal-box"></div></div>
+<script>  /* (a plain script: runs even when the module scripts below are blocked or fail to load) */
+  window.__noswapBoot = setTimeout(function () { var e = document.getElementById("boot-slow"); if (e) e.hidden = false; }, 4000);
+  window.addEventListener("error", function (ev) { var e = document.getElementById("boot-slow"); if (e && document.getElementById("boot-msg")) { e.hidden = false; e.textContent += " (" + (ev.message || "a script failed to load") + ")"; } }, true);
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

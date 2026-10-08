@@ -1,0 +1,5 @@
+Fireball.wav = "Mario Fireball.wav", supplied by the user (2026-10-02; their copy is in the repo's sfx/ folder).
+  Source: ripped by lelegofrog, The Sounds Resource (the user). Credit (the user's): "Fireball sound: Super Mario ©
+  Nintendo, ripped by lelegofrog (The Sounds Resource)".
+Used for: Mario's Fireball shot (tools/abilities.py entry 23, shot "s3k" "sound": Sonic 3 & Knuckles and Sonic Mania).
+Sonic 1 / Sonic 2 / Sonic CD keep "Fire Dash" / SFX_G_RELEASE.
